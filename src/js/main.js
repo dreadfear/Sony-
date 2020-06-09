@@ -394,7 +394,7 @@ function swiperInit() {
 }
 
 $(window).scroll(function () {
-	stickyProductNav();
+	// stickyProductNav();
 });
 
 function mappingMenu() {

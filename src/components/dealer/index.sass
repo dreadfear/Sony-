@@ -1,0 +1,107 @@
+.dealer-section
+	@apply py-12
+	@screen xl
+		@apply py-18
+	.filter-map
+		padding: 20px
+		background: #2c3e50
+		.form-group
+			+ .form-group
+				margin-top: 20px
+			select
+				color: #a3abb2
+				font-size: 16px
+				background: transparent
+				width: 100%
+				height: 40px
+				border: 1px solid #a3abb2
+				padding: 0 15px
+	// .result-wrapper
+	// 	position: relative
+	.list-wrapper
+		position: absolute
+		width: 476px
+		top: 20px
+		bottom: 20px
+		left: 20px
+		background: #fff
+		display: flex
+		flex-direction: column
+	#ajax_msg
+		display: none !important
+	.btn-searchmap
+		height: 30px
+		padding: 5px 30px
+		background: #a3abb2
+		border: 0
+	.list-dealer
+		background: #fff
+		padding: 20px
+		flex: 1
+	#list,.list
+		margin-bottom: 0
+		list-style: none
+		overflow-y: auto
+		padding-right: 12px
+		max-height: 400px
+		> li
+			cursor: pointer
+			display: flex
+			+ li
+				margin-top: 30px
+			address
+				font-style: normal
+				padding: 0 20px
+				flex: 1
+				p
+					margin: 0
+					line-height: 1.4
+					color: #666666
+					display: flex
+					font-size: 12px
+					+ p
+						margin-top: 5px
+					a
+						color: #1b79a7
+					&.name
+						color: #2c3e50
+						text-transform: uppercase
+						font-weight: 600
+						font-size: 14px
+			.link
+				width: 105px
+				a
+					display: flex
+					align-items: center
+					justify-content: center
+					height: 30px
+					width: 100%
+					font-size: 12px
+					color: #2c3e50
+					+ a
+						margin-top: 10px
+					&.view-map
+						border: 1px solid #2c3e50
+					&.view-web
+						background: #ffd200
+		&::-webkit-scrollbar
+			width: 2px
+			background: #2c3e50
+		&::-webkit-scrollbar-thumb
+			background: #ffd200
+	#map,#map_canvas,.map,.map_canvas
+		height: 632px
+		img,iframe
+			width: 100%
+			height: 100%
+		.map-inter
+			height: 100%
+			width: 100%
+	#map_canvas
+		display: none !important
+	@media screen and ( max-width: 1025px )
+		.list-wrapper
+			position: static
+			width: 100%
+		#map,#map_canvas,.map,.map_canvas
+			height: 500px

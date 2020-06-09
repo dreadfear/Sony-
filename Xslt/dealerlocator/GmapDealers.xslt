@@ -3,7 +3,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
-		<div class="uk-hidden">
+		<div class="hidden">
 			<input type="hidden" id="hdnDealerLocatorSiteId">
 			<xsl:attribute name="value">
 				<xsl:value-of select="/DealerList/SiteId"></xsl:value-of>
@@ -48,132 +48,83 @@
 		<div id="super-store-finder">
 			<div id="main_content">
 				<div id="clinic-finder" class="relative">
-
-
-					<div class="overlay uk-hidden" id="overlay-contact-clinic-form">
-						<div class="form-wrapper">
-						</div>
+					<div class="overlay hidden" id="overlay-contact-clinic-form">
 					</div>
-					<h1 class="section-title uk-text-center">
-						<xsl:value-of disable-output-escaping="yes" select="/DealerList/ZoneTitle"></xsl:value-of>
-					</h1>
-					<div class="uk-grid uk-grid-collapse uk-grid-match" uk-grid="">
-						<div class="wrapper uk-width-1-3@l">
-							<div class="system-wrap">
-								<div class="search-location findmaps">
-									<div class="">
-										<div class="filter-map">
-											<div class="filter-title">Filter</div>
-											<div class="field form_desc form-group">
-												<label for="ddlCountry">
-													<xsl:value-of select="/DealerList/CountryText"></xsl:value-of>
-												</label>
-												<select class="form-select uk-select" id="ddlCountry"></select>
-											</div>
-											<div class="field form_desc form-group">
-												<label for="ddlProvince" class="uk-display-block"
+					<div class="result-wrapper">
+						<div id="results" class="dealer-list">
+							<div id="ajax_msg" class="locate mrb15 hidden">
+							</div>
+							<div class="list-wrapper" style="z-index: 2;">
+								<div class="filter-map">
+									<!-- <div class="filter-title">Filter</div> -->
+									<div class="field form_desc form-group hidden">
+										<label for="ddlCountry">
+											<xsl:value-of select="/DealerList/CountryText"></xsl:value-of>
+										</label>
+										<select class="form-select uk-select" id="ddlCountry"></select>
+									</div>
+									<div class="field form_desc form-group">
+										<!-- <label for="ddlProvince" class="uk-display-block"
 													style="margin-bottom: 5px;">
 													<xsl:value-of select="/DealerList/ProvinceText"></xsl:value-of>
-												</label>
-												<select class="form-select uk-select" id="ddlProvince">
-													<option value="">
-														<xsl:value-of select="/DealerList/SelectProvinceText">
-														</xsl:value-of>
-													</option>
-												</select>
-											</div>
-											<div class="field form_desc form-group uk-hidden">
-												<label for="ddlDistrict" class="uk-display-block"
+												</label> -->
+										<select class="form-select form-group" id="ddlProvince">
+											<option value="">
+												<xsl:value-of select="/DealerList/SelectProvinceText">
+												</xsl:value-of>
+											</option>
+										</select>
+									</div>
+									<div class="field form_desc form-group">
+										<!-- <label for="ddlDistrict" class="uk-display-block"
 													style="margin-bottom: 5px;">
 													<xsl:value-of select="/DealerList/DistrictText"></xsl:value-of>
-												</label>
-												<select class="form-select uk-select " id="ddlDistrict">
-													<option value="">
-														<xsl:value-of select="/DealerList/SelectDistrictText">
-														</xsl:value-of>
-													</option>
-												</select>
-											</div>
-											<div class="form-group">
-												<input type="submit" id="edit-submit"
-													class="btn-searchmap uk-button uk-button-default uk-button-primary">
-												<xsl:attribute name="value">
-													<xsl:value-of select="/DealerList/SearchText"></xsl:value-of>
-												</xsl:attribute>
-												</input>
-											</div>
-										</div>
+												</label> -->
+										<select class="form-group " id="ddlDistrict">
+											<option value="">
+												<xsl:value-of select="/DealerList/SelectDistrictText">
+												</xsl:value-of>
+											</option>
+										</select>
 									</div>
-									<div class="uk-hidden">
-										<div class="searh-text">
-											<label>
-												<xsl:value-of select="/DealerList/OrText"></xsl:value-of>
-											</label>
-											<input type="text" maxlength="128" name="address" id="address" size="60"
-												value="" class="form-text" autocomplete="off">
-											<xsl:attribute name="placeholder">
-												<xsl:value-of select="/DealerList/EnterLocationText"></xsl:value-of>
-											</xsl:attribute>
-											</input>
-											<input type="submit" id="edit-submit1"
-												class="btn btn-large btn-primary btn-searchmap">
-											<xsl:attribute name="value">
-												<xsl:value-of select="/DealerList/SearchText"></xsl:value-of>
-											</xsl:attribute>
-											</input>
-										</div>
+									<div class="form-group">
+										<input type="submit" id="edit-submit" class="btn-searchmap">
+										<xsl:attribute name="value">
+											<xsl:value-of select="/DealerList/SearchText"></xsl:value-of>
+										</xsl:attribute>
+										</input>
 									</div>
 								</div>
-							</div>
-							<div id="direction" class="find_address" style="display:none;">
-								<div class="row mrb10">
-									<div class="col-sm-2">
-										<strong>
-											<xsl:value-of select="/DealerList/FromText"></xsl:value-of>
-										</strong>
-									</div>
-									<div class="col-sm-10">
-										<input id="origin-direction" name="origin-direction" class="orides-txt"
-											type="text" />
-									</div>
-								</div>
-								<div class="row mrb20">
-									<div class="col-sm-2">
-										<strong>
-											<xsl:value-of select="/DealerList/ToText"></xsl:value-of>
-										</strong>
-									</div>
-									<div class="col-sm-10">
-										<input id="dest-direction" name="dest-direction" class="orides-txt"
-											type="text" />
+								<div class="hidden">
+									<div class="searh-text">
+										<label>
+											<xsl:value-of select="/DealerList/OrText"></xsl:value-of>
+										</label>
+										<input type="text" maxlength="128" name="address" id="address" size="60"
+											value="" class="form-text" autocomplete="off">
+										<xsl:attribute name="placeholder">
+											<xsl:value-of select="/DealerList/EnterLocationText"></xsl:value-of>
+										</xsl:attribute>
+										</input>
+										<input type="submit" id="edit-submit1"
+											class="btn btn-large btn-primary btn-searchmap">
+										<xsl:attribute name="value">
+											<xsl:value-of select="/DealerList/SearchText"></xsl:value-of>
+										</xsl:attribute>
+										</input>
 									</div>
 								</div>
-								<div id="get-dir-button" class="get-dir-button">
-									<input type="submit" id="get-direction" class="btn">
-									<xsl:attribute name="value">
-										<xsl:value-of select="/DealerList/FindText"></xsl:value-of>
-									</xsl:attribute>
-									</input>
-									<a href="javascript:directionBack()">
-										<xsl:value-of select="/DealerList/BackText"></xsl:value-of>
-									</a>
+								<div class="list-dealer">
+									<ul class="noli list_system mrb15" style="display: block; margin-top: 0;" id="list">
+									</ul>
 								</div>
-							</div>
-							<div id="results" class="dealer-list">
-								<div id="ajax_msg" class="locate mrb15 uk-hidden">
-								</div>
-								<ul class="noli list_system mrb15" style="display: block; margin-top: 0;" id="list">
-								</ul>
 							</div>
 						</div>
-						<div class="wrapper uk-width-2-3@l">
-							<div id="map">
-								<!-- <iframe src="" frameborder="1" id='map-iframe'
-									style="height: 100%; width: 100%;"></iframe> -->
-								<input type="hidden" id="distance" name="distance" value="1" />
-								<div id="map_canvas" class="map_system">
-								</div>
-							</div>
+					</div>
+					<div id="map">
+						<iframe src="" frameborder="1" id='map-iframe' style="height: 100%; width: 100%;"></iframe>
+						<input type="hidden" id="distance" name="distance" value="1" />
+						<div id="map_canvas" class="map_system hidden">
 						</div>
 					</div>
 				</div>
