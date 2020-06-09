@@ -1,0 +1,41 @@
+.primary-banner
+	.container
+		@apply absolute left-50 translate-x-50
+		top: 100px
+		@media screen and ( max-width: 1200px)
+			top: 50px
+			
+		.box-content
+			padding: 50px 30px
+			background-color: rgba($main-1,.8)
+			opacity: 0.8
+			max-width: 50%
+			@media screen and ( max-width:1200px)
+				padding: 30px 
+				
+			@media screen and ( max-width: 1024px)
+				max-width: 320px
+				
+			h2
+				@apply text-white text-42 leading-normal mb-4
+				@media screen and ( max-width: 1440px)
+					@apply text-36 mb-2 leading-tight
+				@media screen and ( max-width: 1024px)
+					@apply text-26 mb-2
+			.caption
+				@apply mb-4 text-20 text-left text-white
+				p
+					@apply  text-20 text-left text-white
+					@media screen and ( max-width:1440px)
+						@apply text-16
+					
+		@media screen and ( max-width: 1024px)
+			@apply static transform-none p-0 m-0
+			max-width: 100%
+			.box-content
+				max-width: 100%
+				padding: 30px 15px
+	.btn
+		border: 1px solid #ffffff
+		span
+			@apply text-white

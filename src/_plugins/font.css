@@ -1,0 +1,253 @@
+@font-face {
+    font-family: 'SST Vietnamese';
+    src: url('../fonts/SSTVietnamese-Bold.eot');
+    src: url('../fonts/SSTVietnamese-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SSTVietnamese-Bold.woff2') format('woff2'),
+        url('../fonts/SSTVietnamese-Bold.woff') format('woff'),
+        url('../fonts/SSTVietnamese-Bold.ttf') format('truetype'),
+        url('../fonts/SSTVietnamese-Bold.svg#SSTVietnamese-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST Vietnamese';
+    src: url('../fonts/SSTVietnamese-Light.eot');
+    src: url('../fonts/SSTVietnamese-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SSTVietnamese-Light.woff2') format('woff2'),
+        url('../fonts/SSTVietnamese-Light.woff') format('woff'),
+        url('../fonts/SSTVietnamese-Light.ttf') format('truetype'),
+        url('../fonts/SSTVietnamese-Light.svg#SSTVietnamese-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-BoldItalic.eot');
+    src: url('../fonts/SST-BoldItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-BoldItalic.woff2') format('woff2'),
+        url('../fonts/SST-BoldItalic.woff') format('woff'),
+        url('../fonts/SST-BoldItalic.ttf') format('truetype'),
+        url('../fonts/SST-BoldItalic.svg#SST-BoldItalic') format('svg');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-Medium.eot');
+    src: url('../fonts/SST-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-Medium.woff2') format('woff2'),
+        url('../fonts/SST-Medium.woff') format('woff'),
+        url('../fonts/SST-Medium.ttf') format('truetype'),
+        url('../fonts/SST-Medium.svg#SST-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-Light.eot');
+    src: url('../fonts/SST-Light.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-Light.woff2') format('woff2'),
+        url('../fonts/SST-Light.woff') format('woff'),
+        url('../fonts/SST-Light.ttf') format('truetype'),
+        url('../fonts/SST-Light.svg#SST-Light') format('svg');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST Vietnamese';
+    src: url('../fonts/SSTVietnamese-Medium.eot');
+    src: url('../fonts/SSTVietnamese-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SSTVietnamese-Medium.woff2') format('woff2'),
+        url('../fonts/SSTVietnamese-Medium.woff') format('woff'),
+        url('../fonts/SSTVietnamese-Medium.ttf') format('truetype'),
+        url('../fonts/SSTVietnamese-Medium.svg#SSTVietnamese-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST Vietnamese';
+    src: url('../fonts/SSTVietnamese-Roman.eot');
+    src: url('../fonts/SSTVietnamese-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SSTVietnamese-Roman.woff2') format('woff2'),
+        url('../fonts/SSTVietnamese-Roman.woff') format('woff'),
+        url('../fonts/SSTVietnamese-Roman.ttf') format('truetype'),
+        url('../fonts/SSTVietnamese-Roman.svg#SSTVietnamese-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-LightItalic.eot');
+    src: url('../fonts/SST-LightItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-LightItalic.woff2') format('woff2'),
+        url('../fonts/SST-LightItalic.woff') format('woff'),
+        url('../fonts/SST-LightItalic.ttf') format('truetype'),
+        url('../fonts/SST-LightItalic.svg#SST-LightItalic') format('svg');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-Roman.eot');
+    src: url('../fonts/SST-Roman.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-Roman.woff2') format('woff2'),
+        url('../fonts/SST-Roman.woff') format('woff'),
+        url('../fonts/SST-Roman.ttf') format('truetype'),
+        url('../fonts/SST-Roman.svg#SST-Roman') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'SST';
+    src: url('../fonts/SST-Bold.eot');
+    src: url('../fonts/SST-Bold.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/SST-Bold.woff2') format('woff2'),
+        url('../fonts/SST-Bold.woff') format('woff'),
+        url('../fonts/SST-Bold.ttf') format('truetype'),
+        url('../fonts/SST-Bold.svg#SST-Bold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: "Material Design Icons";
+  src: url("../fonts/materialdesignicons-webfont.eot?v=5.0.45");
+  src: url("../fonts/materialdesignicons-webfont.eot?#iefix&v=5.0.45")
+      format("embedded-opentype"),
+    url("../fonts/materialdesignicons-webfont.woff2?v=5.0.45") format("woff2"),
+    url("../fonts/materialdesignicons-webfont.woff?v=5.0.45") format("woff"),
+    url("../fonts/materialdesignicons-webfont.ttf?v=5.0.45") format("truetype"),
+    url("../fonts/materialdesignicons-webfont.svg?v=5.0.45#materialdesigniconsregular")
+      format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.mdi:before,
+.mdi-set {
+  display: inline-block;
+  font: normal normal normal 24px/1 "Material Design Icons";
+  font-size: inherit;
+  text-rendering: auto;
+  line-height: inherit;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Brands";
+  font-style: normal;
+  font-weight: normal;
+  font-display: auto;
+  src: url("../fonts/fa-brands-400.eot");
+  src: url("../fonts/fa-brands-400.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fa-brands-400.woff2") format("woff2"),
+    url("../fonts/fa-brands-400.woff") format("woff"),
+    url("../fonts/fa-brands-400.ttf") format("truetype"),
+    url("../fonts/fa-brands-400.svg#fontawesome") format("svg");
+}
+
+.fab:before {
+  font-family: "Font Awesome 5 Brands";
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 400;
+  font-display: auto;
+  src: url("../fonts/fa-regular-400.eot");
+  src: url("../fonts/fa-regular-400.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fa-regular-400.woff2") format("woff2"),
+    url("../fonts/fa-regular-400.woff") format("woff"),
+    url("../fonts/fa-regular-400.ttf") format("truetype"),
+    url("../fonts/fa-regular-400.svg#fontawesome") format("svg");
+}
+
+.far:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Font Awesome 5 Free";
+  font-style: normal;
+  font-weight: 900;
+  font-display: auto;
+  src: url("../fonts/fa-solid-900.eot");
+  src: url("../fonts/fa-solid-900.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/fa-solid-900.woff2") format("woff2"),
+    url("../fonts/fa-solid-900.woff") format("woff"),
+    url("../fonts/fa-solid-900.ttf") format("truetype"),
+    url("../fonts/fa-solid-900.svg#fontawesome") format("svg");
+}
+
+.fa:before,
+.fas:before {
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+.fa:before,
+.fas:before,
+.far:before,
+.fal:before,
+.fab:before {
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  display: inline-block;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  line-height: 1;
+}
+
+@font-face {
+  font-family: "Linearicons-Free";
+  src: url("../fonts/Linearicons-Free.eot?w118d");
+  src: url("../fonts/Linearicons-Free.eot?#iefixw118d")
+      format("embedded-opentype"),
+    url("../fonts/Linearicons-Free.woff2?w118d") format("woff2"),
+    url("../fonts/Linearicons-Free.woff?w118d") format("woff"),
+    url("../fonts/Linearicons-Free.ttf?w118d") format("truetype"),
+    url("../fonts/Linearicons-Free.svg?w118d#Linearicons-Free") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+.lnr:before {
+  font-family: "Linearicons-Free";
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}

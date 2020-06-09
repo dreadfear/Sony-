@@ -1,0 +1,61 @@
+.product-specialist-display
+	@apply py-12
+	@screen lg
+		@apply pt-16 mt-2 pb-20
+	.zone-description
+		@apply mb-8
+		@screen lg
+			@apply mb-12
+
+.product-disable
+	.figure-product
+		.figcaption
+			.title
+				h2
+					@apply flex items-center
+					.product-disable
+						@apply px-4 bg-primary-1 text-12 font-bold text-white flex items-center uppercase
+						height: 20px
+
+.figure-product
+	@apply h-full overflow-hidden
+	border: 1px solid $azure-1
+	.figure-image
+		@apply p-8
+		a
+			display: block
+			height: 0
+			overflow: hidden
+			padding-top: 240 / 360 * 100%
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: contain
+	&:hover
+		.figcaption
+			@apply bg-azure-1
+			.title
+				@apply bg-azure-2
+			.btn-compare
+				@apply bg-azure-2
+	.figcaption
+		@apply bg-azure-3 cursor-pointer h-full transition
+		.title
+			@apply bg-azure-1 transition 
+			h2
+				a
+					@apply text-16 text-grey-2 flex items-center justify-start px-5
+					height: 50px
+		.caption
+			padding: 20px
+			@apply text-14 text-grey-2 leading-relaxed
+			*
+				@apply text-14 text-grey-2 leading-relaxed
+			ul
+				li
+					@apply flex items-start justify-start mb-2
+					+left-dot

@@ -1,0 +1,38 @@
+.top-banner
+	.swiper-slide
+		@apply h-auto
+	.wrapper
+		@apply h-full
+		a	
+			.image-1
+				@apply hidden
+				@media screen and ( min-width: 768px)
+					@apply block
+			.image-2
+				@apply hidden
+				@media screen and ( max-width: 767.9px)
+					@apply block
+					max-width: 100%
+					height: auto
+					width: 100%
+			@media screen and ( min-width: 768px)
+				+img-ratio(420/1920)
+	.btn-primary
+		@apply mt-4
+	.container-fluid
+		@apply h-full relative p-0
+		
+		.container
+			@apply absolute top-50 left-50 translate-50
+			.caption
+				max-width: 50%
+				@media screen and ( max-width:  1024px)
+					max-width: 100%
+				.title
+					@apply text-24 font-bold text-white mb-3 block
+					@screen lg
+						@apply text-32
+				.text
+					@apply text-16 text-white font-normal text-left leading-tight block
+					@screen lg
+						@apply text-28

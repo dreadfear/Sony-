@@ -1,0 +1,141 @@
+.toggle-show-more
+	article
+		.content-height
+			overflow: hidden
+			max-height: 150px
+			transition: max-height .5s ease-in-out
+		&.active
+			.content-height
+				transition: max-height 1s ease-in-out
+			.btn-show-more 
+				em
+					&:after
+						transition: .3s all ease-in-out
+						opacity: 0
+.table-responsive
+	@media screen and ( max-width:768px)
+		overflow-x: auto
+	table
+		@apply w-full
+		@media screen and ( max-width:768px)
+			white-space: nowrap
+		thead
+			tr
+				th
+					@apply text-white text-16 font-bold text-left  py-4  px-6
+					@media screen and ( min-width:1024px)
+						&:first-child
+							@apply pl-12
+		tbody
+			tr
+				&:nth-child(even)
+					background: #f5f5f5
+				td
+					@apply py-4 px-6
+					&:first-child
+						width: 25%
+					@media screen and ( min-width:1024px)
+						@apply pl-12
+					&:last-child
+						width: 25%
+						@apply  text-right pr-12
+						.btn-view-more
+							span
+								color: #af9a56
+.read-more-wrapper
+	article
+		.row
+			display: flex
+		p
+			display: none
+		.btn-primary
+			@apply mt-4
+			.text-2
+				@apply hidden
+			&:hover
+				em
+					transform: translateX(0)
+		.caption,.caption-normal
+			p
+				@apply block
+				&:nth-child(n+2)
+					display: none
+		&.active
+			p
+				@apply block
+			.caption,.caption-normal
+				p
+					@apply block
+					&:nth-child(n+2)
+						display: block
+			.btn-primary
+				span
+					&:first-child
+						display: none
+					&:last-child
+						display: block
+				.text-1
+					@apply hidden
+				.text-2
+					@apply block
+				em
+					&:after
+						transition: .3s all ease-in-out
+						opacity: 0
+.button-wrapper-left
+	@apply flex items-center justify-start
+.button-wrapper-right
+	@apply flex items-center justify-end
+.over-flow-scollbar
+	height: 300px
+	padding-right: 15px
+	overflow-y: auto
+	scrollbar-width: thin
+	scrollbar-color: $blue #cccccc
+	&::-webkit-scrollbar
+		background: #cccccc
+		width: 5px
+	&::-webkit-scrollbar-track
+		-webkit-box-shadow: inset 0 0 6px #cccccc
+		background-color: #cccccc
+	&::-webkit-scrollbar-thumb
+		background-color: $blue
+	@media screen and ( max-width:1024px)
+		height: 400px
+.product-section
+	.row
+		margin: 0 -5px
+		.col
+			padding: 0 5px
+			margin-bottom: 10px
+.toggle-item
+	@apply mb-1
+	&.active
+		.title
+			span,em
+				@apply text-blue
+			em
+				transform: rotate(-180deg)
+	&:hover
+		.title
+			span,em
+				@apply text-blue
+	.title
+		min-height: 60px
+		@apply flex justify-between items-center px-5 bg-azure-4
+		span
+			@apply text-18 font-normal text-dove transition
+		em
+			font-size: 16px
+			@apply text-dove transition
+
+	article
+		@apply hidden px-2 pt-4 pb-4
+		.title-text
+			@apply text-14 font-bold text-grey-2 inline-block
+			*
+				@apply text-14 font-bold text-grey-2 inline-block
+			&::first-letter
+				@apply uppercase
+		.caption
+			@apply text-14 font-normal text-grey-2

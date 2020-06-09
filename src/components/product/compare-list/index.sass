@@ -1,0 +1,29 @@
+.product-list-compare
+	@apply py-12
+	.figure-product
+		.button-wrapper-left
+			padding: 0 20px 20px 20px
+.select-product-compare
+	@apply bg-azure-4 pt-12 pb-20 overflow-auto
+	.button-wrapper-center
+		@apply mt-2
+	.figure-product
+		.figure-image
+			@apply bg-white
+	.row
+		@apply whitespace-no-wrap
+	.col
+		&:last-child
+			.figure-product
+				.figure-image
+					@apply bg-azure-1
+.figure-add-more
+	@apply flex items-center justify-center cursor-pointer transition bg-azure-1 h-full
+	em
+		font-size: 70px
+		@apply text-azure-2 transition
+		transform: rotate(-45deg)
+	&:hover
+		@apply bg-azure-2
+		em
+			@apply text-white

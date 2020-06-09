@@ -1,0 +1,51 @@
+.product-section-zone
+	@apply py-12
+	@screen lg
+		@apply py-32
+	&.reserve-zone
+		.row
+			@apply flex-row-reverse
+	&.grey-text
+		.head-title
+			@apply text-grey-2
+		.caption
+			@apply text-grey-2
+			*
+				@apply text-grey-2
+		.btn-view-more
+			span
+				@apply text-blue
+	.btn-view-more
+		@media screen and ( max-width:767.9px)
+			@apply items-center justify-center
+			
+	.figure-caption
+		.btn
+			@apply mt-6
+		@media screen and ( max-width:767.9px)
+			@apply text-center
+			
+	.caption
+		@apply text-14 leading-relaxed text-left text-white
+		*
+			@apply text-14 leading-relaxed text-left text-white
+		@media screen and ( max-width:767.9px)
+			@apply text-center px-8
+		@media screen and ( max-width:450px)
+			@apply px-4
+			
+	.image-wrapper
+		@media screen and ( max-width:767.9px)
+			@apply mt-10
+		a
+			@media screen and ( max-width:767.9px )
+				height: 200px
+				width: auto
+				img
+					max-width: 100%
+					height: auto
+					object-fit: contain
+					@apply mx-auto block
+		
+			@media screen and ( min-width:768px)
+				+img-ratio(330/530,contain)

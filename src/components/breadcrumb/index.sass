@@ -1,0 +1,71 @@
+.global-breadcrumb
+	background: #f3f3f3
+	position: relative
+	z-index: 1
+	min-height: 45px
+	
+	@apply flex justify-start items-center py-2
+	@media screen and(max-width:500px)
+		display: none
+	.breadcrumb
+	ol
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-flex
+			font-size: 14px
+			line-height: 23px
+			padding-right: 28px
+			position: relative
+			color: #666666
+			&:after
+				font-family: "Linearicons-Free"
+				content: '\e876'
+				display: block
+				position: absolute
+				color: #b8bdc2
+				left: -25px
+				bottom: 0
+				@apply text-20
+			&:first-child
+				&:after
+					content: ''
+			&:last-child
+				&:after
+					font-family: "Linearicons-Free"
+					content: '\e876'
+					display: block
+					position: absolute
+					color: #b8bdc2
+					left: -27px
+					bottom: 0
+					@apply text-20
+
+			&.active
+				color: #666666
+			a
+				font-size: 14px
+				text-decoration: none
+				line-height: 23px
+				color: #666666
+				*
+					font-family: 'Roboto'
+				&.active
+					@apply text-primary-1
+					&:after
+						@apply text-primary-1
+	@media screen and(max-width: 1200px)
+		padding: 10px 0
+		margin-bottom: 0
+	@media screen and(max-width: 768px)
+		margin-bottom: 0
+	@media screen and(max-width: 576px)
+		.breadcrumb
+			li
+				font-size: 14px
+				line-height: 22px
+				a
+					font-size: 13px
+					line-height: 22px
+					span
+						font-size: 13px

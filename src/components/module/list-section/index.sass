@@ -1,0 +1,29 @@
+.zone-display-section
+	@apply bg-white py-12
+	@screen xl
+		@apply py-16 
+	&.reserve-zone
+		@apply bg-azure-4
+		.row
+			@apply flex-row-reverse
+	.head-title
+		@media screen and ( max-width: 767.9px)
+			@apply text-center
+	.caption
+		@apply text-14 text-grey-2 leading-loose
+		*
+			@apply text-14 text-grey-2 leading-loose
+		@media screen and ( max-width: 767.9px)
+			@apply text-center text-16
+			*
+				@apply text-16
+			
+	.btn-view-more
+		span,em
+			@apply text-blue
+		@media screen and ( max-width: 767.9px)
+			@apply justify-center mb-8
+			
+	.image-wrapper
+		a
+			+img-ratio(390/540)

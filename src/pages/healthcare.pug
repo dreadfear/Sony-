@@ -1,0 +1,16 @@
+extends _layout.pug
+
+block var
+	- var title = 'Home'
+	- var bodyClass = 'homepage'
+
+block main
+	include ../components/breadcrumb/index.pug
+	include ../components/top-banner/index.pug
+	include ../components/healthcare/list/index.pug
+	include ../components/module/benefit/index.pug
+	include ../components/module/link-banner/index.pug
+	include ../components/module/list-section/index.pug
+	include ../components/module/news-related/index.pug
+	include ../components/module/product-related/index.pug
+	

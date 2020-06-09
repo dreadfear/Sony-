@@ -1,0 +1,31 @@
+$main-1: #2c3e50
+$main-2: #35495e
+$red: #e3352c
+$blue: #0975d0
+$gray: #666666
+$grey-2: #4a4a4a
+$azure-1: #e1f0f5
+$azure-2: #7ac3d3
+$azure-3: #f3f6fb
+$azure-4: #f1f9fb
+$yellow: #ffd200
+main
+	padding-top: 100px
+	@media screen and ( max-width:1024px)
+		padding-top: 60px
+body
+	//This cause fixed not working
+	// transform: translateX(0px)
+	transition: transform .3s ease
+	
+img[data-sizes="auto"]
+	display: block
+	width: 100%
+img:not([src])
+	visibility: hidden
+#wrapper,.wrapper
+	@apply relative transition-transform
+	&.open-mobile
+		transform: translateX(280px)
+		transition: transform .3s ease
+		width: 100%

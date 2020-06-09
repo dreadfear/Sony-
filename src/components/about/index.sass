@@ -1,0 +1,91 @@
+.about-display
+	@apply pt-16 pb-24 mt-2
+	@media screen and ( max-width: 1360px)
+		@apply pt-12 pb-16 mt-0
+		
+	.caption
+		@apply text-center text-14 font-light pb-16 px-8 leading-relaxed
+		color: $grey-2
+		@media screen and ( max-width:1360px)
+			@apply pb-8
+		@media screen and ( max-width:1200px)
+			@apply pb-6
+		@media screen and ( max-width:576px)
+			@apply px-0
+		*
+			@apply text-center text-14 font-light leading-relaxed
+			color: $grey-2
+	.figure-media
+		&.video
+			.play
+				@media screen and ( max-width: 1440px)
+					padding-top: 550 / 1110 * 100%
+				@media screen and ( max-width:768px)
+					padding-top: 620 / 1110 * 100%
+
+					
+.figure-media
+	&.video
+		.play
+			height: 100%
+			position: relative
+			display: block
+			height: 0
+			overflow: hidden
+			padding-top: 620 / 1110 * 100%
+			position: relative
+			video,iframe,img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: cover
+			&__icon
+				pointer-events: none
+				top: 50%
+				left: 50%
+				transform: translate(-50%,-50%)
+				position: absolute
+				z-index: 1
+				background: url('../img/icon/play.png')
+				background-size: cover
+				background-repeat: no-repeat
+				height: 95px
+				width: 95px
+				@media screen and ( max-width:767px)
+					width: 70px
+					height: 70px
+				@media screen and ( max-width:576px)
+					width: 60px
+					height: 60px
+					
+		.play-icon
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				z-index: 1
+				left: 50%
+				top: 50%
+				transform: translate(-50%,-50%)
+				width: 80px
+				height: 80px
+				background: rgba(#ffffff,.7)
+				border-radius: 50%
+				pointer-events: none
+			&:after
+				z-index: 0
+				background: none
+				content: '\f40a'
+				font-family: 'Material Design Icons'
+				font-size: 62px
+				display: block
+				position: absolute
+				left: 50%
+				top: 50%
+				pointer-events: none
+				transform: translate(-50%,-50%)
+		video,iframe
+			position: relative

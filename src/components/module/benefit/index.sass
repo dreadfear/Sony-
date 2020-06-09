@@ -1,0 +1,29 @@
+.benefits-display
+	background: #282828
+	@apply py-12
+	@screen xl
+		@apply pt-16 pb-18
+	.head-title
+		@apply pb-2 mb-2 text-white
+	.zone-description
+		@apply mb-6 text-white text-16  text-center
+		*
+			@apply text-16 text-white
+		@screen xl
+			@apply text-white mb-12
+	.row
+		.col
+			@apply mb-8
+			@screen xl
+				@apply mb-8
+.figure-benefit
+	.figure-image
+		a
+			+img-ratio(350/350)
+	.figcaption
+		h3
+			@apply my-6
+			a
+				@apply text-white text-left text-28 font-normal
+		.caption
+			@apply text-white text-left font-light text-14 leading-relaxed

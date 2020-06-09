@@ -1,0 +1,121 @@
+header
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100px
+	background: #ffffff
+	z-index: 50
+	border-bottom: 1px solid #ebebeb
+	box-shadow: 0px 0px 5px 0px rgba(9, 90, 126, 0.1)
+	transition: .3s all ease-in-out
+	@apply bg-black overflow-hidden
+	@media screen and ( max-width:1024px)
+		height: 60px
+	.container
+		@apply flex justify-between items-center h-full 
+	.header-wrapper-right
+		@apply flex items-center justify-end h-full
+	.header-wrapper-left
+		@apply flex items-center justify-start h-full
+		@media screen and ( max-width:767.9px)
+			@apply w-full flex items-center 
+	.nav-brand
+		@media screen and ( max-width:767.9px)
+			margin: 0 auto
+			@apply absolute top-50 left-50 translate-50
+		a
+			img
+				max-width: 100%
+				height: auto
+				width: 180px
+			@media screen and ( max-width:1024px)
+				img
+					width: 150px
+.main-menu-toggle
+	@apply hidden
+	@media screen and ( max-width:767.9px)
+		@apply block
+		width: 25px
+.language-wrapper
+	@apply p-0 ml-6 relative overflow-hidden
+	@media screen and ( max-width:767.9px)
+		@apply ml-0
+		width: 37px
+		
+	&:hover 
+		@apply overflow-visible
+		.language-list
+			@apply  opacity-100 pointer-events-auto
+		.current-language
+			a
+				em
+					transform: rotate(-180deg)
+	.current-language
+		@apply relative z-40 
+		a
+			@apply flex items-center justify-center
+			img
+
+				max-width: 20px
+				height: auto
+				width: 100%
+				min-height: 20px
+				@apply rounded-full
+			em
+				@apply ml-2 text-white transition
+				font-size: 10px
+	.language-list
+		@apply absolute left-0 list-none m-0 p-0 top-100 opacity-0 pointer-events-none transition pt-2
+		li
+			@apply inline-block
+			a
+				@apply my-4
+				img
+					border-radius: 50%
+					height: 20px
+					width: 20px
+				@media screen and ( max-width:1024px)
+					@apply text-16
+
+.navbar-primary-menu
+	@apply ml-20
+	@media screen and ( max-width:1024px)
+		@apply ml-4
+	@media screen and ( max-width:767.9px)
+		display: none
+		@apply ml-0 bg-black
+	.nav-primary
+		list-style-type: none
+		padding: 0
+		margin: 0
+		@apply h-full flex items-center justify-end
+		@media screen and ( max-width:767.9px)
+			@apply flex items-center justify-center flex-col w-full p-4
+		li
+			@apply inline-block h-full
+			@media screen and ( max-width:767.9px)
+				@apply block w-full
+			a
+				@apply text-14 font-medium px-6 py-4 transition text-white  relative flex items-center justify-center font-light
+				@media screen and ( max-width:1280px)
+					@apply px-4 
+		
+				@media screen and ( max-width:1024px)
+					@apply px-1 text-16
+				@media screen and ( max-width:767.9px)
+					@apply justify-start
+					&::first-letter
+						@apply uppercase
+
+	
+.mobile-wrapper
+	@apply absolute top-0 bottom-0 m-0 p-4 z-0
+	height: 100vh
+	left: -280px
+	width: 280px
+	transition: left 300ms ease-in-out
+	top: 0
+	&.active
+		@apply  pointer-events-auto bg-white z-50 
+

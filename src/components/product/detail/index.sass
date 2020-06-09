@@ -1,0 +1,300 @@
+.product-detail
+	.button-wrapper
+		.btn
+			&:not(:last-child)
+				@apply mr-2
+			@media screen and ( max-width:767px)
+				@apply mb-2
+	.row-padding
+		@apply py-12
+		@screen lg
+			@apply pt-20 pb-32
+		h1
+			@apply text-32 text-grey-2 uppercase font-bold mb-3
+		.caption
+			@apply text-28 font-light text-grey-2
+			*
+				@apply text-28 font-light text-grey-2 leading-snug
+			@media screen and ( max-width:1024px)
+				@apply 	mb-8
+				
+		.button-wrapper
+			@apply mt-3
+	.product-image
+		.wrapper
+			display: block
+			height: 0
+			overflow: hidden
+			padding-top: 280 / 530 * 100%
+			position: relative
+			img
+				position: absolute
+				top: 0
+				left: 0
+				width: 100%
+				height: 100%
+				object-fit: contain
+.product-sticky-scroll
+	@apply block bg-primary-1 fixed w-full
+	top: 0
+	z-index: 999
+	transform: translateY(-100%)
+	&.active
+		@apply fixed top-0 left-0 w-full
+		z-index: 999
+		transform: translateY(0)
+	.product-header
+		@apply flex justify-between items-start pt-12 pb-2
+		transform: translate-y-100
+		.title
+			h2
+				@apply text-white text-24 uppercase
+	.button-wrapper
+		.btn-primary
+			&:not(:last-child)
+				@apply mr-2
+			&:first-child
+				border: 1px solid #ffffff
+				span
+					@apply text-white
+		
+.product-detail-image
+	@apply  bg-azure-4 pt-12 pb-16 
+	@screen lg
+		@apply pt-20 pb-24
+	.swiper-product-detail
+		position: relative
+		.nav-arrow-prev,.nav-arrow-next
+			padding: 5px 15px
+			transition: .3s all ease-in-out
+			&:hover
+				background: rgba(#333333 ,.8 )
+			span
+				height: 25px
+		.nav-arrow-prev
+			left: -50px
+			@media screen and ( min-width:1200px) and ( max-width:1250px)
+				left: -35px
+			@media screen and ( max-width:1050px)
+				left: -35px
+			@media screen and ( max-width:  1024px)
+				left: 0
+		.nav-arrow-next
+			right: -50px
+			@media screen and ( min-width:1200px) and ( max-width:1250px)
+				right: -35px
+			@media screen and ( max-width:1050px)
+				right: -35px
+			@media screen and ( max-width:  1024px)
+				right: 0
+		.wrapper
+			@apply p-8 bg-white
+			a
+				display: block
+				height: 0
+				overflow: hidden
+				padding-top: 620 / 1100 * 100%
+				position: relative
+				img
+					position: absolute
+					top: 0
+					left: 0
+					width: 100%
+					height: 100%
+					object-fit: contain
+	.swiper-pagination
+		@apply left-50 translate-x-50
+		bottom: -30px
+		display: block !important
+.product-detail-summary
+	@apply  bg-white py-12
+	@screen lg
+		@apply pt-16 pb-16
+	.caption-text
+		
+		.title,strong
+			@apply text-16 text-grey-2 text-left mb-2 font-bold inline-block mb-4
+		@apply text-14 text-grey-2 text-left leading-relaxed mb-4
+		*
+			@apply text-14 text-grey-2 text-left leading-relaxed mb-4
+
+			
+.product-detail-option
+	@apply bg-azure-4 py-12
+	@screen lg
+		@apply pt-16 pb-20
+	.row-wrapper-cards
+		@apply -mx-4 
+		display: flex
+		flex-wrap: wrap
+		.column 
+			-ms-flex: 50%
+			flex: 50%
+			max-width: 50%
+			padding: 0 15px
+			@media screen and (max-width: 600px) 
+				-ms-flex: 100%
+				flex: 100%
+				max-width: 100%
+
+	.cards
+		@apply bg-white p-5 mb-5 inline-block
+		vertical-align: top
+		width: 100%
+		.title
+			@apply text-16 text-grey-2 font-bold text-left inline-block mb-4
+		.caption
+			@apply text-14 text-grey-2 text-left leading-relaxed
+			*
+				@apply text-14 text-grey-2 text-left leading-relaxed mb-4
+.product-detail-specification
+	@apply bg-white py-12 
+	@screen lg
+		@apply pt-12 pb-16
+	.container
+		@apply relative
+	.button-wrapper-right
+		@apply mt-4
+		@media screen and ( min-width: 1024.1px )
+			@apply  mb-8 absolute
+			right: 15px
+			top: 0
+	.toggle-wrapper
+		@apply 	mt-8
+		@media screen and ( min-width: 1024.1px )
+			@apply mt-20
+	.toggle-item
+		.title
+			@apply py-2
+			min-height: 55px
+.product-detail-document
+	@apply bg-azure-4 pt-12 pb-0
+	@screen lg
+		@apply pt-20 pb-8
+	.document-image
+		height: 70px
+		width: auto
+		@apply mb-6
+		img
+			width: 100%
+			height: 100%
+			object-fit: scale-down
+		
+	.figure-document
+		@apply mb-10
+		.title
+			@apply text-24 text-grey-2 text-left pb-4 mb-4
+			border-bottom: 1px solid $grey-2
+		.caption
+			@apply text-14 text-left leading-normal text-primary-1 mb-1
+			*
+				@apply text-14 text-left leading-normal text-primary-1 mb-1
+	.wrapper
+		@apply flex items-center justify-start pt-2
+		flex-wrap: wrap
+	.document-item
+		@apply flex flex-col mb-4 mx-4
+		max-width: 160px
+		.figure-image
+			@apply flex items-center justify-center
+			background: #eaeef3
+			width: 160px
+			height: 160px
+			a
+				height: 70px
+				width: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: scale-down
+		@media screen and ( max-width:1024px)
+			max-width: 110px
+			.figure-image
+				width: 110px
+				height: 110px
+				a
+					height: 50px
+			
+		.text-title
+			@apply mt-4 text-24 text-grey-2
+			*
+				@apply mt-4 text-24 text-grey-2
+			@media screen and ( max-width:  1024px)
+				@apply text-20
+				*
+					@apply text-20
+				
+.product-detail-faq
+	@apply bg-white pt-12
+	@screen lg
+		@apply py-20
+	.toggle-item
+		.title
+			height: 55px
+.product-detail-accessory
+	@apply bg-white pt-12 pb-20
+	@screen lg
+		@apply pb-20
+	.swiper-product-accessory
+		@apply relative
+		.swiper-pagination
+			@apply hidden
+			@media screen and ( max-width: 1024px)
+				@apply block
+				
+	.figure-accessory
+		.figure-image
+			@apply px-4
+			border: 1px solid #e0f0f5
+			a
+				+img-ratio(140/200,contain)
+		.figcaption
+			.title
+				@apply text-14 font-bold text-primary-1 uppercase mt-4 inline-block
+			.caption
+				@apply text-12 text-grey-2 font-light text-left mt-3
+				*
+					@apply text-12 text-grey-2 font-light text-left
+.product-detail-news
+	@apply bg-azure-4 pt-12 pb-20
+	@screen lg
+		@apply pt-20 pb-16
+	.swiper-news-related
+		@apply relative
+	.swiper-pagination
+		@apply hidden
+		@media screen and ( max-width:1024px)
+			@apply block
+	.product-news-related
+		.figure-image
+			a
+				+img-ratio(220/220,cover)
+		.figcaption
+			@apply mt-4
+			@screen lg
+				@apply mt-6
+			h2
+				a
+					@apply text-16 text-grey-2 text-left font-bold leading-normal
+			.caption
+				@apply mt-4 text-12 font-light
+				
+.product-detail-nav
+	@apply bg-primary-1
+	*
+		@apply text-white font-bold text-14
+	@media screen and ( max-width: 767px )
+		white-space: nowrap
+		ul
+			@apply overflow-auto justify-start
+		
+	ul
+		@apply flex
+		li
+			&:not(:last-child)
+				@apply inline-block pr-10
+			a
+				@apply flex items-center justify-center
+				height: 70px
+				&:hover
+					@apply text-white

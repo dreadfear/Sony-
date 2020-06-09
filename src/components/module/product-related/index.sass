@@ -1,0 +1,52 @@
+.product-related-display
+	@apply overflow-hidden pt-12 pb-24
+	@screen xl
+		@apply pt-12 pb-22
+.product-related-swiper
+	@apply relative
+	.swiper-slide
+		height: auto !important
+		@apply bg-white
+		.figure-product-related
+			@apply h-full
+		
+	.swiper-pagination
+		@apply hidden absolute translate-x-50 left-50 
+		bottom: -40px
+		@media screen and ( max-width: 1280px)
+			@apply block
+			
+	.nav-arrow-next,.nav-arrow-prev
+		span
+			color: #959ea7
+			&:hover
+				color: $main-1
+		@media screen and ( max-width: 1280px)
+			@apply hidden
+			
+	.nav-arrow-next
+		right: -45px 
+		@media screen and ( max-width:1280px)
+			right: -40px
+	.nav-arrow-prev
+		left: -45px
+		@media screen and ( max-width:1280px)
+			left: -40px
+.figure-product-related
+	.figure-image
+		border: 1px solid #e0f0f5
+		
+		a
+			+img-ratio(130/220,contain)
+			img
+				@apply py-4
+	.figcaption
+		h3
+			a
+				@apply text-16 font-bold text-primary-1 text-left my-4 inline-block
+				@screen lg
+					@apply my-4
+		.caption
+			@apply text-12 font-light text-left leading-relaxed
+			*
+				@apply text-12 font-light text-left leading-relaxed

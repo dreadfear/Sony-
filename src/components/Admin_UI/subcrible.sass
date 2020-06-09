@@ -1,0 +1,29 @@
+.subscribe
+	.subscribefrm
+		@apply relative
+		input
+			background: none
+			border-bottom: 1px solid #737271
+			width: 100%
+			height: 50px
+			padding: 0 20px  0 0
+			@apply text-grey text-16 font-normal
+			&::placeholder
+				@apply text-14 text-dove font-light
+			&:focus
+				outline: none
+		button
+			@apply absolute right-0
+			bottom: 10px
+			display: flex
+			justify-content: flex-end
+			align-items: center
+			width: 32px
+			&:focus
+				outline: none
+			.text
+				@apply text-white font-bold text-14 uppercase
+			em
+				@apply  
+				font-size: 18px
+				transition: .3s all ease-in-out

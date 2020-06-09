@@ -1,0 +1,47 @@
+.healthcare-display-1
+	@apply py-12
+	@screen xl
+		@apply py-18
+	.zone-description
+		@apply text-17 text-center text-grey-2
+		*
+			@apply text-17 text-grey-2
+.healthcare-solution
+	@apply bg-azure-4 pt-12 pb-6
+	@screen xl
+		@apply pt-16 pb-12
+	.row
+		.col
+			@apply mb-8
+			@screen xl
+				@apply mb-14
+	.btn-view-more
+		@apply mt-0
+.figure-healthcare
+	.figure-image
+		a
+			+img-ratio(250/350)
+	&.text-white
+		.figcaption
+			h2
+				a
+					@apply text-white text-left
+			.caption
+				@apply text-white text-left
+				*
+					@apply text-white text-left
+	.figcaption
+		h3
+			a
+				@apply text-28 text-grey-2 text-center block py-4
+				@screen xl
+					@apply py-6 
+	
+		.caption
+			@apply text-16 text-grey-2 text-center mb-4
+			@screen xl
+				@apply  mb-5 text-14
+			*
+				@apply text-16 text-grey-2 text-center mb-4
+					@screen xl
+						@apply  mb-6 text-14
