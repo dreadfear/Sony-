@@ -1,0 +1,56 @@
+.contact-1
+	@apply py-12
+	@screen xl
+		@apply py-18
+	.row
+		margin: 0
+		+ .row
+			margin-top: 5px
+		> *
+			padding: 0
+	.title-block
+		@apply bg-primary-1
+		padding: 20px
+		height: 100%
+		p
+			color: #fff
+			font-weight: 700
+	.content-block
+		@apply bg-azure-1
+		padding: 20px
+		p
+			color: #666666
+			line-height: 26px
+			span
+				@apply text-blue
+
+.contact-2
+	@apply py-12 bg-azure-3
+	@screen xl
+		@apply py-18
+	.form-contact
+		margin-top: 40px
+	.form-group
+		+ .form-group
+			margin-top: 20px
+		label
+			display: block
+			color: #4a4a4a
+			margin-bottom: 10px
+		input[type='text'], select, textarea
+			background: #fff
+			border: 1px solid #d7d7d7
+			height: 50px
+			width: 100%
+			padding: 0 15px
+		textarea
+			height: 200px
+			padding: 8px 15px
+	.frm-btn
+		margin-top: 30px
+		input[type="submit"]
+			@apply text-primary-1 font-bold uppercase
+			height: 48px
+			width: 144px
+			border: 1px solid #2c3e50
+			background: transparent
