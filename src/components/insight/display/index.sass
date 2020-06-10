@@ -1,0 +1,152 @@
+.insight-section
+	@apply pt-16 pb-8
+	@screen lg
+		@apply pt-16 pb-12
+	&.text-white
+		*
+			@apply text-white
+		.figure-insight
+			.figcaption
+				h3
+					a
+						@apply text-white
+				.caption
+					@apply text-white
+	.figure-insight
+		.figcaption
+			h3
+				a
+					@apply text-grey-2
+			.caption
+				@apply text-grey-2
+	.zone-description
+		@apply mb-8 text-center text-14 font-light
+		@screen lg
+			@apply mb-12
+		*
+			@apply text-center mb-4 text-14 font-light
+			@screen lg
+				@apply mb-8
+	.row
+		.col
+			@apply mb-8
+	
+.insight-display
+	@apply pt-16 pb-8
+	@screen lg
+		@apply pt-16 pb-12
+	.figure-insight
+		.figure-image
+			a
+				+img-ratio(230/350)
+.insight-display-2
+	@apply bg-black
+	@media screen and ( max-width:1024px)
+		@apply pb-16
+		
+	.figure-insight
+		.figure-image
+			a
+				+img-ratio(200/350)
+		.figcaption
+			h3
+				@apply text-center
+			.caption
+				@apply text-center
+				*
+					@apply text-center
+	.view-all-list-wrapper
+		@apply mt-8 pb-0
+		@screen lg
+			@apply mt-12 pb-6
+	.btn-view-more
+		span
+			@apply text-yellow
+.insight-display-3
+	@apply py-16
+	@apply pt-20 pb-12
+	.head-title
+		@apply mb-0
+	.figure-insight
+		.figure-image
+			a
+				+img-ratio(190/260)
+.insight-display-4
+	@apply pt-0 pb-16
+	@screen lg
+		@apply pt-4
+	.head-title
+		@apply font-bold
+.insight-display-6
+	.figure-insight
+		.figure-image
+			a
+				+img-ratio(190/350)
+	.btn-view-more
+		@apply mt-0
+	.view-all-list-wrapper
+		@apply mt-16
+		@media screen and ( max-width:1440.1px)
+			@apply mt-8
+		@media screen and ( max-width:1024px)
+			@apply mt-6
+		.head-title
+			@apply mb-2
+.insight-display-7
+	@apply pt-10 pb-12 
+	.figure-insight
+		.figure-image
+			a
+				+img-ratio(230/350)
+.insight-display-8
+	background: #555459
+	.zone-description
+		@apply text-left p-0 mb-0
+		*
+			@apply text-left p-0
+	.btn-view-more
+		@apply text-yellow
+		span
+			@apply text-yellow
+.insight-display-9
+	@apply py-16
+	@apply pt-16 pb-24
+	.head-title
+		@apply font-bold mb-0
+	.sub-title
+		@apply text-28 mb-6
+		@screen lg
+			@apply mb-8
+.figure-insight
+	.figcaption
+		h3
+			@apply mt-4
+			a
+				@apply text-20 text-grey-2 text-left leading-tight font-normal
+				@screen lg
+					@apply text-28 
+		.caption
+			@apply text-14 font-light leading-relaxed mt-4
+			*
+				@apply text-14 font-light leading-relaxed
+
+.swiper-insight-video
+	@apply relative
+	.swiper-pagination
+		@apply block absolute translate-x-50 left-50 
+		bottom: -40px
+	.nav-arrow-next,.nav-arrow-prev
+		span
+			color: #959ea7
+			&:hover
+				color: $main-1
+		@media screen and ( max-width: 1024px)
+			@apply hidden
+	.nav-arrow-next
+		right: -45px 
+		@media screen and ( max-width:1280px)
+			right: -40px
+	.nav-arrow-prev
+		left: -45px
+		@media screen and ( max-width:1280px)
+			left: -40px

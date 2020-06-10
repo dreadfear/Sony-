@@ -1,0 +1,300 @@
+.technology-detail-head
+	@apply py-16
+	@screen lg
+		@apply pt-16 pb-20
+
+	.image-wrapper
+		@apply my-12
+		@screen lg
+			@apply my-20
+		img
+			@apply block mx-auto
+.technology-detail-1
+	@apply py-16
+	&.normal-section
+		@apply pt-16 pb-0
+		.image-wrapper
+			@apply mt-0
+			@screen lg
+				@apply mt-4
+	.image-wrapper
+		@apply mt-8
+		@screen lg
+			@apply mt-20
+		img
+			@apply block mx-auto
+.technology-detail-2
+	@apply pb-16
+	@screen lg
+		@apply pb-20
+	&.normal-section
+		@apply pt-16 pb-0
+		.sub-title
+			@apply text-center text-24 text-grey-2 mb-4
+		.zone-description
+			@apply mb-0
+		.image-wrapper
+			@apply mt-6
+			@screen lg
+				@apply mt-8
+	&.bg-dark
+		@apply pt-16 pb-8
+		background: #000000
+		.head-title
+			@apply text-white
+		.zone-description
+			@apply text-white
+			*
+				@apply text-white
+		.title
+			@apply text-white
+			*
+				@apply text-white
+		.caption
+			@apply text-white
+				*
+					@apply text-white
+	.zone-description
+		@apply mb-4
+		@screen lg
+			@apply mb-12
+	.title
+		@apply text-center my-4
+		@screen lg
+			@apply my-8
+	.caption
+		@apply text-center text-14 font-light
+		*
+			@apply text-14 font-light
+	.explain-text
+		@apply text-center text-14 font-light italic mx-auto mt-4
+		@screen lg
+			@apply mt-16
+		*
+			@apply text-14 font-light italic
+	.row
+		.col
+			@media screen and ( max-width:767px)
+				@apply mb-8
+				
+	.image-wrapper
+		@media screen and ( max-width:767px)
+			img
+				@apply block mx-auto
+			
+.technology-detail-3
+	background: #222222
+	@apply pt-16 pb-0
+	@screen lg
+		@apply pt-16 pb-8
+	.head-title
+		@apply text-white text-center
+	.zone-description
+		p
+			@apply text-white text-14 font-light
+		strong
+			@apply font-normal text-yellow p-0 text-14 font-light
+	.product-section-include
+		h3
+			a
+				color: #ffffff !important
+		.caption
+			@apply text-white text-14 font-light text-center
+			*
+				@apply text-white text-14 font-light text-center
+.technology-detail-4
+	@apply pt-16 pb-8
+	@screen lg
+		@apply py-16 pb-20
+	.figure-technology-detail
+		.figcaption
+			.title
+				@apply my-4
+				@screen lg
+					@apply my-6
+			.caption
+				@apply text-14 font-light text-left leading-relaxed
+	.row
+		.col
+			@media screen and ( max-width:  1024px)
+				@apply mb-8
+				
+.technology-detail-5
+	@apply py-16
+	.head-title
+		@apply text-white
+.technology-detail-6
+	@apply py-16
+	@screen lg
+		@apply pt-16 pb-20
+	.head-title
+		@apply mb-0
+	.zone-description
+		@apply text-center
+		*
+			@apply text-center
+.technology-detail-three
+	@apply 
+	.zone-description
+		@apply text-14 text-left p-0
+		*
+			@apply text-14 font-normal text-left p-0
+	.image-wrapper
+		+img-ratio(380/540)
+	.row
+		@media screen and ( max-width:1024px)
+			.col
+				&:nth-child(1)
+					order: 1
+				&:nth-child(2)
+					order: 2
+					
+
+.technology-detail-four
+	@apply bg-azure-4
+	.row
+		@media screen and ( max-width:1024px)
+			.col
+				&:nth-child(2)
+					@apply mb-8
+	.zone-description
+		@apply text-14 text-left p-0
+		*
+			@apply text-14 font-normal text-left p-0
+.technology-detail-qoutes
+	@apply py-16
+	
+	.qoutes-text
+		@apply text-18 font-light text-grey-2 text-center  leading-relaxed relative
+		padding: 0 16%
+		@screen lg
+			@apply text-24
+		h2
+			@apply relative
+			&:before,&:after
+				
+				content: ''
+				width: 30px
+				height: 30px
+				display: inline-block
+				background-repeat: no-repeat
+				background-size: inherit
+				@apply mr-2  mt-2 absolute top-0
+						
+			&:before
+				background-image:  url('../img/icon/q-left.png')
+				left: -60px
+			&:after
+				background-image:  url('../img/icon/q-right.png')
+				right: -60px
+	.caption
+		@apply flex items-center justify-center flex-col mt-8
+		@screen lg
+			@apply mt-12
+		p
+			@apply text-18 font-light italic text-center
+.technology-detail-banner
+	.head-title
+		@apply text-white leading-relaxed mb-8
+		padding: 0 8%
+		@media screen and ( max-width:1024px)
+			padding: 0
+	.button-wrapper-center
+		@media screen and ( max-width:  500px)
+			@apply flex-col items-center
+			.btn-primary
+				&:first-child
+					@apply mb-4
+.technology-detail-11
+	@apply pb-16
+		
+.technology-detail-8,.technology-detail-9,.technology-detail-10,.technology-detail-11
+	background: #24272a
+	@apply pt-16
+	@screen lg
+		@apply py-16
+	.head-title
+		@apply text-white
+	.sub-title
+		@apply text-center text-24 text-grey-2 mb-4 text-white
+	.zone-description
+		@apply  text-white text-14 font-light text-center mb-8
+		*
+			@apply text-white
+		@screen lg
+			@apply mb-12
+	.image-wrapper
+		img
+			@apply block mx-auto
+	.title
+		@apply text-white text-28 my-4 text-center
+		@media screen and ( max-width:  1024px)
+			@apply text-20 
+	.caption
+		@apply text-white text-center font-light
+.technology-detail-11
+	.figure-view
+		@apply h-full flex flex-col justify-between items-center
+.technology-detail-12
+	@apply bg-black py-16
+	@screen lg
+		@apply pt-16 pb-24
+	.row
+		@media screen and ( max-width:1024px)
+			.col
+				@apply mb-8
+				&:nth-child(1)
+					order: 2
+				&:nth-child(2)
+					order: 1
+	.image-wrapper
+		@media screen and ( max-width:1024px)
+			img
+				@apply block mx-auto
+	.head-title
+		@apply text-yellow
+		@media screen and ( max-width: 1024px)
+			@apply text-center
+			
+	.title
+		@apply text-yellow mb-6
+		@media screen and ( max-width: 1024px)
+			@apply text-center
+	.caption
+		@apply text-14 font-light text-white text-left leading-relaxed
+		@media screen and ( max-width: 1024px)
+			@apply text-center mb-8
+			*
+				@apply text-center
+		*
+			@apply text-14 font-light text-white text-left leading-relaxed
+	.flex-row-reverse
+		@apply mt-8
+		@screen lg
+			@apply mt-12
+.banner-text-normal
+	@apply py-16
+	@screen lg
+		@apply pt-16 pb-20
+	.head-title
+		@apply text-white leading-relaxed mb-8
+		padding: 0 8%
+		@media screen and ( max-width:1024px)
+			padding: 0
+	.zone-description
+		@apply text-white text-14 font-light text-center
+		*
+			@apply text-white text-14 font-light text-center
+	.btn-view-more
+		span
+			@apply text-yellow
+.technology-reliability
+	.row
+		@media screen and ( max-width:1024px )
+			.col
+				@apply mb-8
+.techology-proof
+	.image-wrapper
+		@media screen and ( max-width:767px)
+			img
+				@apply block mx-auto

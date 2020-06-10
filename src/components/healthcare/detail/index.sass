@@ -45,7 +45,7 @@
 	.zone-description
 		@apply text-white
 		*
-			@apply text-white mb-3
+			@apply text-white mb-3 leading-relaxed
 			@screen lg
 				@apply mb-8
 		p 
@@ -276,6 +276,24 @@
 	@apply py-16
 	@screen lg
 		@apply py-20
+	.title-text
+		color: #fff
+		font-size: 28px
+		text-align: left
+		margin-bottom: 16px
+
+		@media screen and ( max-width:1024px)
+			font-size: 20px
+			
+	.caption
+		@apply text-14 font-light text-left text-white
+		*
+			@apply text-14 font-light text-left text-white
+	.row
+		.col
+			@apply mb-4
+			@screen lg
+				@apply mb-8
 	.head-title
 		@apply text-white
 	.zone-description
@@ -297,19 +315,7 @@
 		@media screen and ( max-width:1024px)
 			@apply my-10
 			
-	.title
-		@apply text-28 text-white text-left mb-6
-			@media screen and ( max-width:767px)
-				@apply text-20
-	.caption
-		@apply text-14 font-light text-left text-white
-		*
-			@apply text-14 font-light text-left text-white
-	.row
-		.col
-			@apply mb-4
-			@screen lg
-				@apply mb-8
+	
 .solution-detail-11,.solution-detail-12,.solution-detail-13
 	@apply pt-16 pb-4
 	.figure-image
@@ -346,3 +352,15 @@
 			@apply text-14 font-light text-white text-center
 			*
 				@apply text-14 font-light text-white text-center
+.figure-product-seciton
+	.figure-image
+		@apply p-4
+		a
+			+img-ratio(150/280,contain)
+	.figcaption
+		h3
+			a
+				@apply text-20
+				@screen lg
+					@apply text-28
+		
