@@ -8,14 +8,8 @@
                 <div class="row">
                     <div class="col w-full lg:w-1/2">
                         <div class="image">
-                            <img>
-                                <xsl:attribute name="src">
-                                    <xsl:value-of select="/NewsDetail/ImageUrl"></xsl:value-of>
-                                </xsl:attribute>
-                                <xsl:attribute name="alt">
-                                    <xsl:value-of select="/NewsDetail/Title"></xsl:value-of>
-                                </xsl:attribute>
-                            </img>
+                            <xsl:apply-templates select="/NewsDetail/NewsImages"></xsl:apply-templates>
+                            
                         </div>
                     </div>
                     <div class="col w-full lg:w-1/2">
@@ -30,6 +24,18 @@
                 </div>
             </div>
         </section>
+    </xsl:template>
+    <xsl:template match="NewsImages">
+        <xsl:if test="position()=1">
+            <img>
+                <xsl:attribute name="src">
+                    <xsl:value-of select="ImageUrl"></xsl:value-of>
+                </xsl:attribute>
+                <xsl:attribute name="alt">
+                    <xsl:value-of select="Title"></xsl:value-of>
+                </xsl:attribute>
+            </img>
+        </xsl:if>
     </xsl:template>
     <xsl:template match="NewsAttributes">
         <div class="toggle-item">
