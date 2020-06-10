@@ -9,10 +9,10 @@ header
 	border-bottom: 1px solid #ebebeb
 	box-shadow: 0px 0px 5px 0px rgba(9, 90, 126, 0.1)
 	transition: .3s all ease-in-out
-	@apply bg-black overflow-hidden
+	@apply bg-black
 	@media screen and ( max-width:1024px)
 		height: 60px
-	.container
+	> .container
 		@apply flex justify-between items-center h-full 
 	.header-wrapper-right
 		@apply flex items-center justify-end h-full
@@ -32,6 +32,37 @@ header
 			@media screen and ( max-width:1024px)
 				img
 					width: 150px
+.mega-menu
+	position: absolute
+	left: 0
+	top: 100%
+	width: 100%
+	z-index: 200
+	height: calc(100vh - 100px)
+	background: #2c3e50
+	padding: 30px
+	display: none
+	overflow-y: auto
+	&:before
+		position: absolute
+		content: ''
+		bottom: 100%
+		width: 100%
+		left: 0
+		height: 30px
+	.mega-item
+		margin-bottom: 30px
+	.mega-link
+		padding: 0 !important
+		display: block !important
+		img
+			display: block
+			margin-bottom: 17px
+		span
+			display: block
+			color: #31b6ee
+			font-size: 14px
+
 .main-menu-toggle
 	@apply hidden
 	@media screen and ( max-width:767.9px)
@@ -107,8 +138,13 @@ header
 					@apply justify-start
 					&::first-letter
 						@apply uppercase
+			&.has-mega
+				&:hover
+					.mega-menu
+						display: block
+				@media screen and ( max-width:767.9px)
+					position: relative
 
-	
 .mobile-wrapper
 	@apply absolute top-0 bottom-0 m-0 p-4 z-0
 	height: 100vh
