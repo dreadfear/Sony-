@@ -310,6 +310,85 @@ function swiperInit() {
 		}
 	});
 
+	var homeNews = new Swiper(".three-item-section .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		spaceBetween: 30,
+
+		autoplay: {
+			delay: 3000
+		},
+		centeredSlides:true,
+		breakpointsInverse: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+
+			},
+			450: {
+				slidesPerView: 2,
+
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1280: {
+				slidesPerView: 3,
+
+			},
+
+		},
+		pagination: {
+			el: '.lastest-news-swiper .swiper-pagination',
+			type: 'bullets',
+		},
+		navigation: {
+			nextEl: '.lastest-news-swiper .nav-arrow-next',
+			prevEl: '.lastest-news-swiper .nav-arrow-prev',
+		},
+
+	});
+
+	$(".four-item-section .swiper-container").each(function (index, element) {
+		var $this = $(this);
+		$this.addClass("instance-" + index);
+		// $this.parents('.tab-item').find(".nav-arrow-prev").addClass("btn-prev-" + index);
+		// $this.parents('.tab-item').find(".nav-arrow-next").addClass("btn-next-" + index);
+
+		var swiper = new Swiper(".instance-" + index, {
+			speed: 750,
+
+			observer: true,
+			spaceBetween: 60,
+			observeParents: true,
+			breakpointsInverse: true,
+			breakpoints: {
+				200: {
+					slidesPerView: 1
+				},
+				576: {
+					slidesPerView: 2
+				},
+				769: {
+					slidesPerView: 3
+				},
+				1200: {
+					slidesPerView: 4
+				},
+
+			},
+			// navigation: {
+			// 	nextEl: ".btn-next-" + index,
+			// 	prevEl: ".btn-prev-" + index
+			// }
+
+			// your settings ...
+		});
+	});
+
+		
+
+
 
 	var productDetail = new Swiper(".swiper-product-detail .swiper-container", {
 		// Optional parameters
@@ -390,12 +469,102 @@ function swiperInit() {
 
 	});
 
+	
+
+
+		
+	var clientBrand = new Swiper(".swiper-client-media .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3000
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			450: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1280: {
+				slidesPerView: 4,
+				slidesPerColumn: 3,
+			},
+		},
+		pagination: {
+			el: '.swiper-client-federations.swiper-pagination',
+			type: 'bullets',
+		},
+	});
+	
+	var clientBrand = new Swiper(".swiper-client-brands .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3000
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			450: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1280: {
+				slidesPerView: 5,
+			},
+		},
+		pagination: {
+			el: '.swiper-client-federations.swiper-pagination',
+			type: 'bullets',
+		},
+	});
+
+	
+	var clientFederation = new Swiper(".swiper-client-federations .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		spaceBetween: 30,
+		autoplay: {
+			delay: 3000
+		},
+		breakpointsInverse: true,
+		breakpoints: {
+			320: {
+				slidesPerView: 1,
+			},
+			450: {
+				slidesPerView: 2,
+			},
+			768: {
+				slidesPerView: 3,
+			},
+			1280: {
+				slidesPerView: 4,
+				slidesPerColumn: 3,
+			},
+		},
+		pagination: {
+			el: '.swiper-client-federations.swiper-pagination',
+			type: 'bullets',
+		},
+	
+
+	});
 
 }
 
-$(window).scroll(function () {
-	stickyProductNav();
-});
+
 
 function mappingMenu() {
 	return new MappingListener({
@@ -580,6 +749,12 @@ $(document).on("click", ".video .wrapper iframe", function (e) {
 function stickyProductDetail() {
 	if ($(".product-detail-nav").length) {
 		$('.product-detail-nav').scrollToFixed({
+				zIndex: 99,
+				marginTop: $('header').outerHeight()
+			});
+	}
+	if ($(".sticky-solution-nav").length) {
+		$('.sticky-solution-nav').scrollToFixed({
 				zIndex: 99,
 				marginTop: $('header').outerHeight()
 			});

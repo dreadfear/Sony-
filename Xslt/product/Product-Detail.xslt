@@ -18,7 +18,7 @@
 								<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes">
 								</xsl:value-of>
 								<div class="caption">
-									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/SubTitle">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FullContent">
 									</xsl:value-of>
 								</div>
 							</div>
@@ -496,14 +496,8 @@
 					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 				</span><em class="lnr lnr-chevron-down"></em></div>
 			<article>
-				<div class="row">
-					<div class="col w-full md:w-4/12">
-						<div class="title-text">hệ thống hiểm thị</div>
-					</div>
-					<div class="col w-full md:w-8/12">
-						<div class="caption">SXRD panlel</div>
-					</div>
-				</div>
+
+				<xsl:value-of disable-output-escaping="yes" select="Content"></xsl:value-of>
 			</article>
 		</div>
 	</xsl:template>

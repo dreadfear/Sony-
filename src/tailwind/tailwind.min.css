@@ -352,7 +352,7 @@ hr {
   .btn.btn-view-more {
     @apply flex text-center cursor-pointer   mt-4 {} }
     .btn.btn-view-more span {
-      @apply text-blue inline-block font-normal transition  text-14 font-normal text-yellow {} }
+      @apply text-blue inline-block font-normal transition  text-14 font-normal {} }
       .btn.btn-view-more span::first-letter {
         @apply uppercase {} }
     .btn.btn-view-more em {
@@ -550,9 +550,9 @@ footer {
     max-width: 1170px; } }
 
 .zone-description {
-  @apply text-center text-grey-2 px-4 leading-loose {} }
+  @apply text-center text-16 text-grey-2 px-4 leading-loose {} }
   .zone-description * {
-    @apply text-center text-grey-2 px-4 leading-loose {} }
+    @apply text-center text-16 text-grey-2 px-4 leading-loose {} }
   .zone-description.white {
     @apply text-white {} }
     .zone-description.white * {
