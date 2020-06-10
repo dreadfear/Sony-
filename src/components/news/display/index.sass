@@ -1,5 +1,6 @@
 .blog-display
-	@apply py-12 bg-azure-1
+	background: #f4f7fa
+	@apply py-12
 	@screen xl
 		@apply pt-15
 	.row
@@ -8,6 +9,29 @@
 			margin-bottom: 30px
 		+ .row
 			margin-top: 30px
+	.subnav-wrapper
+		margin-bottom: 40px
+		.subnav
+			ul
+				text-align: center
+				white-space: nowrap
+				overflow-x: auto
+				li
+					display: inline-block
+					+ li
+						margin-left: 20px
+					a
+						display: flex
+						align-items: center
+						justify-content: center
+						min-width: 180px
+						height: 40px
+						background: #e1f0f5
+						color: #2c3e50
+						transition: 0.3s all
+					&.active,&:hover
+						a
+							background: #7ac3d3
 
 
 .mobile-auto
