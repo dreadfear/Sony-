@@ -71,6 +71,10 @@
 		.figure-image
 			a
 				+img-ratio(190/260)
+	.caption
+		@apply text-center
+		*
+			@apply text-center
 .insight-display-4
 	@apply pt-0 pb-16
 	@screen lg
@@ -95,6 +99,11 @@
 .insight-display-7
 	@apply pt-10 pb-12 
 	.figure-insight
+		.figcaption
+			h3
+				@apply text-left
+				a
+					@apply text-left
 		.figure-image
 			a
 				+img-ratio(230/350)
@@ -120,7 +129,7 @@
 .figure-insight
 	.figcaption
 		h3
-			@apply mt-4
+			@apply mt-4 text-center
 			a
 				@apply text-20 text-grey-2 text-left leading-tight font-normal
 				@screen lg
@@ -128,7 +137,7 @@
 		.caption
 			@apply text-14 font-light leading-relaxed mt-4
 			*
-				@apply text-14 font-light leading-relaxed
+				@apply text-14 font-light leading-relaxed 
 
 .swiper-insight-video
 	@apply relative
