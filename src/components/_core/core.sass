@@ -33,4 +33,18 @@ img:not([src])
 	@apply text-28
 	@media screen and ( max-width:1024px)
 		@apply text-20
-		
+.section-caption
+	.zone-description
+		*
+			@apply  mb-3 leading-relaxed
+			@screen lg
+				@apply mb-8
+		@media screen and ( max-width:767px)
+			@apply text-14 
+			*
+				@apply text-14 
+		&.text-white
+			*
+				@apply text-white
+.uk-container
+	@apply hidden

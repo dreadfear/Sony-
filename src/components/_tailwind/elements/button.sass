@@ -3,7 +3,7 @@
 	@apply text-16 font-normal text-center cursor-pointer
 	transition: .3s all ease-in-out
 	&.btn-primary
-		@apply  inline-flex text-center cursor-pointer items-center justify-center px-4
+		@apply  inline-flex text-center cursor-pointer items-center justify-center px-4 mx-2
 		border: 1px solid $grey-2
 		height: 50px
 		min-width: 140px
@@ -31,10 +31,20 @@
 		@apply mr-4
 	&.yellow
 		@apply bg-yellow transition
-		border: 2px solid transparent
+		border: 1px solid transparent
 		&:hover
 			@apply bg-primary-1
-			border: 2px solid $yellow !important
+			border: 1px solid $yellow !important
+			span
+				@apply text-yellow
+	&.white
+		@apply  transition
+		border: 1px solid #ffffff
+		span
+			@apply text-white
+		&:hover
+			@apply bg-white
+			border: 1px solid #ffffff !important
 			span
 				@apply text-grey-2
 	&.btn-compare
@@ -52,6 +62,7 @@
 	
 	&.btn-view-more
 		@apply  flex text-center cursor-pointer   mt-4
+		background: none !important
 		span
 			@apply text-blue inline-block font-normal transition  text-14 font-normal 
 			&::first-letter

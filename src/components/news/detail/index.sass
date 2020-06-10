@@ -1,0 +1,108 @@
+.blog-detail-display
+	@apply pt-12 pb-4
+	@screen lg
+		@apply pt-16 pb-8
+	.bottom-wrapper
+		@apply flex items-center flex-row justify-between
+		.social-network-share
+			margin-top: 0
+			@apply mb-2
+		time
+			@apply text-14 font-normal inline-block mb-2
+			color: #999999
+			&::first-letter
+				text-transform: uppercase
+	.blog-detail-wrapper
+		.title-blue
+			@apply mb-2 text-24 text-blue font-bold
+		.briefcontent
+			color: #666666
+			@apply text-16 font-medium mt-4
+			*
+				color: #666666
+				@apply text-16 font-medium my-4
+		.fullcontent
+			@apply text-16 font-normal text-justify mb-4 
+		
+			*
+				@apply text-16 font-normal text-justify mb-4
+			span
+				margin: 0 -2px
+			
+			img
+				max-width: 100%
+				height: auto
+				@apply block
+				margin: 15px auto
+			a
+				@apply text-primary-2 font-bold inline
+			h2,strong
+				@apply text-16 text-primary-2 font-bold inline-block my-4
+.other-news
+	background: #f3f3f3
+	padding: 30px 30px 0 30px
+	@media screen and ( max-width:1024px)
+		padding: 30px 15px 0 15px
+	.title-section-wrapper
+		@apply mb-8
+		.title-blue
+			@apply text-24 font-normal  text-blue
+			&:after
+				height: 2px
+	.other-news-figure
+		&:not(:last-child)
+			border-bottom: 1px solid #eaeaea
+		a
+			@apply flex flex-row items-center justify-between 
+			padding: 20px 0
+			@media screen and ( max-width:  576px)
+				@apply flex-col
+				
+		&:first-child
+			a
+				padding: 0 0 20px 0
+		.figure-image
+			max-width: 100px
+			.wrapper
+				height: 75px
+				width: auto
+				img
+					width: 100%
+					height: 100%
+					object-fit: cover
+		.caption
+			padding-left: 15px
+			width: calc( 100% - 100px )
+			time
+				@apply text-12 font-normal
+				color: #666666
+				@media screen and ( max-width:1024px)
+					@apply text-14
+					
+			h2
+				@apply text-14 font-medium text-grey text-left
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+				transition: .3s all ease-in-out
+				&:hover
+					@apply text-primary-2
+				@media screen and ( max-width:1024px)
+					@apply text-16
+					-webkit-line-clamp: 4
+		@media screen and ( max-width:1024px )
+			.figure-image
+				max-width: 150px
+				.wrapper
+					height: 150px
+			.caption
+				width: calc( 100% - 150px )
+		@media screen and ( max-width:576px )
+			.figure-image
+				max-width: 100%
+				.wrapper
+					height:  100%
+			.caption
+				width: 100%
+				padding-left: 0

@@ -308,7 +308,7 @@ hr {
 .btn {
   @apply text-16 font-normal text-center cursor-pointer {}  transition: .3s all ease-in-out; }
   .btn.btn-primary {
-    @apply inline-flex text-center cursor-pointer items-center justify-center px-4 {}    border: 1px solid #4a4a4a;
+    @apply inline-flex text-center cursor-pointer items-center justify-center px-4 mx-2 {}    border: 1px solid #4a4a4a;
     height: 50px;
     min-width: 140px; }
     @media screen and (max-width: 1024.1px) {
@@ -333,10 +333,18 @@ hr {
   .btn.btn-open-all {
     @apply mr-4 {} }
   .btn.yellow {
-    @apply bg-yellow transition {}    border: 2px solid transparent; }
+    @apply bg-yellow transition {}    border: 1px solid transparent; }
     .btn.yellow:hover {
-      @apply bg-primary-1 {}      border: 2px solid #ffd200 !important; }
+      @apply bg-primary-1 {}      border: 1px solid #ffd200 !important; }
       .btn.yellow:hover span {
+        @apply text-yellow {} }
+  .btn.white {
+    @apply transition {}    border: 1px solid #ffffff; }
+    .btn.white span {
+      @apply text-white {} }
+    .btn.white:hover {
+      @apply bg-white {}      border: 1px solid #ffffff !important; }
+      .btn.white:hover span {
         @apply text-grey-2 {} }
   .btn.btn-compare {
     @apply flex  cursor-pointer bg-azure-1 items-center justify-center {}    border-radius: 15px;
@@ -350,7 +358,7 @@ hr {
     .btn.btn-compare span {
       @apply text-14 text-grey-2 font-semibold {} }
   .btn.btn-view-more {
-    @apply flex text-center cursor-pointer   mt-4 {} }
+    @apply flex text-center cursor-pointer   mt-4 {}    background: none !important; }
     .btn.btn-view-more span {
       @apply text-blue inline-block font-normal transition  text-14 font-normal {} }
       .btn.btn-view-more span::first-letter {
@@ -550,9 +558,9 @@ footer {
     max-width: 1170px; } }
 
 .zone-description {
-  @apply text-center text-16 text-grey-2 px-4 leading-loose {} }
+  @apply text-16 text-grey-2 px-4 leading-loose {} }
   .zone-description * {
-    @apply text-center text-16 text-grey-2 px-4 leading-loose {} }
+    @apply text-16 text-grey-2 px-4 leading-loose {} }
   .zone-description.white {
     @apply text-white {} }
     .zone-description.white * {

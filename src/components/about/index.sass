@@ -34,6 +34,21 @@
 			overflow: hidden
 			padding-top: 620 / 1110 * 100%
 			position: relative
+			&:hover,&.active
+				&::before
+					opacity: 0
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				bottom: 0
+				width: 100%
+				z-index: 9
+				pointer-events: none
+				height: 1000%
+				background: rgba(#000000,.3)
+				transition: .3s all ease-in-out
 			video,iframe,img
 				position: absolute
 				top: 0
@@ -47,8 +62,8 @@
 				left: 50%
 				transform: translate(-50%,-50%)
 				position: absolute
-				z-index: 1
-				background: url('../img/icon/play.png')
+				z-index: 10
+				background: url('../img/icon/play.png') 
 				background-size: cover
 				background-repeat: no-repeat
 				height: 95px
