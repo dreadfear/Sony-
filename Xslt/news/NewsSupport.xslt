@@ -23,7 +23,7 @@
                     
                 </div>
             </div>
-        </section>
+        </section>  
     </xsl:template>
     <xsl:template match="NewsImages">
         <xsl:if test="position()=1">
