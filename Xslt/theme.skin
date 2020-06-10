@@ -26,6 +26,8 @@
 	/>
 <portal:DealerDisplaySettings runat="server"
 	ShowDescription="true"
+	ShowFax="true"
+	ShowWebsite="true"
 	/>
 <portal:ProductDisplaySettings runat="server"
 	ShowOldPrice="true"

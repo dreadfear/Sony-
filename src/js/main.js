@@ -565,7 +565,6 @@ function swiperInit() {
 }
 
 
-
 function mappingMenu() {
 	return new MappingListener({
 		selector: ".navbar-primary-menu",
