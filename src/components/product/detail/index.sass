@@ -20,6 +20,14 @@
 				
 		.button-wrapper
 			@apply mt-3
+				
+			.btn
+				@media screen and ( max-width: 767px)
+					@apply mx-0
+					&:first-child
+						@apply mr-2
+				&:first-child
+					@apply ml-0
 	.product-image
 		.wrapper
 			display: block
@@ -34,29 +42,29 @@
 				width: 100%
 				height: 100%
 				object-fit: contain
-.product-sticky-scroll
-	@apply block bg-primary-1 fixed w-full
-	top: 0
-	z-index: 999
-	transform: translateY(-100%)
-	&.active
-		@apply fixed top-0 left-0 w-full
-		z-index: 999
-		transform: translateY(0)
-	.product-header
-		@apply flex justify-between items-start pt-12 pb-2
-		transform: translate-y-100
-		.title
-			h2
-				@apply text-white text-24 uppercase
-	.button-wrapper
-		.btn-primary
-			&:not(:last-child)
-				@apply mr-2
-			&:first-child
-				border: 1px solid #ffffff
-				span
-					@apply text-white
+// .product-sticky-scroll
+// 	@apply block bg-primary-1 fixed w-full
+// 	top: 0
+// 	z-index: 999
+// 	transform: translateY(-100%)
+// 	&.active
+// 		@apply fixed top-0 left-0 w-full
+// 		z-index: 999
+// 		transform: translateY(0)
+// 	.product-header
+// 		@apply flex justify-between items-start pt-12 pb-2
+// 		transform: translate-y-100
+// 		.title
+// 			h2
+// 				@apply text-white text-24 uppercase
+// 	.button-wrapper
+// 		.btn-primary
+// 			&:not(:last-child)
+// 				@apply mr-2
+// 			&:first-child
+// 				border: 1px solid #ffffff
+// 				span
+// 					@apply text-white
 		
 .product-detail-image
 	@apply  bg-azure-4 pt-12 pb-16 
@@ -160,6 +168,7 @@
 			right: 15px
 			top: 0
 	table
+		@apply w-full
 		tbody
 			tr
 				td
@@ -294,6 +303,29 @@
 				@apply mt-4 text-12 font-light
 				
 .product-detail-nav
+	&.scroll-to-fixed-fixed
+		@apply pt-6
+		.row
+			@apply flex opacity-100
+			max-height: 50px
+	.button-wrapper-right
+		@media screen and ( max-width:767px)
+			margin: 0 -10px
+			@apply flex flex-row justify-between items-center 
+			flex-wrap: wrap
+			.btn
+				padding: 0 10px
+				width: calc( 50% - 20px )
+				&:not(:last-child)
+					@apply mb-4
+	.row
+		@apply  opacity-0 transition flex
+		max-height: 0
+		@media screen and ( max-width:1439px)
+			@apply pt-6
+			
+		.head-title
+			@apply text-24 font-normal uppercase
 	@apply bg-primary-1
 	*
 		@apply text-white font-bold text-14
@@ -305,10 +337,32 @@
 	ul
 		@apply flex
 		li
+			@apply relative
 			&:not(:last-child)
 				@apply inline-block pr-10
+			&.active
+				a
+					&::before
+						opacity: 1
 			a
-				@apply flex items-center justify-center
+				@apply flex items-center justify-center relative
 				height: 70px
+				@media screen and ( max-width:1439px)
+					height: 50px
+				&:before
+					top: 100%
+					left: 50%
+					border: solid transparent
+					content: " "
+					height: 0
+					width: 0
+					position: absolute
+					pointer-events: none
+					border-color: rgba(44, 62, 80, 0)
+					border-top-color: #2c3e50
+					border-width: 12px
+					opacity: 0
+					margin-left: -12px
+					transition: .3s all ease-in-out
 				&:hover
 					@apply text-white

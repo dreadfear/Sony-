@@ -1,3 +1,18 @@
+.product-section
+	.row
+		margin: 0 -5px
+		.col
+			padding: 0 5px
+			margin-bottom: 10px
+	.figure-product
+		.figcaption
+			
+			.title
+				h2
+					@apply flex items-center
+		
+		.button-wrapper-left
+			padding: 0 20px 20px 20px
 .product-specialist-display
 	@apply py-12
 	@screen lg
@@ -6,35 +21,18 @@
 		@apply mb-8
 		@screen lg
 			@apply mb-12
-
-.product-disable
-	.figure-product
-		.figcaption
-			.title
-				h2
-					@apply flex items-center
-					.product-disable
-						@apply px-4 bg-primary-1 text-12 font-bold text-white flex items-center uppercase
-						height: 20px
-
+		ul
+			@apply text-center
+	.button-wrapper-left
+		.btn-primary
+			@apply ml-0
 .figure-product
 	@apply h-full overflow-hidden
 	border: 1px solid $azure-1
 	.figure-image
 		@apply p-8
 		a
-			display: block
-			height: 0
-			overflow: hidden
-			padding-top: 240 / 360 * 100%
-			position: relative
-			img
-				position: absolute
-				top: 0
-				left: 0
-				width: 100%
-				height: 100%
-				object-fit: contain
+			+img-ratio(240/360,contain)
 	&:hover
 		.figcaption
 			@apply bg-azure-1
@@ -45,11 +43,16 @@
 	.figcaption
 		@apply bg-azure-3 cursor-pointer h-full transition
 		.title
-			@apply bg-azure-1 transition 
+			@apply bg-azure-1 transition flex flex-row items-center px-4
+			@screen lg
+				@apply px-5
 			h2
 				a
-					@apply text-16 text-grey-2 flex items-center justify-start px-5
+					@apply text-16 text-grey-2 flex items-center justify-start 
 					height: 50px
+		.product-disable
+			@apply px-4 bg-primary-1 text-12 font-bold text-white flex items-center uppercase whitespace-no-wrap ml-2
+			height: 20px
 		.caption
 			padding: 20px
 			@apply text-14 text-grey-2 leading-relaxed
@@ -59,3 +62,5 @@
 				li
 					@apply flex items-start justify-start mb-2
 					+left-dot
+					&::before
+						color: #333333

@@ -4,35 +4,20 @@
 	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 		<div class="current-language">
-			<xsl:apply-templates select="/LanguageList/Language" mode='Inactive'></xsl:apply-templates>
+			<xsl:apply-templates select="/LanguageList/Language" mode='Active'></xsl:apply-templates>
+
 
 		</div>
 		<ul class="language-list">
-			<xsl:apply-templates select="/LanguageList/Language" mode='Active'></xsl:apply-templates>
+			<xsl:apply-templates select="/LanguageList/Language" mode='Inactive'></xsl:apply-templates>
+
 		</ul>
 
 
 	</xsl:template>
 	<xsl:template match="Language" mode="Inactive">
 		<xsl:if test="IsActive != 'true'">
-			<a href="javascript:;">
-
-				<img>
-				<xsl:attribute name="src">
-					<xsl:value-of select="ImageUrl"></xsl:value-of>
-				</xsl:attribute>
-				<xsl:attribute name="alt">
-					<xsl:value-of select="Title"></xsl:value-of>
-				</xsl:attribute>
-				</img>
-				<em class="lnr lnr-chevron-down"></em>
-			</a>
-
-		</xsl:if>
-	</xsl:template>
-	<xsl:template match="Language" mode='Active'>
-		<xsl:if test="IsActive = 'true'">
-			<li>
+	<li>
 				<a>
 					<xsl:attribute name="href">
 						<xsl:value-of select="Url"></xsl:value-of>
@@ -51,6 +36,26 @@
 					</img>
 
 				</a></li>
+
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="Language" mode='Active'>
+		<xsl:if test="IsActive = 'true'">
+
+			<a href="javascript:;">
+
+				<img>
+				<xsl:attribute name="src">
+					<xsl:value-of select="ImageUrl"></xsl:value-of>
+				</xsl:attribute>
+				<xsl:attribute name="alt">
+					<xsl:value-of select="Title"></xsl:value-of>
+				</xsl:attribute>
+				</img>
+				<em class="lnr lnr-chevron-down"></em>
+			</a>
+
+		
 
 		</xsl:if>
 	</xsl:template>

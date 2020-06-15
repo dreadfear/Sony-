@@ -37,6 +37,7 @@
     ShowStockQuantity="true"
     ShowComments="true"
     ShowProductParent="false" 
+	ShowRelatedNews="true"
 	/>
 <portal:ManufacturerDisplaySettings runat="server"
     ShowDescription="true"

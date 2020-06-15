@@ -1,0 +1,116 @@
+.insight-detail-section
+	@apply py-16
+	.row
+		margin-top: -30px
+		.col
+			margin-bottom: 30px
+	.head-title
+
+.insight-detail-1
+	.head-title
+		@apply mb-0
+	.zone-description
+		@apply text-14 font-light text-center mb-8
+		@screen lg
+			@apply mb-12
+		*
+			@apply text-14 font-light
+.insight-detail-2
+	@apply bg-azure-4
+	.head-title
+		@apply pb-10
+		@screen lg
+			@apply pb-14
+	.figure-insight-detail
+		.figure-image
+			a
+			@media screen and ( max-width:1024px)
+				img
+					@apply block mx-auto
+				
+		.figcaption
+			@apply text-center
+			@screen lg
+				@apply text-left
+			.title
+				@apply text-20 inline-block my-4
+				@screen lg
+					@apply text-28 
+				
+			ul
+				li
+					margin-left: 16px
+					@apply mb-2 text-14 font-light
+					+left-dot
+					&::before
+						color: #333333
+						padding-right: 2px
+						margin-left: -10px
+.insight-detail-product-related
+	.swiper-slide
+		height: auto !important
+	.figure-product-related-sample
+		@apply h-full flex flex-col justify-between
+		.figure-image
+			@apply p-4
+			@screen lg
+				@apply p-4
+				
+			a
+				+img-ratio(175/200,contain )
+		.figcaption
+			h3
+				@apply text-center my-2
+				a
+					@apply text-20 text-center
+					@screen lg
+						@apply text-28
+.insight-detail-3
+	@apply bg-azure-4 py-16
+	.head-title
+		@apply text-center
+		@screen lg
+			@apply text-left
+	.row
+		margin-top: 0 !important
+		.col
+			margin-bottom: 0 !important
+	.image-wrapper
+		@apply mt-8
+		@screen lg
+			@apply mt-0
+		img
+			@apply block mx-auto
+.insight-detail-5
+	@apply py-16
+	.row
+		margin-top: 0 !important
+		.col
+			margin-bottom: 0 !important
+	.image-wrapper
+		img
+			@apply block mx-auto
+	.head-title
+		@apply mt-8
+		@screen lg
+			@apply mt-0
+.insight-detail-4
+	.row
+		margin-top: 0 !important
+		.col
+			margin-bottom: 0 !important
+	.image-wrapper
+		@apply mt-8
+		@screen lg
+			@apply mt-0
+		img
+			@apply block mx-auto
+.insight-detail-text,.insight-detail-4
+	.zone-description
+		@apply p-0
+		p
+			@apply p-0
+.insight-detail-6
+	padding-top: 0
+.insight-detail-7
+	@apply bg-azure-4

@@ -1,6 +1,9 @@
-.product-disable
-	.button-wrapper-left
-		@apply mt-3
+.product-news-section-wrapper
+	.product-section-zone
+		&:nth-child(even)
+			.row
+				@apply flex-row-reverse
+			
 .product-section-zone
 	@apply py-12
 	@screen lg
@@ -19,10 +22,14 @@
 			span
 				@apply text-blue
 	.btn-view-more
+		span
+			@apply text-yellow
 		@media screen and ( max-width:767.9px)
 			@apply items-center justify-center
 			
 	.figure-caption
+		.head-title
+			@apply text-white
 		.btn
 			@apply mt-6
 		@media screen and ( max-width:767.9px)

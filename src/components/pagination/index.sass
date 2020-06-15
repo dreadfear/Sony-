@@ -1,0 +1,31 @@
+//Type 1 first child icon
+.modulepager
+	@apply flex items-center justify-center pt-0 pb-12
+	background: transparent
+	ul
+		padding: 0
+		margin: 0
+		position: relative
+		li
+			display: inline-block
+			padding: 0 10px
+	
+			&:hover,&.active
+				a,span
+					@apply bg-azure-2
+			span,a
+				display: flex
+				justify-content: center
+				align-items: center
+				text-decoration: none
+				color: #333333
+				font-size: 18px
+				transition: .3s all ease-in-out
+				width: 40px
+				height: 40px
+				@apply bg-azure-1 text-primary-1 flex items-center justify-center
+				
+				@media screen and ( max-width:1024px)
+					height: 32px
+					width: 32px
+					

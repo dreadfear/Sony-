@@ -18,7 +18,29 @@
 			color: #4a4a4a
 	.blog-detail-content
 		@apply py-10
-	.blog-detail-content
 		line-height: 26px
 		.btn-back
 			margin-top: 40px
+		img
+			max-width: 100%
+			height: auto
+			@apply block mx-auto my-4
+.news-contact-banner
+	@apply py-12 bg-primary-1 hidden
+	border-bottom: 1px solid #7ac3d3
+	@screen lg
+		@apply py-16
+	.head-title
+		@apply text-white
+	.button-wrapper-center
+		@media screen and ( max-width:576px)
+			@apply flex-col
+	.btn-primary
+		min-width: 250px
+		@media screen and ( max-width:1024px)
+			min-width: 200px
+		@media screen and ( max-width: 576px)
+			&:first-child
+				@apply mb-4
+			
+			

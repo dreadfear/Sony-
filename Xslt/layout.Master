@@ -46,6 +46,7 @@ Facebook: https://fb.com/canhcam.vn
 	<meta name="msapplication-tap-highlight" content="no">
 	<meta name="apple-mobile-web-app-capable" content="yes">
 	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/Data/Sites/1/skins/default/css/custom.min.css" />
 	<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries-->
 	<!-- WARNING: Respond.js doesn't work if you view the page via file://-->
 	<!--if lt IE 9
@@ -278,6 +279,7 @@ Facebook: https://fb.com/canhcam.vn
 	<script src="/Data/Sites/1/skins/default/js/main.min.js?v=1.0.0"></script>
 	<script src="/Data/Sites/1/skins/default/js/ecommerce.js?v=1.2.0"></script>
 	<script src="/Data/Sites/1/skins/default/js/comment.min.js"></script>
+	<script src="/Data/Sites/1/skins/default/js/compare.js"></script>
 	<script type="text/javascript">
 		function HideToolbar() {
 			$(".cmsadminpanel").addClass("toggled"), $(".fa-chevron-circle-right").addClass("fa-rotate-180")

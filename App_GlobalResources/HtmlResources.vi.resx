@@ -254,7 +254,7 @@
 	<data name="CAllText" xml:space="preserve">
 		<value> Đóng tất cả </value>
 	</data>
-	<data name="DownloadDocumentText" xml:space="preserve">
+	<data name="DDText" xml:space="preserve">
 		<value>Tài liệu tải về </value>
 	</data>
 	<data name="FaqText" xml:space="preserve">
@@ -269,13 +269,13 @@
 	<data name="AvailableText" xml:space="preserve">
 		<value> Sản phẩm đang bán</value>
 	</data>
-	<data name="UnavailableText" xml:space="preserve">
+	<data name="OutStock" xml:space="preserve">
 		<value> Sản phẩm ngưng bán</value>
 	</data>
 	<data name="CompareText" xml:space="preserve">
 		<value> So sánh</value>
 	</data>
-	<data name="UnavailableText" xml:space="preserve">
+	<data name="OutStockText" xml:space="preserve">
 		<value> Ngừng bán</value>
 	</data>
 	<data name="ProductRelatedText" xml:space="preserve">
@@ -313,6 +313,12 @@
 	</data>
 	<data name="VMAText" xml:space="preserve">
 		<value>Xem thêm > </value>
+	</data>
+	<data name="BackListText" xml:space="preserve">
+		<value>Trở lại trang danh sách </value>
+	</data>
+	<data name="PCText" xml:space="preserve">
+		<value>So sánh sản phẩm </value>
 	</data>
 
 </root>

@@ -255,7 +255,7 @@
 	<data name="CAllText" xml:space="preserve">
 		<value> Close all</value>
 	</data>
-	<data name="DownloadDocumentText" xml:space="preserve">
+	<data name="DDText" xml:space="preserve">
 		<value>Download Document </value>
 	</data>
 	<data name="FaqText" xml:space="preserve">
@@ -270,13 +270,13 @@
 	<data name="AvailableText" xml:space="preserve">
 		<value> Available product</value>
 	</data>
-	<data name="UnavailableText" xml:space="preserve">
+	<data name="OutStock" xml:space="preserve">
 		<value> Currently unavailable</value>
 	</data>
 	<data name="CompareText" xml:space="preserve">
 		<value> Compare</value>
 	</data>
-	<data name="UnavailableText" xml:space="preserve">
+	<data name="OutStockText" xml:space="preserve">
 		<value> Unavailable</value>
 	</data>
 	<data name="ProductRelatedText" xml:space="preserve">
@@ -315,6 +315,12 @@
 	<data name="VMAText" xml:space="preserve">
 		<value>View more > </value>
 	</data>
+	<data name="BackListText" xml:space="preserve">
+		<value>Back to list </value>
+	</data>
 
+	<data name="PCText" xml:space="preserve">
+		<value>Compare products </value>
+	</data>
 
 </root>

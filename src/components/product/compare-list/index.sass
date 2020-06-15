@@ -4,12 +4,26 @@
 		.button-wrapper-left
 			padding: 0 20px 20px 20px
 .select-product-compare
-	@apply bg-azure-4 pt-12 pb-20 overflow-auto
+	@apply bg-azure-4 py-6 overflow-auto fixed bottom-0 w-full h-auto  transition
+	&.open-compare
+		@apply transform-none
+	.head-title
+		@apply text-20 mb-0
 	.button-wrapper-center
 		@apply mt-2
 	.figure-product
 		.figure-image
-			@apply bg-white
+			@apply bg-white px-4
+			a
+				+img-ratio(30/140)
+	.btn-remove-compare
+		@apply absolute z-20
+		top: 30px
+		right: 30px
+		em
+			@apply text-28 text-grey-2
+	.btn-primary
+		height: 40px
 	.row
 		@apply whitespace-no-wrap
 	.col

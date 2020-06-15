@@ -160,12 +160,7 @@
 		&:focus
 			outline: none
 			transition: none
-			~ button
-				opacity: 1
-				pointer-events: auto
-				z-index: 1
-				@media screen and ( max-width:767.9px)
-					@apply bg-black
+		
 		&::placeholder
 			font-size: 13px
 		@media screen and ( max-width: 767.9px)
@@ -173,16 +168,16 @@
 			width: calc( 100% - 30px )
 			height: 30px
 	button
-		opacity: 0
 		color: #ffffff
 		background: $gray
 		width: 32px
 		height: 30px
-		opacity: 0
-		cursor: none
+		opacity: 1
+		pointer-events: auto
+		z-index: 1
+		cursor: pointer
 		border: none
-		pointer-events: none
-		z-index: -1
+		pointer-events: auto
 		position: absolute
 		top: 0
 		right: 0
@@ -191,8 +186,9 @@
 			color: #ffffff
 		&:focus
 			outline: none
+		
 		@media screen and ( max-width:767.9px)
-			@apply static opacity-100 pointer-events-auto cursor-pointer border-0  bg-white z-30 bg-white
+			@apply static opacity-100 pointer-events-auto cursor-pointer border-0  bg-white z-30 bg-white bg-black
 			width: 30px
 			height: 30px
 .search-wrapper
