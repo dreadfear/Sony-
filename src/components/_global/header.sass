@@ -6,7 +6,6 @@ header
 	height: 100px
 	background: #ffffff
 	z-index: 50
-	border-bottom: 1px solid #ebebeb
 	box-shadow: 0px 0px 5px 0px rgba(9, 90, 126, 0.1)
 	transition: .3s all ease-in-out
 	@apply bg-black
@@ -16,14 +15,17 @@ header
 		@apply flex justify-between items-center h-full 
 	.header-wrapper-right
 		@apply flex items-center justify-end h-full
+		@media screen and ( max-width: 767.9px)
+			@apply mr-5
+			
 	.header-wrapper-left
 		@apply flex items-center justify-start h-full
 		@media screen and ( max-width:767.9px)
 			@apply w-full flex items-center 
 	.nav-brand
 		@media screen and ( max-width:767.9px)
-			margin: 0 auto
-			@apply absolute top-50 left-50 translate-50
+			margin: 0
+			// @apply absolute top-50 left-50 translate-50
 		a
 			img
 				max-width: 100%
@@ -38,10 +40,10 @@ header
 		@apply block
 		width: 25px
 .language-wrapper
-	@apply p-0 ml-6 relative overflow-hidden
+	@apply p-0 ml-5 relative overflow-hidden
 	@media screen and ( max-width:767.9px)
 		@apply ml-0
-		width: 37px
+		width: 50px
 		
 	&:hover 
 		@apply overflow-visible
@@ -98,142 +100,14 @@ header
 			height: 50px
 		
 
-.mega-title
-	@apply h-full
-	@media screen and ( max-width:767.9px)
-		@apply flex justify-between items-center
-		height: 40px
-	a
-		&:hover
-			text-decoration: underline
-		@media screen and ( max-width:  767px)
-			width: calc( 100% - 50px  )
-			height: 40px
-	em
-		width: 50px
-		@apply hidden
-		@media screen and ( max-width:767px)
-			@apply block text-white 
-			height: 40px
-			@apply flex justify-end items-center
-.mega-menu
-	position: absolute
-	left: 0
-	top: 100%
-	width: 100%
-	z-index: 200
-	height: calc(100vh - 100px)
-	background: #2c3e50
-	padding: 30px
-	overflow-y: auto
-	@media screen and ( min-width:767.9px )
-		@apply opacity-0 pointer-events-none  z-0 transition
-	@media screen and ( max-width:  767px)
-		@apply py-6 px-0 hidden static h-auto
-		background: none
-		
-	.mega-item
-		margin-bottom: 30px
-	.mega-nav-first-level
-		@apply mb-8
-		@media screen and ( max-width:767.9px)
-			@apply w-full
-			
-		.first-level-title
-			padding: 0 !important
-			display: block 
-			@media screen and ( max-width: 767.9px)
-				@apply flex justify-between items-center h-auto
-				
-			a
-				@apply flex flex-col justify-start items-start h-auto
-				border-bottom: 0 !important
-			
-				span
-					@apply pb-2 block text-14 
-					color: #31b6ee
-					display: block
-			img
-				display: block
-				margin-bottom: 17px
-				@media screen and ( max-width: 767px)
-					@apply hidden
-					
-			em
-				width: 50px
-				@apply hidden
-				@media screen and ( max-width:767px)
-					@apply flex text-white items-center justify-end
-	.mega-nav-second-level
-		@media screen and ( max-width: 767.9px)
-			@apply hidden
-			
-		li
-			@apply p-0 block text-left h-auto
-			a
-				@apply py-2 justify-start h-auto
-				border-bottom: 0 !important
-.navbar-primary-menu
-	@apply ml-20 h-full
-	@media screen and ( max-width:1024px)
-		@apply ml-4
-	@media screen and ( max-width:767.9px)
-		display: none
-		@apply ml-0 bg-black
-.nav-primary
-	list-style-type: none
-	padding: 0
-	margin: 0
-	@apply h-full flex items-center justify-end
-	@media screen and ( max-width:767.9px)
-		@apply flex items-center justify-start flex-col w-full p-4
-	li
-		@apply inline-block 
-		@media screen and ( min-width:767.9px)
-			@apply h-full  px-6
-		@media screen and ( max-width:767.8px)
-			@apply block w-full 
-			height: 40px
-			
-		a
-			@apply text-14 font-medium  transition text-white  relative flex items-center justify-center font-light h-full
-			border-bottom: 2px solid transparent
 
-			@media screen and ( max-width:1024px)
-				@apply  text-16
-			@media screen and ( max-width:767.9px)
-				@apply justify-start
-				&::first-letter
-					@apply uppercase
-		&:hover
-			>a
-				text-decoration: underline
-		&.active,&:hover
-			a
-				@media screen and ( min-width: 767.9px )
-					border-bottom: 2px solid $azure-2
-		&.has-mega
-			@media screen and ( min-width:767.9px)
-				&:hover
-					.mega-menu
-						@apply opacity-100 pointer-events-auto z-50
-			@media screen and ( max-width:767.9px)
-				position: relative
-				@apply h-auto
-				&.open-first
-					.mega-title
-						em
-							@apply transition
-							&:before
-								@apply transition
-								transform: rotate(-180deg)
 .mobile-wrapper
-	@apply absolute top-0 bottom-0 m-0 p-4 z-0
+	@apply fixed top-0 bottom-0 m-0  z-0 opacity-0
 	height: 100vh
-	left: -280px
-	width: 280px
-	transition: left 300ms ease-in-out
+	width: 100%
+	transition: all .5s ease
 	top: 0
+	padding: 60px 0 0 0
 	&.active
-		@apply  pointer-events-auto bg-white z-50 
+		@apply  pointer-events-auto bg-white z-50 opacity-100 bg-primary-1
 

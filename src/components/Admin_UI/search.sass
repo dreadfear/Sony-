@@ -125,6 +125,7 @@
 .searchbox
 	@media screen and ( max-width:767.8px  )
 		@apply flex relative items-center justify-center px-4
+		border-top: 1px solid #81dcf7
 		background: #e4e7eb
 		height: 45px
 	@media screen and ( min-width:767.9px  )
@@ -157,6 +158,9 @@
 		transition: opacity .3s ease-in-out
 		font-size: 16px
 		color: #333333
+		@media screen and ( max-width: 767.9px)
+			@apply  text-14
+			
 		&:focus
 			outline: none
 			transition: none

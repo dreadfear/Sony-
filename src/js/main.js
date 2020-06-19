@@ -715,7 +715,6 @@ function mobileMenu() {
   var $hamburger = $(".hamburger");
   $(".main-menu-toggle").on("click", function () {
     $(".mobile-wrapper").toggleClass("active");
-    $("#wrapper").toggleClass("open-mobile");
     $hamburger.toggleClass("is-active");
   });
 }

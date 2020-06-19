@@ -1,0 +1,82 @@
+.mega-title
+	@apply h-full
+	a
+		&:hover
+			text-decoration: underline
+	em
+		width: 50px
+		@apply hidden
+.mega-menu
+	position: absolute
+	left: 0
+	top: 100%
+	width: 100%
+	z-index: 200
+	height: calc(100vh - 100px)
+	background: #2c3e50
+	padding: 30px
+	overflow-y: auto
+	@media screen and ( min-width:767.9px )
+		@apply opacity-0 pointer-events-none  z-0 transition
+	.menu-view-all-link
+	.mega-nav-first-level
+		@apply mb-8
+		.first-level-title
+			padding: 0 !important
+			display: block 
+			a
+				@apply flex flex-col justify-start items-start h-auto
+				border-bottom: 0 !important
+				&:hover
+					span
+						@apply underline
+				span
+					@apply pb-2 block text-14 
+					color: #31b6ee
+					display: block
+			img
+				display: block
+				margin-bottom: 20px
+				min-width: 40px
+				max-height: 60px
+			em
+				width: 50px
+				@apply hidden
+	.mega-nav-second-level
+		li
+			@apply p-0 block text-left h-auto
+			a
+				@apply py-2 justify-start h-auto
+				border-bottom: 0 !important
+.navbar-primary-menu
+	@apply ml-20 h-full
+	@media screen and ( max-width:1024px)
+		@apply ml-12
+.nav-primary
+	list-style-type: none
+	padding: 0
+	margin: 0
+	@apply h-full flex items-center justify-end
+	li
+		@apply inline-block 
+		@media screen and ( min-width:1024.9px)
+			@apply h-full  px-6
+		@media screen and ( max-width:1024px)
+			@apply px-2
+		a
+			@apply text-14 font-medium  transition text-white  relative flex items-center justify-center font-normal h-full
+			border-bottom: 2px solid transparent
+			@media screen and ( max-width:1024px)
+				@apply  text-14
+		&:hover
+			>a
+				text-decoration: underline
+		&.active,&:hover
+			a
+				@media screen and ( min-width: 767.9px )
+					border-bottom: 2px solid $azure-2
+		&.has-mega
+			@media screen and ( min-width:767.9px)
+				&:hover
+					.mega-menu
+						@apply opacity-100 pointer-events-auto z-50
