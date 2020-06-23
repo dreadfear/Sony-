@@ -42,6 +42,7 @@ module.exports = {
 			"22": "1.375rem",
 			"20": "1.25rem",
 			"18": "1.125rem",
+			"17": "1.06275rem",
 			"16": "1rem",
 			"15": "0.9375rem",
 			"14": "0.875rem",
@@ -53,6 +54,7 @@ module.exports = {
 			primary: {
 				'1': '#2c3e50',
 				'2': '#35495e',
+				
 			},
 
 			azure: {
@@ -66,6 +68,8 @@ module.exports = {
 			grey: "#333333",
 			'grey-2': "#4a4a4a",
 			dove: "#666666",
+			smoky :"#5d5c62",
+			iron: "#E7E7E9",
 			dusty: "#999999",
 			black: "#000000",
 			white: "#ffffff",

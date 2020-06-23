@@ -6,21 +6,46 @@
 	em
 		width: 50px
 		@apply hidden
+	@media screen and ( max-width: 767.9px)
+		@apply flex w-full
+		a
+			@apply w-full
+		em
+			@apply  flex items-center justify-center
+			color: #a0a0a0
+		
+.back-previous
+	@apply hidden
+	@media screen and ( max-width: 767.9px)
+		@apply absolute block
+		top: 15px
+		left: 15px
+		em
+			@apply text-white text-24
+			
 .mega-menu
-	position: absolute
-	left: 0
-	top: 100%
-	width: 100%
 	z-index: 200
-	height: calc(100vh - 100px)
-	background: #2c3e50
-	padding: 30px
-	overflow-y: auto
+	@media screen and ( max-width:767.9px)
+		@apply fixed right-0 h-full bg-primary-1
+		transform: translateX(100%)
+		top: 60px
+		transition: .5s transform ease-in-out
+		padding: 50px 15px
+		
 	@media screen and ( min-width:767.9px )
-		@apply opacity-0 pointer-events-none  z-0 transition
+		position: absolute
+		height: calc(100vh - 100px)
+		padding: 30px
+		@apply opacity-0 pointer-events-none  z-0 transition overflow-y-auto w-full top-100 left-0 absolute bg-primary-1
+	&.open-first
+		transform: translateX(0) 
+		@apply  z-50
+	.container
+		@media screen and ( max-width:767.9px)
+			@apply p-0
 	.menu-view-all-link
 	.mega-nav-first-level
-		@apply mb-8
+		@apply mb-4
 		.first-level-title
 			padding: 0 !important
 			display: block 
@@ -34,24 +59,49 @@
 					@apply pb-2 block text-14 
 					color: #31b6ee
 					display: block
+			@media screen and ( max-width:767.9px)
+				@apply flex justify-between
+				height: 40px
+				a
+					span
+						@apply text-18 font-medium  transition text-white  relative flex items-center justify-center font-normal h-full
+				
 			img
 				display: block
 				margin-bottom: 20px
 				min-width: 40px
-				max-height: 60px
+				max-height: 
+				@media screen and ( max-width: 767.9px)
+					@apply hidden
+					
 			em
 				width: 50px
 				@apply hidden
+				@media screen and ( max-width: 767.9px)
+					@apply flex items-center justify-center
+					color: #a0a0a0
+					
 	.mega-nav-second-level
 		li
 			@apply p-0 block text-left h-auto
 			a
 				@apply py-2 justify-start h-auto
 				border-bottom: 0 !important
+		@media screen and ( max-width:767.9px)
+			@apply fixed  right-0 top-0  w-full h-full   bg-primary-1
+			transform: translateX(100%)
+			padding: 50px 15px
+			transition: .5s transform ease-in-out
+		&.open-second
+			transform: translateX(0) 
+			@apply bg-primary-1 z-50
 .navbar-primary-menu
 	@apply ml-20 h-full
 	@media screen and ( max-width:1024px)
 		@apply ml-12
+	@media screen and ( max-width:767.9px)
+		@apply m-0 justify-start
+		
 .nav-primary
 	list-style-type: none
 	padding: 0
@@ -68,6 +118,9 @@
 			border-bottom: 2px solid transparent
 			@media screen and ( max-width:1024px)
 				@apply  text-14
+			@media screen and ( max-width: 767.9px)
+				@apply text-18 justify-start
+				
 		&:hover
 			>a
 				text-decoration: underline
@@ -80,3 +133,10 @@
 				&:hover
 					.mega-menu
 						@apply opacity-100 pointer-events-auto z-50
+	@media screen and ( max-width: 767.9px)
+		padding: 35px 15px
+		max-width: 100%
+		@apply justify-start flex-col items-start w-full
+		li
+			@apply w-full mb-4 flex justify-start p-0
+			height: 40px

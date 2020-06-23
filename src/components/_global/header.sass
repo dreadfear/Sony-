@@ -15,9 +15,6 @@ header
 		@apply flex justify-between items-center h-full 
 	.header-wrapper-right
 		@apply flex items-center justify-end h-full
-		@media screen and ( max-width: 767.9px)
-			@apply mr-5
-			
 	.header-wrapper-left
 		@apply flex items-center justify-start h-full
 		@media screen and ( max-width:767.9px)
@@ -25,7 +22,6 @@ header
 	.nav-brand
 		@media screen and ( max-width:767.9px)
 			margin: 0
-			// @apply absolute top-50 left-50 translate-50
 		a
 			img
 				max-width: 100%
@@ -40,11 +36,10 @@ header
 		@apply block
 		width: 25px
 .language-wrapper
-	@apply p-0 ml-5 relative overflow-hidden
+	@apply p-0 ml-5 relative overflow-hidden flex
 	@media screen and ( max-width:767.9px)
-		@apply ml-0
+		@apply mr-5
 		width: 50px
-		
 	&:hover 
 		@apply overflow-visible
 		.language-list
@@ -79,8 +74,6 @@ header
 					width: 20px
 				@media screen and ( max-width:1024px)
 					@apply text-16
-
-
 .footer-mega
 	@apply flex justify-between items-center w-full pt-5
 	border-top: 1px solid #969fa8 
@@ -98,16 +91,14 @@ header
 		.btn-primary
 			@apply mt-2
 			height: 50px
-		
-
-
 .mobile-wrapper
-	@apply fixed top-0 bottom-0 m-0  z-0 opacity-0
+	@apply fixed top-0 bottom-0 m-0   opacity-0 overflow-y-auto  pointer-events-none
 	height: 100vh
 	width: 100%
 	transition: all .5s ease
 	top: 0
+	z-index: -1
 	padding: 60px 0 0 0
 	&.active
-		@apply  pointer-events-auto bg-white z-50 opacity-100 bg-primary-1
+		@apply  pointer-events-auto bg-white z-50 opacity-100 bg-primary-1 pointer-events-auto
 

@@ -1,0 +1,167 @@
+.figure-feature
+	.image-wrapper
+		img
+	.figcaption
+		h2
+			@apply text-28 text-grey-2 mb-2 text-center pt-4
+			@screen lg
+				@apply text-32 mb-3
+		.caption
+			@apply text-14 text-grey-2 text-center
+			*
+				@apply text-14 text-grey-2 text-center
+.detail-section
+	@apply py-16
+	@screen lg
+		@apply py-20
+	.head-title
+		@apply mb-0
+	.caption
+		@apply text-14 text-grey-2 leading-relaxed
+		*
+			@apply text-14 text-grey-2 leading-relaxed
+	ul
+		@apply my-2
+		li
+			+left-dot
+
+			@apply text-14 text-grey-2  font-light mb-2 ml-3
+			*
+				@apply text-14 text-grey-2  font-light mb-2
+			&:before
+				font-size: 6px
+				color: #333333
+				margin-right: 4px
+				margin-left: -10px
+.product-detail-cameras
+	@apply bg-smoky
+	.top-image
+		@apply pt-16 
+		@screen lg
+			@apply pt-20
+	.product-information
+		h1
+			@apply text-28 text-white text-center mb-3
+			@screen lg
+				@apply text-32 mb-4
+		h2
+			@apply text-16 font-bold mb-2 text-white text-center
+		.caption
+			@apply text-16 text-white text-center
+			*
+				@apply text-16 text-white
+		.image-wrapper
+			@apply py-16
+			@screen lg 
+				@apply pt-14 pb-22
+	.button-wrapper-center
+		@apply pb-16
+		@screen lg
+			@apply pb-24
+.product-detail-media
+	@apply bg-smoky
+	.container + .container
+		@apply pt-16
+		@screen lg
+			@apply pt-20
+
+	.container
+		&:first-child,&:last-child
+			@apply py-16
+			@screen lg
+				@apply py-20
+
+	h2
+		@apply text-28 text-white text-center mb-3
+		@screen lg
+			@apply text-32 mb-4
+	.caption
+		@apply text-14 text-white text-center mb-2 pb-16 font-light
+		padding: 0 8.33%
+		*
+			@apply text-14 text-white text-center mb-2 leading-relaxed font-light
+		@media screen and ( max-width: 1024px)
+			@apply p-0
+			
+.product-detail-features-1
+	.text-left-image-right
+		@apply pb-12
+		@screen lg
+			@apply pb-20
+	.row + .row
+		margin-top: -30px
+		.col
+			margin-bottom: 30px
+.product-detail-features-2
+	@apply bg-iron
+
+.product-detail-features-3
+	
+	.caption
+		@apply text-center mb-6
+		@screen lg
+			@apply mb-12
+			padding: 0 8.33%
+		*
+			@apply text-center
+.product-detail-features-4
+	@apply bg-iron
+.product-detail-features-5
+	.head-title
+		@apply text-center
+	.caption
+		@apply text-center mb-8
+		@screen lg
+			@apply mb-12
+		*
+			@apply text-center
+	.note-text
+		@apply text-center mb-4 pt-16
+		@screen lg
+			@apply pt-20
+		*
+			@apply  mb-4
+.product-detail-features-6
+	@apply bg-iron
+	.head-title
+		@apply text-center 
+	.caption
+		@apply text-center text-14 text-grey-2
+		*
+			@apply text-center text-14  text-grey-2
+	.note-text
+		@apply text-center text-14  text-grey-2 font-light mb-2
+		*
+			@apply text-center text-14  text-grey-2 font-light mb-2
+.product-detail-features-7
+	@apply bg-white
+.wrapper-section
+	.product-detail-caption-text
+		&:nth-child(odd)
+			@apply bg-iron
+			.row
+				@apply flex-row-reverse
+		&:nth-child(even)
+.product-detail-features-8
+	@apply bg-iron pb-12
+	@screen lg
+		@apply pb-16
+	.row + .row
+		@apply pt-8
+		.col
+			@apply mb-8
+	.cards-example
+		.cards-image
+		.cards-caption
+			h2
+				@apply text-26 text-grey-2 text-center mt-4 mb-2
+				@screen lg
+					@apply text-28
+			.caption
+				@apply text-grey-2 text-center
+.product-detail-features-9
+	.row
+		&:nth-child(even)
+			@apply flex-row-reverse
+		+ .row
+			@apply pt-16

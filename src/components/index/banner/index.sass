@@ -1,9 +1,20 @@
 .primary-banner
+	.wrapper
+		a
+			width: auto
+			img
+				min-height: 60vh
+				width: 100%
+				height: 100%
+				object-fit: cover
+					
 	.container
 		@apply absolute left-50 translate-x-50
 		top: 100px
 		@media screen and ( max-width: 1200px)
 			top: 50px
+		@media screen and ( max-width: 767px)
+			@apply top-50 translate-50
 			
 		.box-content
 			padding: 50px 30px
@@ -30,12 +41,12 @@
 						@apply text-16
 					
 		@media screen and ( max-width: 1024px)
-			@apply static transform-none p-0 m-0
 			max-width: 100%
 			.box-content
 				max-width: 100%
 				padding: 30px 15px
 	.btn
 		border: 1px solid #ffffff
+		@apply m-0
 		span
 			@apply text-white

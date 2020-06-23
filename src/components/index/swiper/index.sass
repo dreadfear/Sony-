@@ -32,10 +32,12 @@
 	.swiper-container
 		@apply overflow-visible
 	.lastest-news-prev,.lastest-news-next
-		@apply absolute top-50 translate-y-50 flex items-center justify-center z-10
+		@apply absolute top-50 translate-y-50 flex items-center justify-center z-10 transition
 		width: 60px
 		height: 100px
 		background: rgba(#000000,.3 )
+		&.swiper-button-disabled
+			@apply opacity-0
 		&:hover
 			em
 				@apply text-white

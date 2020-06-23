@@ -66,6 +66,7 @@ Facebook: https://fb.com/canhcam.vn
 				'https://www.googletagmanager.com/gtm.js?id=' + i + dl;
 			f.parentNode.insertBefore(j, f);
 		})(window, document, 'script', 'dataLayer', 'GTM-KQNJG2N');
+
 	</script>
 	<!-- End Google Tag Manager -->
 
@@ -120,6 +121,7 @@ Facebook: https://fb.com/canhcam.vn
 				flex-direction: column
 			}
 		}
+
 	</style>
 	<portal:ScriptLoader ID="ScriptLoader1" runat="server" IncludejQueryUICore="true" IncludeFancyBox="false" />
 	<portal:StyleSheetCombiner ID="StyleSheetCombiner" runat="server" IncludejQueryUI="false"
@@ -143,13 +145,7 @@ Facebook: https://fb.com/canhcam.vn
 
 			<header>
 				<div class="container">
-					<div class="main-menu-toggle">
-						<div class="hamburger hamburger--elastic">
-							<div class="hamburger-box">
-								<div class="hamburger-inner"></div>
-							</div>
-						</div>
-					</div>
+
 					<div class="header-wrapper-left">
 						<div class="nav-brand">
 							<portal:ModuleWrapper ID="mdl295" runat="server" ConfigureModuleId="295" />
@@ -163,6 +159,13 @@ Facebook: https://fb.com/canhcam.vn
 						</div>
 						<div class="language-wrapper">
 							<portal:ModuleWrapper ID="mdl298" runat="server" ConfigureModuleId="298" />
+						</div>
+						<div class="main-menu-toggle">
+							<div class="hamburger hamburger--elastic">
+								<div class="hamburger-box">
+									<div class="hamburger-inner"></div>
+								</div>
+							</div>
 						</div>
 					</div>
 				</div>
@@ -297,6 +300,7 @@ Facebook: https://fb.com/canhcam.vn
 			var o = Get_Cookie("toolbarOpenState");
 			null != o && ("closed" == o && HideToolbar(), "open" == o && ShowToolbar())
 		});
+
 	</script>
 </body>
 
