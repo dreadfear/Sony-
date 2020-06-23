@@ -4,7 +4,7 @@
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
 	<xsl:output method="html" indent="yes"/>
 	<xsl:template match="/">
-		<section class="solution-detail-1">
+		<section class="top-section-banner">
 			<div class="container">
 				<xsl:apply-templates select="/BannerList/Banner"></xsl:apply-templates>
 			</div>

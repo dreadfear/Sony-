@@ -1,7 +1,7 @@
 .news-related-display
 	@apply pt-12 pb-24 bg-azure-4 relative
 	@screen lg
-		@apply pt-16 pb-24
+		@apply pt-18 pb-24
 	.row
 		margin: 0 -5px
 		.col
@@ -19,17 +19,17 @@
 .figure-news-related
 	.figure-image
 		a
-			+img-ratio(210/220)
+			+img-ratio(210/220,cover)
 	.figcaption
 		h3
 			a
 				@apply text-16 text-primary-1 font-bold my-4 inline-block
 				@screen lg
-					@apply my-5
+					@apply mt-5 mb-3
 		.caption
-			@apply text-12 font-light text-grey-2 text-left leading-relaxed
+			@apply text-12 font-normal text-grey-2 text-left leading-relaxed
 			*
-				@apply text-12 text-grey-2 font-light leading-relaxed
+				@apply text-12 text-grey-2 font-normal leading-relaxed
 			@media screen and ( max-width: 1024px)
 				@apply text-16
 				*

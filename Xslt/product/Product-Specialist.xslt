@@ -48,49 +48,49 @@
 			</div>
 		</section>
 
-		<xsl:if test="count(/ProductList/Compared) > 0">
+		<!-- <xsl:if test="count(/ProductList/Compared) > 0"> -->
+		<div id="product-compare">
+		<section class="select-product-compare-2" >
+			<div class="container">
+				<h2 class="head-title">
+					<xsl:value-of disable-output-escaping="yes" select="/ProductList/PCText"></xsl:value-of>
+				</h2>
+				<div class="btn-remove-compare"><em class="lnr lnr-cross"></em></div>
+				<div class="row">
+					<xsl:apply-templates select="/ProductList/Compared"></xsl:apply-templates>
 
-			<section class="select-product-compare product-section">
-				<div class="container">
-					<h2 class="head-title">
-						<xsl:value-of disable-output-escaping="yes" select="/ProductList/PCText"></xsl:value-of>
-					</h2>
-					<div class="btn-remove-compare"><em class="lnr lnr-cross"></em></div>
-					<div class="row">
-						<xsl:apply-templates select="/ProductList/Compared"></xsl:apply-templates>
+					<xsl:variable name="CompareNum">
+						<xsl:value-of select="count(/ProductList/Compared)"></xsl:value-of>
+					</xsl:variable>
 
-						<xsl:variable name="CompareNum">
-							<xsl:value-of select="count(/ProductList/Compared)"></xsl:value-of>
-						</xsl:variable>
+					<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
+					<!-- <div class="col-match-height"> -->
+					<!-- <div class="figure-product"> -->
+					<!-- <div class="figure-image"><a href="#"><img src="./img/product/3.png" alt="" /></a></div> -->
+					<!-- <div class="figcaption"> -->
+					<!-- <div class="title"> -->
+					<!-- <h2><a href="#">máy quay chuyên dụngg</a></h2> -->
+					<!-- </div> -->
+					<!-- </div> -->
+					<!-- </div> -->
+					<!-- </div> -->
+					<!-- </div> -->
 
-						<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
-						<!-- <div class="col-match-height"> -->
-						<!-- <div class="figure-product"> -->
-						<!-- <div class="figure-image"><a href="#"><img src="./img/product/3.png" alt="" /></a></div> -->
-						<!-- <div class="figcaption"> -->
-						<!-- <div class="title"> -->
-						<!-- <h2><a href="#">máy quay chuyên dụngg</a></h2> -->
-						<!-- </div> -->
-						<!-- </div> -->
-						<!-- </div> -->
-						<!-- </div> -->
-						<!-- </div> -->
-
-						<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
-						<!-- <div class="col-match-height"> -->
-						<!-- <div class="figure-add-more"><em class="lnr lnr-cross"></em></div> -->
-						<!-- </div> -->
-						<!-- </div> -->
-					</div>
-					<div class="button-wrapper-center"><a class="btn btn-primary yellow"
-							href="/Product/Compare.aspx"><span>
-								<xsl:value-of disable-output-escaping="yes" select="/ProductList/CompareText">
-								</xsl:value-of>
-							</span></a>
-					</div>
+					<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
+					<!-- <div class="col-match-height"> -->
+					<!-- <div class="figure-add-more"><em class="lnr lnr-cross"></em></div> -->
+					<!-- </div> -->
+					<!-- </div> -->
 				</div>
-			</section>
-		</xsl:if>
+				<div class="button-wrapper-center"><a class="btn btn-primary yellow" href="/Product/Compare.aspx"><span>
+							<xsl:value-of disable-output-escaping="yes" select="/ProductList/CompareText">
+							</xsl:value-of>
+						</span></a>
+				</div>
+			</div>
+		</section>
+		</div>
+		<!-- </xsl:if> -->
 	</xsl:template>
 	<xsl:template match="Product" mode='Available'>
 		<xsl:if test="floor(ShowOption div 1) mod 2 = 1">
@@ -206,11 +206,16 @@
 	</xsl:template>
 
 	<xsl:template match="Compared">
-		<div class="col w-full sm:w-1/2 lg:w-4/12">
+		<div class="col w-4/12  md:w-3/12">
 			<div class="col-match-height">
 				<div class="figure-product">
-					<div class="figure-image"><a href="#">
-							<img src="./img/product/3.png" alt="" />
+					<div class="figure-image">
+						<!-- <a href="#"> -->
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="Url" />
+							</xsl:attribute>
+							<!-- <img src="./img/product/3.png" alt="" /> -->
 							<img alt="">
 							<xsl:attribute name="src">
 								<xsl:value-of select="ImageUrl" />
@@ -220,7 +225,7 @@
 					<div class="figcaption">
 						<div class="title">
 							<h2>
-								<a href="#">máy quay chuyên dụngg</a>
+								<!-- <a href="#">máy quay chuyên dụngg</a> -->
 								<a>
 									<xsl:attribute name="href">
 										<xsl:value-of select="Url" />
@@ -236,8 +241,8 @@
 
 		<!-- <xsl:if test="position() < 1 and position() = last()"> -->
 		<!-- <xsl:if test="position() = last() and position() &gt; 1"> -->
-		<xsl:if test="position() &lt; 3 and position() = last()">
-			<div class="col w-full sm:w-1/2 lg:w-4/12">
+		<xsl:if test="position() &lt; 4 and position() = last()">
+			<div class="col w-4/12  md:w-3/12">
 				<div class="col-match-height">
 					<div class="figure-add-more"><em class="lnr lnr-cross"></em></div>
 				</div>

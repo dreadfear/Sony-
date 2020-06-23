@@ -14,10 +14,10 @@
 		p
 			@apply text-white font-bold
 	.content-block
-		@apply bg-azure-1
+		@apply bg-azure-4
 		padding: 20px
 		p
-			@apply text-dove leading-relaxed
+			@apply text-dove leading-tight font-normal text-16
 			span
 				@apply text-blue
 
@@ -27,6 +27,8 @@
 		@apply py-18
 	.form-contact
 		margin-top: 40px
+	.head-title
+		@apply mb-0
 	.form-group
 		+ .form-group
 			margin-top: 20px
@@ -40,6 +42,11 @@
 			height: 50px
 			width: 100%
 			padding: 0 15px
+		select
+			-webkit-appearance: none
+			-moz-appearance: none
+			background: url('../img/icon/chevron.png') no-repeat calc(100% - 15px)  #ffffff !important
+			background-position: 95% 50%
 		textarea
 			height: 8rem
 			padding: 8px 15px

@@ -2,9 +2,10 @@
 	@apply pt-16 pb-24 mt-2
 	@media screen and ( max-width: 1360px)
 		@apply pt-12 pb-16 mt-0
-		
+	.head-title
+		@apply text-grey-2 mb-0
 	.caption
-		@apply text-center text-14 font-light pb-16 px-8 leading-relaxed
+		@apply text-center text-14 font-normal pb-16 px-8 leading-loose
 		color: $grey-2
 		@media screen and ( max-width:1360px)
 			@apply pb-8
@@ -13,7 +14,7 @@
 		@media screen and ( max-width:576px)
 			@apply px-0
 		*
-			@apply text-center text-14 font-light leading-relaxed
+			@apply text-center text-14 font-normal leading-loose
 			color: $grey-2
 	.figure-media
 		&.video

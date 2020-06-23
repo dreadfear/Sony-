@@ -10,7 +10,7 @@
 					
 	.container
 		@apply absolute left-50 translate-x-50
-		top: 100px
+		top: 80px
 		@media screen and ( max-width: 1200px)
 			top: 50px
 		@media screen and ( max-width: 767px)
@@ -20,26 +20,24 @@
 			padding: 50px 30px
 			background-color: rgba($main-1,.8)
 			opacity: 0.8
-			max-width: 50%
+			max-width: 570px
 			@media screen and ( max-width:1200px)
 				padding: 30px 
 				
 			@media screen and ( max-width: 1024px)
 				max-width: 320px
-				
+			@media screen and ( max-width: 576px)
+				max-width: 100%
 			h2
 				@apply text-white text-42 leading-normal mb-4
 				@media screen and ( max-width: 1440px)
-					@apply text-36 mb-2 leading-tight
+					@apply text-36  leading-relaxed
 				@media screen and ( max-width: 1024px)
-					@apply text-26 mb-2
+					@apply text-32 
 			.caption
-				@apply mb-4 text-20 text-left text-white
+				@apply mb-6 text-20 text-left text-white
 				p
 					@apply  text-20 text-left text-white
-					@media screen and ( max-width:1440px)
-						@apply text-16
-					
 		@media screen and ( max-width: 1024px)
 			max-width: 100%
 			.box-content
@@ -50,3 +48,6 @@
 		@apply m-0
 		span
 			@apply text-white
+		@media screen and ( max-width:576px)
+			min-width: 100%
+			

@@ -16,22 +16,28 @@
 		margin: 0
 		li
 			@apply inline-block h-full 
-			@media screen and ( min-width: 1024px )
-				max-width: 151px
 			&:not(:first-child)
 				@apply mx-10
 				
 			a
 				text-decoration: none
 				@apply text-14 text-grey-2 text-center flex items-center justify-center h-full
-.solution-detail-1
+.top-section-banner
 	@apply py-12
 	@screen lg
 		@apply pt-16 pb-30
 	.zone-description 
-		@apply mb-8
+		@apply mb-8 text-center text-14 px-2
 		@screen lg
-			@apply mb-16
+			@apply mb-16 px-10
+		
+		*
+			@apply text-14
+	img
+		@apply block mx-auto mt-16
+		@media screen and ( max-width: 1024px)
+			@apply mt-16
+			
 .banner-text-over
 	&.text-bottom
 		.container
@@ -105,6 +111,8 @@
 		@media screen and ( max-width:1024px)
 			@apply mt-8
 .solution-detail-banner
+
+	
 	.button-wrapper-center
 		a
 			min-width: 150px !important
@@ -159,14 +167,14 @@
 		.figcaption
 			h3
 				a
-					@apply text-28 text-grey-2  text-center block
+					@apply text-32 text-grey-2  text-center block
 					@media screen and ( max-width:767px)
 						@apply text-20
 						
 			.caption
-				@apply text-14  mt-4 text-center
+				@apply text-14  mt-4 text-center text-grey-2 font-normal text-white
 				*
-					@apply text-14 text-center
+					@apply text-14 text-center text-grey-2 font-normal text-white
 			.btn-view-more
 				@media screen and ( max-width:1024px)
 					@apply mt-8 justify-center

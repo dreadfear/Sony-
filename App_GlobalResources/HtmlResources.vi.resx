@@ -221,7 +221,7 @@
 		<value> Liên hệ</value>
 	</data>
 	<data name="ShopText" xml:space="preserve">
-		<value>Shop Oline </value>
+		<value>Shop Online </value>
 	</data>
 	<data name="RetailText" xml:space="preserve">
 		<value>Nhà phân phối</value>
@@ -233,7 +233,7 @@
 		<value> Thông số kỹ thuật </value>
 	</data>
 	<data name="FeatureText" xml:space="preserve">
-		<value> Tinh năng</value>
+		<value> Tính năng</value>
 	</data>
 
 	<data name="DocumentText" xml:space="preserve">
@@ -311,6 +311,9 @@
 	<data name="ProductText" xml:space="preserve">
 		<value>Sản phẩm </value>
 	</data>
+		<data name="VMText" xml:space="preserve">
+		<value>Xem thêm  </value>
+	</data>
 	<data name="VMAText" xml:space="preserve">
 		<value>Xem thêm > </value>
 	</data>
@@ -320,5 +323,9 @@
 	<data name="PCText" xml:space="preserve">
 		<value>So sánh sản phẩm </value>
 	</data>
+		<data name="DownloadFilePDFText" xml:space="preserve">
+		<value>Tải về file PDF ></value>
+	</data>
+
 
 </root>

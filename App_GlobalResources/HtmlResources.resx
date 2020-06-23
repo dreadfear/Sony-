@@ -221,7 +221,7 @@
 		<value> Contact</value>
 	</data>
 	<data name="ShopText" xml:space="preserve">
-		<value>Shop Oline </value>
+		<value>Shop Online </value>
 	</data>
 	<data name="RetailText" xml:space="preserve">
 		<value>Retailer</value>
@@ -322,5 +322,13 @@
 	<data name="PCText" xml:space="preserve">
 		<value>Compare products </value>
 	</data>
-
+	<data name="PCText" xml:space="preserve">
+		<value>Compare products </value>
+	</data>
+	<data name="DownloadFilePDFText" xml:space="preserve">
+		<value>Download file PDF ></value>
+	</data>
+		<data name="VMText" xml:space="preserve">
+		<value>View more</value>
+	</data>
 </root>

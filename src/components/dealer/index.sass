@@ -2,20 +2,25 @@
 	@apply py-12
 	@screen xl
 		@apply py-18
+	.btn-searchmap
 	.filter-map
-		padding: 20px
+		padding: 15px 30px
 		background: #2c3e50
 		.form-group
 			+ .form-group
-				margin-top: 20px
+				margin-top: 10px
 			select
-				color: #a3abb2
-				font-size: 16px
+				color: #ffffff
+				font-size: 14px
 				background: transparent
 				width: 100%
 				height: 40px
 				border: 1px solid #a3abb2
 				padding: 0 15px
+				-webkit-appearance: none
+				-moz-appearance: none
+				background: url('../img/icon/chevron-down.png') no-repeat calc(100% - 15px)  #2c3e50 !important
+				background-position: 95% 50%
 	// .result-wrapper
 	// 	position: relative
 	.list-wrapper
@@ -36,17 +41,19 @@
 		border: 0
 	.list-dealer
 		background: #fff
-		padding: 20px
+		margin: 20px 0px 20px 10px
+		padding: 16px
 		flex: 1
 	#list,.list
 		margin-bottom: 0
 		list-style: none
 		overflow-y: auto
-		padding-right: 12px
+		padding-right: 0
 		max-height: 400px
 		> li
 			cursor: pointer
 			display: flex
+			padding-right: 10px
 			+ li
 				margin-top: 30px
 			address
@@ -78,6 +85,7 @@
 					width: 100%
 					font-size: 12px
 					color: #2c3e50
+					font-weight: 500
 					+ a
 						margin-top: 10px
 					&.view-map
@@ -90,7 +98,7 @@
 		&::-webkit-scrollbar-thumb
 			background: #ffd200
 	#map,#map_canvas,.map,.map_canvas
-		height: 632px
+		height: 692px
 		img,iframe
 			width: 100%
 			height: 100%

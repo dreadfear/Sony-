@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xsl:stylesheet version="1.0"
-	xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+<xsl:stylesheet version="1.0" xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
 	xmlns:msxsl="urn:schemas-microsoft-com:xslt" exclude-result-prefixes="msxsl">
-	<xsl:output method="html" indent="yes"/>
+	<xsl:output method="html" indent="yes" />
 	<xsl:template match="/">
 		<xsl:apply-templates select="/ZoneList/Zone"></xsl:apply-templates>
 	</xsl:template>
@@ -101,7 +100,7 @@
 		</xsl:if>
 		<xsl:if test="position()=13">
 			<xsl:if test="Url !='#'">
-				<section class="solution-detail-8" >
+				<section class="solution-detail-8">
 					<xsl:attribute name="setBackground">
 						<xsl:value-of select="ImageUrl"></xsl:value-of>
 					</xsl:attribute>
@@ -193,19 +192,19 @@
 		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode='News-1'>
-		<section class="banner-text-over" >
+		<section class="banner-text-over">
 			<xsl:attribute name="setBackground">
 				<xsl:value-of select="ImageUrl"></xsl:value-of>
 			</xsl:attribute>
 			<div class="container-fluid">
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 				<div class="container">
@@ -231,13 +230,13 @@
 					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 				</div>
 				<div class="image-wrapper">
-					<img class='lazyload' >
-						<xsl:attribute name="data-src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img class='lazyload'>
+					<xsl:attribute name="data-src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 			</div>
@@ -264,20 +263,21 @@
 									<xsl:value-of select="Title"></xsl:value-of>
 								</xsl:attribute>
 								<span>
-									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText"></xsl:value-of>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+									</xsl:value-of>
 								</span>
 							</a>
 						</div>
 					</div>
 					<div class="col w-full lg:w-1/2">
 						<div class="image-wrapper opacity">
-							<img >
-								<xsl:attribute name="src">
-									<xsl:value-of select="ImageUrl"></xsl:value-of>
-								</xsl:attribute>
-								<xsl:attribute name="alt">
-									<xsl:value-of select="Title"></xsl:value-of>
-								</xsl:attribute>
+							<img>
+							<xsl:attribute name="src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
 							</img>
 						</div>
 					</div>
@@ -291,7 +291,7 @@
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</h2>
 		<div class="button-wrapper-center">
-			<a class="btn btn-primary yellow" >
+			<a class="btn btn-primary yellow">
 				<xsl:attribute name="href">
 					<xsl:value-of select="Url"></xsl:value-of>
 				</xsl:attribute>
@@ -316,14 +316,14 @@
 			<div class="figure-media video">
 				<div class="figure-image">
 					<div class="wrapper">
-						<xsl:if test="Url != ''">
+						<xsl:if test="FileUrl != ''">
 							<div class="play">
 								<div class="play__icon"></div>
 								<video playsinline="" loop="">
 									<source type="video/mp4">
-										<xsl:attribute name="src">
-											<xsl:value-of select="FileUrl" disable-output-escaping="yes"></xsl:value-of>
-										</xsl:attribute>
+									<xsl:attribute name="src">
+										<xsl:value-of select="FileUrl" disable-output-escaping="yes"></xsl:value-of>
+									</xsl:attribute>
 									</source>
 								</video>
 							</div>
@@ -337,13 +337,13 @@
 		<div class="row">
 			<div class="col w-full lg:w-1/2">
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 			</div>
@@ -357,7 +357,7 @@
 				</div>
 				<xsl:if test="SubTitle !=''">
 					<div class="button-wrapper-left">
-						<a class="btn btn-view-more" >
+						<a class="btn btn-view-more">
 							<xsl:attribute name="href">
 								<xsl:value-of select="SubTitle"></xsl:value-of>
 							</xsl:attribute>
@@ -365,7 +365,8 @@
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 							<span>
-								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText"></xsl:value-of>
+								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+								</xsl:value-of>
 							</span>
 						</a>
 					</div>
@@ -382,13 +383,13 @@
 		<div class="row">
 			<div class="col w-full lg:w-1/2">
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 			</div>
@@ -402,7 +403,7 @@
 				</div>
 				<xsl:if test="SubTitle !=''">
 					<div class="button-wrapper-left">
-						<a class="btn btn-view-more" >
+						<a class="btn btn-view-more">
 							<xsl:attribute name="href">
 								<xsl:value-of select="SubTitle"></xsl:value-of>
 							</xsl:attribute>
@@ -410,7 +411,8 @@
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 							<span>
-								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText"></xsl:value-of>
+								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+								</xsl:value-of>
 							</span>
 						</a>
 					</div>
@@ -427,13 +429,13 @@
 		<div class="row">
 			<div class="col w-full lg:w-1/2">
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 			</div>
@@ -442,10 +444,13 @@
 					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</div>
-				<div class="zone-description">NUCLeUS là nền tảng phát triển  video-over-IP của chúng tôi, giúp thay đổi quy trình phẫu thuật tại các bệnh viện kết nối hiện nay. Linh hoạt và có thể mở rộng, NUCLeUS trao quyền cho các bác sĩ phẫu thuật và nhân viên lâm sàng lên kế hoạch, định tuyến, ghi lại và chia sẻ dữ liệu y tế - trong và ngoài OR.</div>
+				<div class="zone-description">NUCLeUS là nền tảng phát triển video-over-IP của chúng tôi, giúp thay đổi
+					quy trình phẫu thuật tại các bệnh viện kết nối hiện nay. Linh hoạt và có thể mở rộng, NUCLeUS trao
+					quyền cho các bác sĩ phẫu thuật và nhân viên lâm sàng lên kế hoạch, định tuyến, ghi lại và chia sẻ
+					dữ liệu y tế - trong và ngoài OR.</div>
 				<xsl:if test="SubTitle !=''">
 					<div class="button-wrapper-left">
-						<a class="btn btn-view-more" >
+						<a class="btn btn-view-more">
 							<xsl:attribute name="href">
 								<xsl:value-of select="SubTitle"></xsl:value-of>
 							</xsl:attribute>
@@ -453,7 +458,8 @@
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 							<span>
-								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText"></xsl:value-of>
+								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+								</xsl:value-of>
 							</span>
 						</a>
 					</div>
@@ -472,7 +478,7 @@
 			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</h2>
 		<div class="button-wrapper-center">
-			<a class="btn btn-primary yellow" >
+			<a class="btn btn-primary yellow">
 				<xsl:attribute name="href">
 					<xsl:value-of select="BriefContent"></xsl:value-of>
 				</xsl:attribute>
@@ -494,7 +500,7 @@
 			<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 		</div>
 		<xsl:if test="SubTitle !=''">
-			<a class="btn btn-view-more" >
+			<a class="btn btn-view-more">
 				<xsl:attribute name="href">
 					<xsl:value-of select="SubTitle"></xsl:value-of>
 				</xsl:attribute>
@@ -514,13 +520,13 @@
 			</xsl:attribute>
 			<div class="container-fluid">
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 				<div class="container">
@@ -551,13 +557,13 @@
 		<div class="col w-full sm:w-1/2 lg:w-4/12">
 			<div class="figure-expertise">
 				<div class="figure-image">
-					<img class='lazyload' >
-						<xsl:attribute name="data-src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img class='lazyload'>
+					<xsl:attribute name="data-src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 				<div class="figcaption">
@@ -573,7 +579,7 @@
 		</div>
 	</xsl:template>
 	<xsl:template match="News" mode='News-14'>
-		<section class="solution-detail-9" >
+		<section class="solution-detail-9">
 			<xsl:attribute name="setBackground">
 				<xsl:value-of select="ThumbnailUrl"></xsl:value-of>
 			</xsl:attribute>
@@ -586,13 +592,13 @@
 					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 				</div>
 				<div class="image-wrapper">
-					<img >
-						<xsl:attribute name="src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<img>
+					<xsl:attribute name="src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</div>
 				<div class="row">
@@ -633,12 +639,12 @@
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
 						<img class="lazyload">
-							<xsl:attribute name="data-src">
-								<xsl:value-of select="ImageUrl"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="alt">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
+						<xsl:attribute name="data-src">
+							<xsl:value-of select="ImageUrl"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="alt">
+							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
 						</img>
 					</a>
 				</div>
@@ -665,12 +671,12 @@
 						<xsl:value-of select="Title"></xsl:value-of>
 					</xsl:attribute>
 					<img class="lazyload">
-						<xsl:attribute name="data-src">
-							<xsl:value-of select="ImageUrl"></xsl:value-of>
-						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
+					<xsl:attribute name="data-src">
+						<xsl:value-of select="ImageUrl"></xsl:value-of>
+					</xsl:attribute>
+					<xsl:attribute name="alt">
+						<xsl:value-of select="Title"></xsl:value-of>
+					</xsl:attribute>
 					</img>
 				</a>
 			</div>

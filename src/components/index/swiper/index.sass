@@ -1,11 +1,14 @@
 .lastest-news-swiper
+	padding-bottom: 100px
+	@media screen and ( max-width:1024px)
+		padding-bottom: 60px
 	@apply relative overflow-hidden
 	margin-top: -110px
 	background: #f4f7fa
-	@media screen and ( max-width:1440px)
+	@media screen and ( max-width:1600px)
 		margin-top: -50px
 	@media screen and ( max-width:1024px)
-		@apply pt-12  pb-20  mt-0
+		@apply pt-16  pb-24  mt-0
 	
 				
 	.swiper-slide
@@ -46,6 +49,8 @@
 			color: #7e8996
 		@media screen and ( max-width:1024px)
 			@apply hidden
+		&.swiper-button-disabled
+			@apply hidden 
 	.lastest-news-next
 		right: -20px
 		em
@@ -73,7 +78,7 @@
 		transition: .3s all ease-in-out
 		h3
 			a
-				@apply text-20 font-light text-left mb-2 inline-block
+				@apply text-20 font-normal text-left mb-2 inline-block
 		.caption
 			@apply text-12 text-white font-light
 	@media screen and ( min-width: 1024px )

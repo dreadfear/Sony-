@@ -1,3 +1,9 @@
+.insight-display-section
+	.solution-display-section 
+		.figure-product 
+			.figure-image 
+				a 
+					+img-ratio(240/360)
 .insight-section
 	@apply pt-16 pb-8
 	@screen lg
@@ -20,11 +26,11 @@
 			.caption
 				@apply text-grey-2
 	.zone-description
-		@apply mb-8 text-center text-14 font-light
+		@apply mb-8 text-center text-14 font-normal
 		@screen lg
 			@apply mb-12
 		*
-			@apply text-center mb-4 text-14 font-light
+			@apply text-center mb-4 text-14 font-normal
 			@screen lg
 				@apply mb-8
 	.row
@@ -86,6 +92,11 @@
 		.figure-image
 			a
 				+img-ratio(190/350)
+		.figcaption
+			h3
+				@apply text-left
+		.button-wrapper-left
+			@apply mt-4
 	.btn-view-more
 		@apply mt-0
 	.view-all-list-wrapper

@@ -13,6 +13,12 @@
 	<xsl:template match="Zone">
 		<div class="col w-1/2 lg:w-3/12">
 			<h3>
+				<xsl:if test="IsActive='true'">
+					<xsl:attribute name="class">
+						<xsl:text>active</xsl:text>
+					</xsl:attribute>
+				</xsl:if>
+				
 
 				<a>
 					<xsl:attribute name="href">

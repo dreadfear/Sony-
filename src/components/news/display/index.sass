@@ -32,6 +32,7 @@
 						background: #e1f0f5
 						color: #2c3e50
 						transition: 0.3s all
+						font-weight: 500
 					&.active,&:hover
 						a
 							background: #7ac3d3
@@ -55,9 +56,9 @@
 			padding: 25px
 			h2
 				a
-					@apply text-16 font-medium text-primary-1
+					@apply text-16 font-medium text-primary-2
 			p
-				@apply mb-10 text-14
+				@apply mb-10 text-14 text-dove
 		@media screen and ( max-width:1440px)
 			.figcaption
 				padding: 30px 
@@ -104,6 +105,7 @@
 		.figcaption
 			padding: 15px
 			flex: 1
+			@apply flex flex-col justify-between items-start
 			p
 				@apply mb-2
 		@media screen and ( max-width:1441px)
@@ -161,7 +163,7 @@
 			height: 0
 			overflow: hidden
 			position: relative
-			padding-top: 250 / 390 * 100%
+			padding-top: 150 / 250 * 100%
 			img
 				position: absolute
 				top: 0

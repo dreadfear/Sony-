@@ -68,6 +68,9 @@
 				<xsl:apply-templates select="News" mode='News-5'></xsl:apply-templates>
 			</xsl:if>
 		</xsl:if>
+		<xsl:if test="position">
+			
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode='News-1'>
 		<div class="head-title text-center">

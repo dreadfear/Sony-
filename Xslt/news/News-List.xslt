@@ -118,7 +118,7 @@
 
 	<xsl:template match="News" mode="Small">
 		<xsl:if test="position() > 5">
-			<div class="col w-full sm:w-1/2 lg:w-4/12">
+			<div class="col w-full sm:w-1/2 lg:w-3/12">
 				<div class="col-match-height">
 					<div class="figure-blog">
 						<div class="image-wrapper opacity">

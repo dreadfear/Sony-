@@ -2,6 +2,16 @@
 	@apply pt-16 pb-20
 	.wrapper-table
 		overflow-x: auto
+	.clear-list
+		@apply  inline-flex text-center cursor-pointer items-center justify-center px-4  font-normal text-16  text-grey-2 transition  mb-2
+		border: 1px solid $grey-2
+		height: 40px
+		min-width: 140px
+		&::first-letter
+			text-transform: upperc
+		&:hover
+			@apply bg-grey-2 text-white
+			
 .product-comparison-table 
 	border: 1px solid #e0f0f5
 	overflow-x: auto
@@ -48,7 +58,7 @@
 					object-fit: contain
 	@media screen and ( min-width:1024px)
 .product-comparison-wrapper
-	@apply inline-flex flex-col
+	@apply inline-flex flex-col w-screen
 	article
 		@apply inline-flex p-0
 	.toggle-item
@@ -69,6 +79,8 @@
 			min-height: 40px
 			&:first-child
 				border-top: 1px solid #e0f0f5
+			&:last-child
+				border-right: none
 			span
 				@apply text-14 text-grey-2
 	.specification-columns

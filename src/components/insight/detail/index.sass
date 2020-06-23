@@ -1,22 +1,40 @@
 .insight-detail-section
 	@apply py-16
+	
 	.row
 		margin-top: -30px
 		.col
 			margin-bottom: 30px
 	.head-title
-
+	.zone-description
+		@apply text-14 font-normal text-grey-2 p-0
+		*
+			@apply text-14 font-normal text-grey-2 p-0
+.insight-detail-banner-2
+	&.link-banner
+		.button-wrapper-center
+			a
+				min-width: 170px
+		.title
+			@apply text-20
+			@screen lg
+				@apply text-32
 .insight-detail-1
+	@apply pb-16
+	@screen lg
+		@apply pb-20
 	.head-title
 		@apply mb-0
 	.zone-description
-		@apply text-14 font-light text-center mb-8
+		@apply text-14 font-normal text-center mb-8
 		@screen lg
 			@apply mb-12
 		*
-			@apply text-14 font-light
+			@apply text-14 font-normal
 .insight-detail-2
-	@apply bg-azure-4
+	@apply bg-azure-4 pb-16
+	@screen lg
+		@apply pb-20
 	.head-title
 		@apply pb-10
 		@screen lg
@@ -40,12 +58,12 @@
 			ul
 				li
 					margin-left: 16px
-					@apply mb-2 text-14 font-light
+					@apply mb-2 text-14 font-normal text-grey-2
 					+left-dot
 					&::before
 						color: #333333
 						padding-right: 2px
-						margin-left: -10px
+						margin-left: -16px
 .insight-detail-product-related
 	.swiper-slide
 		height: auto !important
@@ -62,13 +80,13 @@
 			h3
 				@apply text-center my-2
 				a
-					@apply text-20 text-center
+					@apply text-20 text-center text-grey-2
 					@screen lg
 						@apply text-28
 .insight-detail-3
 	@apply bg-azure-4 py-16
 	.head-title
-		@apply text-center
+		@apply text-center mb-0
 		@screen lg
 			@apply text-left
 	.row
@@ -93,7 +111,7 @@
 	.head-title
 		@apply mt-8
 		@screen lg
-			@apply mt-0
+			@apply mt-0 mb-0
 .insight-detail-4
 	.row
 		margin-top: 0 !important
@@ -105,7 +123,11 @@
 			@apply mt-0
 		img
 			@apply block mx-auto
+.insight-detail-text,.insight-detail-text-2
+	@apply pb-10
 .insight-detail-text,.insight-detail-4
+	.head-title
+		@apply  mb-0
 	.zone-description
 		@apply p-0
 		p
@@ -113,4 +135,6 @@
 .insight-detail-6
 	padding-top: 0
 .insight-detail-7
-	@apply bg-azure-4
+	@apply bg-azure-4 pb-16
+	@screen lg
+		@apply pb-24

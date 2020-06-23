@@ -28,15 +28,20 @@ img[data-sizes="auto"]
 img:not([src])
 	visibility: hidden
 .title
-	@apply text-28
+	@apply text-28 text-grey-2
 	@media screen and ( max-width:1024px)
 		@apply text-20
 .section-caption
-	.zone-description
+	.head-title,.title
+		@apply text-32 text-grey-2
 		*
-			@apply  mb-3 leading-relaxed
+			@apply text-grey-2 
+	.zone-description
+		@apply font-normal text-14
+		*
+			@apply  mb-3 leading-relaxed font-normal text-14
 			@screen lg
-				@apply mb-8
+				@apply mb-6
 		@media screen and ( max-width:767px)
 			@apply text-14 
 			*
@@ -53,7 +58,6 @@ img:not([src])
 		-moz-appearance: none
 		background: url('../img/icon/chevron.png') no-repeat calc(100% - 15px) #ffffff !important
 		background-position: 95% 50%
-		bgo
 .tab-item
 	@apply hidden
 	&.active

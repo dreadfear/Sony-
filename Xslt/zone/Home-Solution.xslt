@@ -13,12 +13,12 @@
 					<xsl:apply-templates select="/ZoneList/Zone" mode='Parent'></xsl:apply-templates>
 
 				</div>
-				<div class="swiper-pagination"></div>
+				<!-- <div class="swiper-pagination"></div>
 				<div class="swiper-container">
 					<div class="swiper-wrapper">
 						<xsl:apply-templates select="/ZoneList/Zone" mode='Child'></xsl:apply-templates>
 					</div>
-				</div>
+				</div> -->
 			</div>
 		</section>
 	</xsl:template>
@@ -27,13 +27,13 @@
 		<xsl:apply-templates select="Zone" mode='Desktop'></xsl:apply-templates>
 
 	</xsl:template>
-	<xsl:template match="Zone" mode='Child'>
+	<!-- <xsl:template match="Zone" mode='Child'>
 		<xsl:apply-templates select="Zone" mode='Mobile'></xsl:apply-templates>
 
-	</xsl:template>
+	</xsl:template> -->
 	<xsl:template match="Zone" mode='Desktop'>
 		<xsl:if test="position() >0 and position() &lt; 3">
-			<div class="col w-1/2">
+			<div class="col w-full sm:w-1/2">
 				<div class="solution-figure">
 					<div class="figure-image opacity">
 						<a>
@@ -67,7 +67,7 @@
 			</div>
 		</xsl:if>
 		<xsl:if test="position() >2 and position() &lt; 6">
-			<div class="col w-1/2 md:w-4/12">
+			<div class="col w-full sm:w-1/2 md:w-4/12">
 				<div class="solution-figure">
 					<div class="figure-image opacity"><a>
 							<xsl:attribute name="href">
@@ -98,7 +98,7 @@
 			</div>
 		</xsl:if>
 	</xsl:template>
-	<xsl:template match="Zone" mode='Mobile'>
+	<!-- <xsl:template match="Zone" mode='Mobile'>
 		<div class="swiper-slide">
 			<div class="solution-figure">
 				<div class="figure-image opacity">
@@ -129,5 +129,5 @@
 				</div>
 			</div>
 		</div>
-	</xsl:template>
+	</xsl:template> -->
 </xsl:stylesheet>

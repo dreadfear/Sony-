@@ -3,7 +3,8 @@
 		&:nth-child(even)
 			.row
 				@apply flex-row-reverse
-			
+	.caption
+		padding: 0 !important
 .product-section-zone
 	@apply py-12
 	@screen lg
@@ -36,7 +37,9 @@
 			@apply text-center
 			
 	.caption
-		@apply text-14 leading-relaxed text-left text-white
+		@apply text-14 leading-relaxed text-left text-white pl-0
+		@screen lg
+			@apply pl-4
 		*
 			@apply text-14 leading-relaxed text-left text-white
 		@media screen and ( max-width:767.9px)

@@ -171,7 +171,11 @@
 		@apply w-full
 		tbody
 			tr
+				&:not(:last-child)
+					border-bottom: 1px solid #f1f9fb
 				td
+					min-height: 50px
+					padding: 15px 0
 					&:first-child
 						width: 100%
 						@apply text-14 font-bold text-grey-2 inline-block
@@ -182,14 +186,20 @@
 					&:nth-child(2)
 						width: 66.666667%
 						@apply text-14 font-normal text-grey-2
+						*
+							@apply text-14 text-grey-2
 	.toggle-wrapper
-		@apply 	mt-8
+		@apply mt-8
 		@media screen and ( min-width: 1024.1px )
 			@apply mt-20
 	.toggle-item
 		.title
 			@apply py-2
 			min-height: 55px
+		article
+			@apply py-0
+			p
+				@apply mb-0
 .product-detail-document
 	@apply bg-azure-4 pt-12 pb-0
 	@screen lg
@@ -254,6 +264,7 @@
 	.toggle-item
 		.title
 			height: 55px
+		
 .product-detail-accessory
 	@apply bg-white pt-12 pb-20
 	@screen lg
@@ -307,10 +318,16 @@
 		.head-title
 			@apply mb-0 pb-0
 	&.scroll-to-fixed-fixed
-		@apply pt-6
+		@apply py-6
 		.row
 			@apply flex opacity-100
 			max-height: 50px
+			@media screen and ( max-width: 767px)
+				max-height: 100%
+		@media screen and ( max-width:576px)
+			@apply pb-2
+			
+				
 	.button-wrapper-right
 		@media screen and ( max-width:767px)
 			margin: 0 -10px
@@ -321,14 +338,43 @@
 				width: calc( 50% - 20px )
 				&:not(:last-child)
 					@apply mb-4
+				@media screen and ( max-width:1024px)
+					@apply mb-2
+	.button-wrapper
+		@media screen and ( min-width:767.9px) and ( max-width:1024px)
+			@apply flex flex-row items-center justify-end 
+			flex-wrap: wrap
+			flex: 0 0 100%
+			max-width: 100%
+			.btn
+				@apply mt-0
+				flex: 0 0 calc(50% - 30px)
+				max-width: calc(50% - 30px)
+				&:last-child
+					@apply mt-4
+		@media screen and ( max-width:767.9px)
+			@apply whitespace-no-wrap
+			.btn
+	
+				&:first-child
+					@apply ml-0
+
+			
 	.row
-		@apply  opacity-0 transition flex
+		@apply  opacity-0 transition flex pt-0
 		max-height: 0
-		@media screen and ( max-width:1439px)
-			@apply pt-6
+		@media screen and ( max-width: 1024px)
+			@apply pt-0
 			
 		.head-title
 			@apply text-24 font-normal uppercase
+			@media screen and ( max-width: 767.9px)
+				@apply mb-0
+		.col
+			&:nth-child(2)
+				@media screen and ( max-width:  767px)
+					@apply overflow-x-auto
+					
 	@apply bg-primary-1
 	*
 		@apply text-white font-bold text-14

@@ -36,13 +36,12 @@ footer
 			li
 				display: inline-block
 				&:hover,&.active
-
 					a
 						@apply underline
 
 				&:not(:last-child)
 					a
-						@apply mr-4
+						@apply mr-6
 				a
 					text-decoration: none
 					@apply text-white font-light text-14 pb-1
@@ -50,20 +49,27 @@ footer
 	background: #f1f9fb
 	
 	h3
+		&:hover,&.active
+			a
+				@apply underline
 		a
-			@apply text-14 font-light text-primary-1 text-left mb-4 inline-block
+			@apply text-14 font-normal text-primary-1 text-left mb-4 inline-block
+		
 	ul
 		li
 			a
 				@apply text-12 font-medium mb-3 inline-block transition
 				color: #707070
-				&:hover
-					@apply text-grey
+			&:hover,&.active
+				a
+					@apply text-primary-1 underline
+					// text-shadow: 1px 0 0 $main-1
 	.footer-expandable-title
 		height: 65px
 		border-bottom: 1px solid  #ffffff
 		&.open
 			.title
+				@apply underline
 				em
 					transform: rotate(-180deg)
 
@@ -74,7 +80,7 @@ footer
 			@apply flex items-center justify-start h-full
 		.title
 			span
-				@apply text-14 font-light underline text-primary-1
+				@apply text-14 font-normal  text-primary-1
 			em
 				@apply text-primary-1 inline-block ml-2 text-14 transition-transform
 	.container-wrapper

@@ -13,9 +13,9 @@
 		list-style-type: none
 		li
 			display: inline-flex
-			font-size: 14px
+			font-size: 13px
 			line-height: 23px
-			padding-right: 28px
+			padding-right: 32px
 			position: relative
 			color: #666666
 			&:after
@@ -23,7 +23,7 @@
 				content: '\e876'
 				display: block
 				position: absolute
-				color: #b8bdc2
+				color: #666666
 				left: -25px
 				bottom: 0
 				@apply text-20
@@ -36,7 +36,7 @@
 					content: '\e876'
 					display: block
 					position: absolute
-					color: #b8bdc2
+					color: #666666
 					left: -27px
 					bottom: 0
 					@apply text-20
@@ -48,12 +48,10 @@
 				text-decoration: none
 				line-height: 23px
 				color: #666666
-				*
-					font-family: 'Roboto'
-				&.active
-					@apply text-primary-1
-					&:after
-						@apply text-primary-1
+				// &.active
+				// 	@apply text-primary-1
+				// 	&:after
+				// 		@apply text-primary-1
 	@media screen and(max-width: 1200px)
 		padding: 10px 0
 		margin-bottom: 0

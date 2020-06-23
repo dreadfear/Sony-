@@ -2,20 +2,34 @@
 	@apply py-12
 	@screen xl
 		@apply py-18
+	.head-title
+		@apply mb-4
+		@screen lg
+			@apply mb-8
 	.row
-		margin-bottom: -30px
+		margin: 0 5px -10px 5px
 		> *
-			margin-bottom: 30px
+			margin-bottom: 10px
+		.col
+			padding: 0 5px
 	.figure-product
 		.figure-image
 			padding: 0
+			margin: 0 
 			img
 				object-fit: cover
 		.figcaption
 			padding-top: 20px
 			background: #fff
+			.title
+				h2
+					a
+						@apply text-primary-1 font-normal
 			.caption
+				@apply text-primary-1
+				*
+					@apply text-primary-1
 				ul 
 					li:before
-						color: #000
+						color: #555555
 						font-size: 6px

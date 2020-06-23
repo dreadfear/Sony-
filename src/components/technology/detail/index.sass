@@ -9,6 +9,11 @@
 			@apply my-20
 		img
 			@apply block mx-auto
+.banner-text-over
+	.zone-description
+		@apply text-14 text-center
+		*
+			@apply text-14
 .technology-detail-1
 	@apply py-16
 	&.normal-section
@@ -23,29 +28,49 @@
 			@apply mt-20
 		img
 			@apply block mx-auto
+	.zone-description
+		@apply text-14 text-center px-0
+		@screen lg
+			@apply px-8
+		*
+			@apply text-14
 .technology-detail-2
 	@apply pb-16
 	@screen lg
 		@apply pb-20
 	&.normal-section
-		@apply pt-16 pb-0
+		@apply py-8 bg-azure-4
+		&:first-child
+			@apply pt-16 pb-6
+			@screen lg
+				@apply pt-16 pb-18
+		&:last-child
+			@apply pb-16
+			@screen lg
+				@apply pb-28
+
 		.sub-title
 			@apply text-center text-24 text-grey-2 mb-4
 		.zone-description
-			@apply mb-0
+			@apply mb-0 text-14 text-center
+			*
+				@apply text-14
 		.image-wrapper
 			@apply mt-6
 			@screen lg
 				@apply mt-8
 	&.bg-dark
-		@apply pt-16 pb-8
+		@apply pt-16 pb-16
+		@media screen and ( max-width: 1024px)
+			@apply pb-8
+			
 		background: #000000
 		.head-title
 			@apply text-white
 		.zone-description
-			@apply text-white
+			@apply text-white text-14
 			*
-				@apply text-white
+				@apply text-white text-14
 		.title
 			@apply text-white
 			*
@@ -59,13 +84,13 @@
 		@screen lg
 			@apply mb-12
 	.title
-		@apply text-center my-4
+		@apply text-center my-4 text-20 text-grey-2
 		@screen lg
-			@apply my-8
+			@apply my-8 text-32
 	.caption
-		@apply text-center text-14 font-light
+		@apply text-center text-14 font-light text-grey-2 font-normal
 		*
-			@apply text-14 font-light
+			@apply text-14 font-normal text-grey-2
 	.explain-text
 		@apply text-center text-14 font-light italic mx-auto mt-4
 		@screen lg
@@ -88,8 +113,12 @@
 	@screen lg
 		@apply pt-16 pb-8
 	.head-title
-		@apply text-white text-center
+		@apply text-white text-center mb-0
 	.zone-description
+		@apply text-center px-8
+		@media screen and ( max-width:1024px)
+			@apply px-0
+			
 		p
 			@apply text-white text-14 font-light
 		strong
@@ -109,11 +138,13 @@
 	.figure-technology-detail
 		.figcaption
 			.title
-				@apply my-4
+				@apply my-4 text-20 leading-relaxed
 				@screen lg
-					@apply my-6
+					@apply my-6 text-28 leading-tight
 			.caption
-				@apply text-14 font-light text-left leading-relaxed
+				@apply text-14 font-normal text-left leading-relaxed text-grey-2
+				*
+					@apply text-grey-2
 	.row
 		.col
 			@media screen and ( max-width:  1024px)
@@ -122,7 +153,7 @@
 .technology-detail-5
 	@apply py-16
 	.head-title
-		@apply text-white
+		@apply text-white mb-0
 .technology-detail-6
 	@apply py-16
 	@screen lg
@@ -162,17 +193,19 @@
 		*
 			@apply text-14 font-normal text-left p-0
 .technology-detail-qoutes
-	@apply py-16
-	
+	@apply py-16 overflow-hidden
 	.qoutes-text
-		@apply text-18 font-light text-grey-2 text-center  leading-relaxed relative
-		padding: 0 16%
+		@apply text-18 font-light text-grey-2 text-center  leading-relaxed relative p-0
 		@screen lg
 			@apply text-24
+			padding: 0 20%
+		@media screen and ( min-width:1440px)
+			padding: 0 25%
 		h2
-			@apply relative
+			@apply relative text-18 font-light text-grey-2 text-center  leading-relaxed
+			@screen lg
+				@apply text-24
 			&:before,&:after
-				
 				content: ''
 				width: 30px
 				height: 30px
@@ -188,11 +221,11 @@
 				background-image:  url('../img/icon/q-right.png')
 				right: -60px
 	.caption
-		@apply flex items-center justify-center flex-col mt-8
+		@apply flex items-center justify-center flex-col mt-8 text-grey-2
 		@screen lg
 			@apply mt-12
 		p
-			@apply text-18 font-light italic text-center
+			@apply text-18 font-light italic text-center text-grey-2 mb-1
 .technology-detail-banner
 	.head-title
 		@apply text-white leading-relaxed mb-8
@@ -200,29 +233,71 @@
 		@media screen and ( max-width:1024px)
 			padding: 0
 	.button-wrapper-center
+		.btn-primary
+			&.yellow
+				span
+					@apply text-primary-1
+				&:hover
+					span
+						@apply text-yellow
 		@media screen and ( max-width:  500px)
 			@apply flex-col items-center
 			.btn-primary
+				
 				&:first-child
 					@apply mb-4
 .technology-detail-11
 	@apply pb-16
+.technology-detail-10
+	@media screen and ( max-width:1024px)
+		@apply pb-16
 		
+.technology-features
+	background: #24272a
+	@apply py-16
+	@screen lg
+		@apply py-24
+	.technology-news-section
+		@apply pb-12
+		@screen lg
+			@apply pb-20
+		&:last-child
+			@apply pb-0
+	.head-title
+		@apply text-white mb-0
+	.techology-reproduction
+		.sub-title
+			@apply text-24 text-white text-center mb-4
+			@screen lg
+				@apply  mb-6
+	.technology-detail-8
+		.head-title
+			@apply mb-0
+	.technology-detail-9
+		@apply pb-16
+		@screen lg
+			@apply pb-28
+	.technology-detail-10
+		@apply pb-16
+		@screen lg
+			@apply pb-26
+		.zone-description
+			@apply mb-6
+			@screen lg
+				@apply mb-10
 .technology-detail-8,.technology-detail-9,.technology-detail-10,.technology-detail-11
 	background: #24272a
-	@apply pt-16
-	@screen lg
-		@apply py-16
 	.head-title
 		@apply text-white
 	.sub-title
 		@apply text-center text-24 text-grey-2 mb-4 text-white
 	.zone-description
-		@apply  text-white text-14 font-light text-center mb-8
+		@apply  text-white text-14 font-light text-center mb-8 p-0
 		*
 			@apply text-white
 		@screen lg
 			@apply mb-12
+			padding: 0 8%
 	.image-wrapper
 		img
 			@apply block mx-auto
@@ -232,17 +307,23 @@
 			@apply text-20 
 	.caption
 		@apply text-white text-center font-light
+	.second-image
+		@apply mt-6
+		@screen lg
+			@apply mt-14
 .technology-detail-11
 	.figure-view
 		@apply h-full flex flex-col justify-between items-center
 .technology-detail-12
-	@apply bg-black py-16
+	@apply bg-black pt-16 pb-8
 	@screen lg
-		@apply pt-16 pb-24
+		@apply pt-16 pb-18
 	.row
+		@apply pt-6
 		@media screen and ( max-width:1024px)
+			@apply pt-0
 			.col
-				@apply mb-8
+				@apply mb-2
 				&:nth-child(1)
 					order: 2
 				&:nth-child(2)
@@ -252,12 +333,12 @@
 			img
 				@apply block mx-auto
 	.head-title
-		@apply text-yellow
+		@apply text-yellow pb-10
 		@media screen and ( max-width: 1024px)
-			@apply text-center
+			@apply text-center pb-4
 			
 	.title
-		@apply text-yellow mb-6
+		@apply text-yellow mb-6 text-24
 		@media screen and ( max-width: 1024px)
 			@apply text-center
 	.caption
@@ -277,14 +358,14 @@
 	@screen lg
 		@apply pt-16 pb-20
 	.head-title
-		@apply text-white leading-relaxed mb-8
+		@apply text-white leading-relaxed mb-6
 		padding: 0 8%
 		@media screen and ( max-width:1024px)
 			padding: 0
 	.zone-description
 		@apply text-white text-14 font-light text-center
 		*
-			@apply text-white text-14 font-light text-center
+			@apply text-white text-14 font-light text-center leading-loose  mb-6
 	.btn-view-more
 		span
 			@apply text-yellow

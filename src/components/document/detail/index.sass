@@ -37,9 +37,16 @@
 				width: 120px
 				color: #fff
 				cursor: pointer
-
+.document-button
+	@apply pt-4 pb-16
+	@screen lg
+		@apply pt-8 pb-20
+	.btn
+		@apply m-0 
 .document-category
-	padding: 40px 0 70px
+	padding: 40px 0 0
+	.head-title
+		@apply text-30
 	.category
 		+ .category
 			margin-top: 70px
@@ -51,6 +58,10 @@
 					th
 						padding: 8px 5px
 						font-weight: normal
+						@apply text-grey-2 text-14
+						*
+							@apply text-grey-2 text-14
+
 			tbody
 				tr
 					text-decoration: none
@@ -60,4 +71,7 @@
 					+ tr
 						border-top: 2px solid #fff
 					td
+						@apply text-grey-2 text-14
 						padding: 15px 20px
+						*
+							@apply text-grey-2 text-14

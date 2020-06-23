@@ -25,10 +25,21 @@
 							<div class="button-wrapper"><a class="btn btn-primary"><span>
 										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ContactText">
 										</xsl:value-of>
-									</span></a><a class="btn btn-primary yellow"><span>
+									</span></a><a class="btn btn-primary yellow">
+									<xsl:attribute name="href">
+										<xsl:text disable-output-escaping="yes">
+											https://sonycenter.sony.com.vn/san-pham/san-pham-chuyen-dung
+										</xsl:text>
+									</xsl:attribute>
+									<xsl:attribute name="title">
+										<xsl:value-of select="Title"></xsl:value-of>
+									</xsl:attribute>
+
+									<span>
 										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ShopText">
 										</xsl:value-of>
-									</span></a><a class="btn btn-primary yellow"><span>
+									</span>
+								</a><a class="btn btn-primary yellow"><span>
 										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/RetailText">
 										</xsl:value-of>
 									</span></a></div>
@@ -47,8 +58,41 @@
 		</section>
 
 		<section class="product-detail-nav">
+
+
 			<div class="container">
-				<ul>
+				<div class="row">
+					<div class="col w-full md:w-1/2">
+						<div class="head-title text-white">
+							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/Code"></xsl:value-of>
+						</div>
+					</div>
+					<div class="col w-full md:w-1/2">
+						<div class="button-wrapper"><a class="btn btn-primary white"><span>
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DownloadPDFText">
+									</xsl:value-of>
+								</span></a><a class="btn btn-primary yellow">
+
+
+
+								<xsl:attribute name="href">
+									<xsl:text disable-output-escaping="yes">https://sonycenter.sony.com.vn/san-pham/san-pham-chuyen-dung</xsl:text>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+
+								<span>
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/ShopText">
+									</xsl:value-of>
+								</span>
+							</a><a class="btn btn-primary yellow"><span>
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/RetailText">
+									</xsl:value-of>
+								</span></a></div>
+					</div>
+				</div>
+				<ul class="sticky-navigation" id="sticky-nav">
 					<li><a href="#product-section-1">
 							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OViewText">
 							</xsl:value-of>
@@ -72,7 +116,7 @@
 			</div>
 		</section>
 
-		<section class="product-sticky-scroll">
+		<!-- <section class="product-sticky-scroll">
 			<div class="container">
 				<div class="product-header">
 					<div class="title">
@@ -119,7 +163,7 @@
 					</div>
 				</div>
 			</div>
-		</section>
+		</section> -->
 
 		<section class="product-detail-image">
 			<div class="container">
@@ -140,149 +184,153 @@
 				</div>
 			</div>
 		</section>
-
-		<section class="product-detail-summary" id="product-section-1">
-			<div class="container">
-				<div class="row">
-					<div class="col w-full  lg:w-2/12">
-						<div class="head-title">
-							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OViewText">
-							</xsl:value-of>
-						</div>
-					</div>
-					<div class="col w-full  lg:w-10/12">
-						<div class="caption-text">
-
-
-							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BriefContent">
-							</xsl:value-of>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-
-		<section class="product-detail-option" id="product-section-2">
-			<div class="container">
-				<div class="row">
-					<div class="col w-full  lg:w-2/12">
-						<div class="head-title">
-							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FeatureText">
-							</xsl:value-of>
-						</div>
-					</div>
-					<div class="col w-full  lg:w-10/12">
-						<div class="row-wrapper-cards">
-							<div class="column">
-								<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode='Attribute-1'>
-								</xsl:apply-templates>
-							</div>
-							<div class="column">
-
-								<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode='Attribute-2'>
-								</xsl:apply-templates>
-
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
-		<xsl:if test="count(/ProductDetail/ProductAttributes2)>0">
-
-			<section class="product-detail-specification" id="product-section-3">
+		<div class="content-scroll-wrapper">
+			<section class="product-detail-summary" id="product-section-1">
 				<div class="container">
 					<div class="row">
-						<div class="col w-full lg:w-3/12">
+						<div class="col w-full  lg:w-2/12">
 							<div class="head-title">
-								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/SpecText">
-								</xsl:value-of>
-							</div>
-							<div class="button-wrapper-right"><a class="btn btn-open-all" href="javascript:;"><span>
-										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OAllText">
-										</xsl:value-of>
-									</span><em class="lnr lnr-chevron-down"></em></a><a class="btn btn-close-all"
-									href="javascript:;"><span>
-										<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/CAllText">
-										</xsl:value-of>
-									</span><em class="lnr lnr-chevron-up"></em></a>
-							</div>
-						</div>
-						<div class="col w-full lg:w-9/12">
-							<div class="toggle-wrapper">
-
-								<xsl:apply-templates select="/ProductDetail/ProductAttributes2"></xsl:apply-templates>
-							</div>
-						</div>
-					</div>
-				</div>
-			</section>
-		</xsl:if>
-
-
-		<xsl:if test="count(/ProductDetail/NewsRelated)>0">
-
-			<section class="product-detail-document" id="product-section-4">
-				<div class="container">
-					<div class="head-title">
-						<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DownloadDocumentText">
-						</xsl:value-of>
-					</div>
-					<xsl:apply-templates select="/ProductDetail/NewsRelated"></xsl:apply-templates>
-
-				</div>
-			</section>
-		</xsl:if>
-
-		<xsl:if test="count(/ProductDetail/NewsRelated2)>0">
-
-			<section class="product-detail-faq" id="product-section-5">
-				<div class="container">
-					<div class="row">
-						<div class="col w-full md:w-3/12">
-							<div class="head-title">
-								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FaqText">
+								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/OViewText">
 								</xsl:value-of>
 							</div>
 						</div>
-						<div class="col w-full md:w-9/12">
-							<div class="toggle-wrapper">
-								<xsl:apply-templates select="/ProductDetail/NewsRelated2"></xsl:apply-templates>
+						<div class="col w-full  lg:w-10/12">
+							<div class="caption-text">
+
+
+								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/BriefContent">
+								</xsl:value-of>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
 
-		</xsl:if>
-		<xsl:if test="count(/ProductDetail/ProductRelated)>0">
-
-			<section class="product-detail-accessory" id="product-section-6">
+			<section class="product-detail-option" id="product-section-2">
 				<div class="container">
 					<div class="row">
-						<div class="col w-full md:w-3/12">
+						<div class="col w-full  lg:w-2/12">
 							<div class="head-title">
-								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/AccessoryText">
+								<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FeatureText">
 								</xsl:value-of>
 							</div>
 						</div>
-						<div class="col w-full md:w-9/12">
-							<div class="swiper-product-accessory">
-								<div class="swiper-pagination"></div>
-								<div class="swiper-container">
-									<div class="swiper-wrapper">
+						<div class="col w-full  lg:w-10/12">
+							<div class="row-wrapper-cards">
+								<div class="column">
+									<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode='Attribute-1'>
+									</xsl:apply-templates>
+								</div>
+								<div class="column">
 
-										<xsl:apply-templates select="/ProductDetail/ProductRelated">
-										</xsl:apply-templates>
-									</div>
+									<xsl:apply-templates select="/ProductDetail/ProductAttributes" mode='Attribute-2'>
+									</xsl:apply-templates>
+
 								</div>
 							</div>
 						</div>
 					</div>
 				</div>
 			</section>
+			<xsl:if test="count(/ProductDetail/ProductAttributes2)>0">
 
-		</xsl:if>
+				<section class="product-detail-specification" id="product-section-3">
+					<div class="container">
+						<div class="row">
+							<div class="col w-full lg:w-3/12">
+								<div class="head-title">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/SpecText">
+									</xsl:value-of>
+								</div>
+								<div class="button-wrapper-right"><a class="btn btn-open-all" href="javascript:;"><span>
+											<xsl:value-of disable-output-escaping="yes"
+												select="/ProductDetail/OAllText">
+											</xsl:value-of>
+										</span><em class="lnr lnr-chevron-down"></em></a><a class="btn btn-close-all"
+										href="javascript:;"><span>
+											<xsl:value-of disable-output-escaping="yes"
+												select="/ProductDetail/CAllText">
+											</xsl:value-of>
+										</span><em class="lnr lnr-chevron-up"></em></a>
+								</div>
+							</div>
+							<div class="col w-full lg:w-9/12">
+								<div class="toggle-wrapper">
+
+									<xsl:apply-templates select="/ProductDetail/ProductAttributes2">
+									</xsl:apply-templates>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</xsl:if>
+
+
+			<xsl:if test="count(/ProductDetail/NewsRelated)>0">
+
+				<section class="product-detail-document" id="product-section-4">
+					<div class="container">
+						<div class="head-title">
+							<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/DownloadDocumentText">
+							</xsl:value-of>
+						</div>
+						<xsl:apply-templates select="/ProductDetail/NewsRelated"></xsl:apply-templates>
+
+					</div>
+				</section>
+			</xsl:if>
+
+			<xsl:if test="count(/ProductDetail/NewsRelated2)>0">
+
+				<section class="product-detail-faq" id="product-section-5">
+					<div class="container">
+						<div class="row">
+							<div class="col w-full md:w-3/12">
+								<div class="head-title">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/FaqText">
+									</xsl:value-of>
+								</div>
+							</div>
+							<div class="col w-full md:w-9/12">
+								<div class="toggle-wrapper">
+									<xsl:apply-templates select="/ProductDetail/NewsRelated2"></xsl:apply-templates>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</xsl:if>
+			<xsl:if test="count(/ProductDetail/ProductRelated)>0">
+
+				<section class="product-detail-accessory" id="product-section-6">
+					<div class="container">
+						<div class="row">
+							<div class="col w-full md:w-3/12">
+								<div class="head-title">
+									<xsl:value-of disable-output-escaping="yes" select="/ProductDetail/AccessoryText">
+									</xsl:value-of>
+								</div>
+							</div>
+							<div class="col w-full md:w-9/12">
+								<div class="swiper-product-accessory">
+									<div class="swiper-pagination"></div>
+									<div class="swiper-container">
+										<div class="swiper-wrapper">
+
+											<xsl:apply-templates select="/ProductDetail/ProductRelated">
+											</xsl:apply-templates>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</xsl:if>
+		</div>
 		<xsl:if test="count(/ProductDetail/NewsRelated3)>0">
 
 			<section class="product-detail-news">
@@ -331,11 +379,21 @@
 				<div class="figure-document">
 					<div class="title">
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+						<xsl:value-of select="/ProductDetail/EditLink" disable-output-escaping="yes"></xsl:value-of>
 					</div>
-					<div class="caption">
-						<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-					</div>
+					<xsl:if test="position()!=4">
+
+						<div class="caption">
+							<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+						</div>
+					</xsl:if>
+					<xsl:if test="position()=4">
+
+						<div class="wrapper">
+							<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+						</div>
+					</xsl:if>
+
 				</div>
 			</div>
 		</div>

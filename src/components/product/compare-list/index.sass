@@ -3,34 +3,76 @@
 	.figure-product
 		.button-wrapper-left
 			padding: 0 20px 20px 20px
-.select-product-compare
-	@apply bg-azure-4 py-6 overflow-auto fixed bottom-0 w-full h-auto  transition
+.select-product-compare-2
+	@apply bg-azure-4 overflow-auto fixed bottom-0 w-full h-auto  transition z-50
+	transform: translateY(100%)
 	&.open-compare
-		@apply transform-none
+		@apply transform-none py-6 
+		@media screen and ( max-width:1440.1px)
+			@apply py-4
+			
 	.head-title
-		@apply text-20 mb-0
+		@apply text-20 pb-0
 	.button-wrapper-center
-		@apply mt-2
+		@apply mt-4
 	.figure-product
+		@apply bg-white
 		.figure-image
 			@apply bg-white px-4
 			a
-				+img-ratio(30/140)
+				@apply static pt-0 h-auto
+				img
+					@apply static
+			@media screen and ( min-width:1024.1px)
+				@apply my-4
+			@media screen and ( min-width:1440.1px)
+				@apply my-6 mx-2
+				a
+					+img-ratio(70/140,contain)
+			@media screen and ( max-width:576px)
+				@apply m-0 p-0
+				a
+					height: 80px
+					width: auto
+					@apply px-2
+					img
+						width: 100%
+						height: 100%
+						object-fit: contain
+		.figcaption
+			@media screen and ( max-width:576px)
+				@apply hidden
+			.title
+				@media screen and ( max-width:1440px)
+					h2
+						a
+							min-height: 30px
+							@apply py-2
+				@media screen and ( max-width:1024px)
+					h2
+						a
+							@apply text-12
 	.btn-remove-compare
-		@apply absolute z-20
+		@apply absolute z-20 cursor-pointer
 		top: 30px
 		right: 30px
+		@media screen and ( max-width: 767px)
+			top: 15px
+			right: 15px
+			
 		em
 			@apply text-28 text-grey-2
 	.btn-primary
 		height: 40px
 	.row
-		@apply whitespace-no-wrap
+		@apply whitespace-no-wrap 
 	.col
 		&:last-child
 			.figure-product
 				.figure-image
 					@apply bg-azure-1
+		&:nth-child(4)
+			@apply hidden
 .figure-add-more
 	@apply flex items-center justify-center cursor-pointer transition bg-azure-1 h-full
 	em

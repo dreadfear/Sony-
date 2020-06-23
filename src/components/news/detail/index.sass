@@ -1,6 +1,12 @@
 .blog-detail-display
+	.btn-back
+		min-width: 250px
+		@media screen and ( max-width:1024px)
+			min-width: 220px
 	.blog-detail-heading
-		@apply py-12 bg-azure-1
+		@apply py-12
+		background: #f4f7fa
+		
 	.briefcontent
 		margin-top: 30px
 		time
@@ -16,11 +22,20 @@
 		p
 			line-height: 26px
 			color: #4a4a4a
+			@apply text-14 text-grey-2
+	
 	.blog-detail-content
 		@apply py-10
 		line-height: 26px
 		.btn-back
 			margin-top: 40px
+		strong
+			@apply text-14 text-primary-1
+		ul
+			li
+				@apply mb-2 text-14
+		p
+			@apply text-14 text-grey-2
 		img
 			max-width: 100%
 			height: auto
@@ -37,6 +52,9 @@
 			@apply flex-col
 	.btn-primary
 		min-width: 250px
+		&:hover
+			span
+				@apply text-primary-1
 		@media screen and ( max-width:1024px)
 			min-width: 200px
 		@media screen and ( max-width: 576px)

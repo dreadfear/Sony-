@@ -65,15 +65,16 @@
 							<xsl:if test="Url !=''">
 								<div class="button-wrapper-left">
 									<a class="btn btn-primary yellow">
-										<a>
-											<xsl:attribute name="href">
-												<xsl:value-of select="Url"></xsl:value-of>
-											</xsl:attribute>
-											<xsl:attribute name="title">
-												<xsl:value-of select="Title"></xsl:value-of>
-											</xsl:attribute>
-										</a>
-
+										<xsl:attribute name="href">
+											<xsl:value-of select="Url"></xsl:value-of>
+										</xsl:attribute>
+										<xsl:attribute name="title">
+											<xsl:value-of select="Title"></xsl:value-of>
+										</xsl:attribute>
+										<span>
+											<xsl:value-of disable-output-escaping="yes"
+												select="/BannerList/ContactText"></xsl:value-of>
+										</span>
 									</a></div>
 							</xsl:if>
 						</div>
