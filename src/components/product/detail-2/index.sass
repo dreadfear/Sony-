@@ -3,23 +3,23 @@
 		img
 	.figcaption
 		h2
-			@apply text-28 text-grey-2 mb-2 text-center pt-4
+			@apply text-28 text-grey-2 mb-2 text-center pt-4  font-light
 			@screen lg
-				@apply text-32 mb-3
+				@apply text-32 mb-3 
 		.caption
-			@apply text-14 text-grey-2 text-center
+			@apply text-14 text-grey-2 text-center  font-light
 			*
-				@apply text-14 text-grey-2 text-center
+				@apply text-14 text-grey-2 text-center  font-light
 .detail-section
 	@apply py-16
 	@screen lg
 		@apply py-20
 	.head-title
-		@apply mb-0
+		@apply mb-0 font-light
 	.caption
-		@apply text-14 text-grey-2 leading-relaxed
+		@apply text-14 text-grey-2 leading-relaxed font-light
 		*
-			@apply text-14 text-grey-2 leading-relaxed
+			@apply text-14 text-grey-2 leading-relaxed font-light
 	ul
 		@apply my-2
 		li
@@ -36,22 +36,22 @@
 .product-detail-cameras
 	@apply bg-smoky
 	.top-image
-		@apply pt-16 
+		@apply py-8
 		@screen lg
 			@apply pt-20
 	.product-information
 		h1
-			@apply text-28 text-white text-center mb-3
+			@apply text-28 text-white text-center mb-3 font-light
 			@screen lg
 				@apply text-32 mb-4
 		h2
-			@apply text-16 font-bold mb-2 text-white text-center
+			@apply text-16 font-bold mb-2 text-white text-center  font-light
 		.caption
-			@apply text-16 text-white text-center
+			@apply text-16 text-white text-center  font-light
 			*
-				@apply text-16 text-white
+				@apply text-16 text-white  font-light
 		.image-wrapper
-			@apply py-16
+			@apply py-8
 			@screen lg 
 				@apply pt-14 pb-22
 	.button-wrapper-center
@@ -66,22 +66,26 @@
 			@apply pt-20
 
 	.container
-		&:first-child,&:last-child
-			@apply py-16
+		&:first-child
+			@apply pt-16
 			@screen lg
 				@apply py-20
-
+		&:last-child
+			@apply pb-16
+			@screen lg
+				@apply pb-20
 	h2
-		@apply text-28 text-white text-center mb-3
+		@apply text-28 text-white text-center mb-3  font-light
 		@screen lg
-			@apply text-32 mb-4
+			@apply text-32 mb-4  font-light
 	.caption
 		@apply text-14 text-white text-center mb-2 pb-16 font-light
 		padding: 0 8.33%
 		*
 			@apply text-14 text-white text-center mb-2 leading-relaxed font-light
 		@media screen and ( max-width: 1024px)
-			@apply p-0
+
+			@apply px-0 pb-10
 			
 .product-detail-features-1
 	.text-left-image-right
@@ -94,6 +98,12 @@
 			margin-bottom: 30px
 .product-detail-features-2
 	@apply bg-iron
+	.row
+		.col
+			@media screen and ( max-width: 1024px)
+				&:first-child
+					@apply mb-8
+				
 
 .product-detail-features-3
 	
@@ -106,6 +116,12 @@
 			@apply text-center
 .product-detail-features-4
 	@apply bg-iron
+	.row
+		.col
+			@media screen and ( max-width: 1024px)
+				&:first-child
+					@apply mb-8
+
 .product-detail-features-5
 	.head-title
 		@apply text-center
@@ -116,11 +132,11 @@
 		*
 			@apply text-center
 	.note-text
-		@apply text-center mb-4 pt-16
+		@apply text-center mb-4 pt-8 italic
 		@screen lg
 			@apply pt-20
 		*
-			@apply  mb-4
+			@apply  mb-4 italic
 .product-detail-features-6
 	@apply bg-iron
 	.head-title
@@ -130,18 +146,46 @@
 		*
 			@apply text-center text-14  text-grey-2
 	.note-text
-		@apply text-center text-14  text-grey-2 font-light mb-2
+		@apply text-center text-14  text-grey-2 font-light mt-4
 		*
-			@apply text-center text-14  text-grey-2 font-light mb-2
+			@apply text-center text-14  text-grey-2 font-light mt-4
+
 .product-detail-features-7
 	@apply bg-white
-.wrapper-section
-	.product-detail-caption-text
-		&:nth-child(odd)
-			@apply bg-iron
-			.row
-				@apply flex-row-reverse
-		&:nth-child(even)
+	.caption
+		@apply text-14 text-grey-2
+		*
+			@apply text-14 text-grey-2 font-light
+	@media screen and ( max-width: 1024px)
+		@apply text-center
+		.image-wrapper
+			img
+				@apply block mx-auto
+		.caption
+			@apply text-center
+			*
+				@apply text-center
+			
+	
+.product-detail-caption-text
+	@media screen and ( max-width: 1024px)
+		@apply text-center
+		.image-wrapper
+			img
+				@apply block mx-auto
+		.caption
+			@apply text-center
+			*
+				@apply text-center
+	.row
+		.col
+			@media screen and ( max-width: 1024px)
+				&:first-child
+					@apply mb-8
+			
+	&.reserve-section
+		.row
+			@apply flex-row-reverse
 .product-detail-features-8
 	@apply bg-iron pb-12
 	@screen lg
@@ -159,7 +203,17 @@
 					@apply text-28
 			.caption
 				@apply text-grey-2 text-center
+	@media screen and ( max-width: 1024px)
+		@apply text-center
+		.image-wrapper
+			img
+				@apply block mx-auto
+		.caption
+			@apply text-center
+			*
+				@apply text-center
 .product-detail-features-9
+
 	.row
 		&:nth-child(even)
 			@apply flex-row-reverse
