@@ -16,7 +16,7 @@
 			a
 				min-width: 170px
 		.title
-			@apply text-20
+			@apply text-20 text-white text-center
 			@screen lg
 				@apply text-32
 .insight-detail-1
@@ -138,3 +138,11 @@
 	@apply bg-azure-4 pb-16
 	@screen lg
 		@apply pb-24
+.insight-detail-image
+	.img-wrapper
+		img
+			@media screen and ( max-width:1024px)
+				min-height: 50vh
+				width: 100%
+				height: 100%
+				object-fit: cover

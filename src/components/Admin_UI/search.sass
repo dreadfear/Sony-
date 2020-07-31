@@ -123,17 +123,14 @@
 			display: none !important
 
 .searchbox
-	@media screen and ( max-width:767.8px  )
-		@apply flex relative items-center justify-center px-4
-		border-top: 1px solid #81dcf7
-		background: #e4e7eb
-		height: 45px
-	@media screen and ( min-width:767.9px  )
-		bottom: -1px
-		z-index: 10
-		@apply right-0 translate-x-50 opacity-0 overflow-visible absolute block h-0
-		transition: opacity .1s linear 0s,left 0s linear .1s
+	bottom: -1px
+	z-index: 10
+	@apply right-0  opacity-0 overflow-visible absolute block h-0 w-full
+	transition: opacity .1s linear 0s,left 0s linear .1s
 	@media screen and ( max-width:1024px)
+		@apply translate-0
+
+		
 	&.active
 		@apply opacity-100
 		input
@@ -158,19 +155,16 @@
 		transition: opacity .3s ease-in-out
 		font-size: 16px
 		color: #333333
-		@media screen and ( max-width: 767.9px)
-			@apply  text-14
+		@media screen and ( max-width:  576px)
+			@apply w-full
 			
 		&:focus
 			outline: none
 			transition: none
-		
 		&::placeholder
 			font-size: 13px
-		@media screen and ( max-width: 767.9px)
-			@apply static bg-white opacity-100 pointer-events-auto cursor-pointer visible z-30 border-0
-			width: calc( 100% - 30px )
-			height: 30px
+	
+			
 	button
 		color: #ffffff
 		background: $gray
@@ -190,20 +184,14 @@
 			color: #ffffff
 		&:focus
 			outline: none
-		
-		@media screen and ( max-width:767.9px)
-			@apply static opacity-100 pointer-events-auto cursor-pointer border-0  bg-white z-30 bg-white bg-black
-			width: 30px
-			height: 30px
 .search-wrapper
-	@apply relative
+	@apply static h-full
+	@screen sm
+		@apply relative
 	.search-toggle
-		@apply flex items-center justify-center uppercase  text-12 transition relative 
+		@apply flex items-center justify-center uppercase  text-12 transition relative  h-full
 		width: 35px
-		height: 35px
 		z-index: 999
-		@media (max-width: 767.98px)
-			display: none
 		em
 			@apply inline-block text-white transition pointer-events-none
 			font-size: 18px

@@ -14,7 +14,7 @@ $(document).ready(function () {
 	swiperInit();
 	tabActive();
 	productTab();
-	mappingSearch();
+	// mappingSearch();
 	mappingMenu();
 	toggleSearch();
 	toggleFooter();
@@ -37,18 +37,18 @@ window.onscroll = function () {
 
 function toggleMobileNav() {
 	let trigger = $('.nav-primary .mega-title em')
-  let firstLevel = $('.first-level-title em')
-  let back = $('.back-previous')
+	let firstLevel = $('.first-level-title em')
+	let back = $('.back-previous')
 	trigger.click(function () {
 		$(this).parent().next().toggleClass('open-first')
 
 	});
 	firstLevel.click(function () {
 		$(this).parent().next().toggleClass('open-second')
-  })
-  back.click(function(){
-    $(this).parent().removeClass(['open-first', 'open-second'])
-  })
+	})
+	back.click(function () {
+		$(this).parent().removeClass(['open-first', 'open-second'])
+	})
 
 }
 
@@ -130,9 +130,11 @@ function swiperInit() {
 		pagination: {
 			el: ".news-related-display .swiper-pagination",
 			type: "bullets",
-		},
+		}
+
 	});
-	var lastedNews = new Swiper(".product-related-swiper .swiper-container", {
+
+	var productRelated = new Swiper(".product-related-swiper .swiper-container", {
 		// Optional parameters
 		speed: 1205,
 		autoplay: {
@@ -299,7 +301,7 @@ function swiperInit() {
 		},
 	});
 
-	var homeNews = new Swiper(".lastest-news-swiper .swiper-container", {
+	var homeNewsLastest = new Swiper(".lastest-news-swiper .swiper-container", {
 		// Optional parameters
 		speed: 1205,
 		autoplay: {
@@ -325,6 +327,10 @@ function swiperInit() {
 				spaceBetween: 10,
 			},
 		},
+		on: {
+			init: function () {
+			}
+		},
 		pagination: {
 			el: ".lastest-news-swiper .swiper-pagination",
 			type: "bullets",
@@ -334,6 +340,8 @@ function swiperInit() {
 			prevEl: ".lastest-news-swiper .lastest-news-prev",
 		},
 	});
+				homeNewsLastest.slideTo(1)
+
 
 	var topBanner = new Swiper(".top-banner .swiper-container", {
 		// Optional parameters
@@ -638,19 +646,6 @@ function mappingSearch() {
 	}).watch();
 }
 
-// function scrollHeader() {
-//   var prevScrollpos = window.pageYOffset;
-//   window.onscroll = function () {
-//     var currentScrollPos = window.pageYOffset;
-//     if (prevScrollpos > currentScrollPos) {
-//       document.getElementById("header").style.top = "0";
-//     } else {
-//       document.getElementById("header").style.top = "-100px";
-//     }
-//     prevScrollpos = currentScrollPos;
-//   };
-// }
-
 function sideNavigation() {
 	$(".side-navigation > li > .title em").click(function (e) {
 		e.preventDefault();
@@ -747,10 +742,6 @@ function toggleFooter() {
 }
 
 function triggerCompare() {
-	// let trigger = $('.btn-compare')
-	// trigger.on('click', function () {
-	// 	$('.select-product-compare').addClass('open-compare')
-	// })
 	let remove = $(".btn-remove-compare");
 	remove.on("click", function () {
 		$(".select-product-compare").removeClass("open-compare");
@@ -775,15 +766,10 @@ function stickyProductDetail() {
 		.scroll(function () {
 			var scrollDistance = $(window).scrollTop();
 
-			// Show/hide menu on scroll
-			//if (scrollDistance >= 850) {
-			//		$('nav').fadeIn("fast");
-			//} else {
-			//		$('nav').fadeOut("fast");
-			//}
+
 
 			// Assign active class to nav links while scolling
-			$(".content-scroll-wrapper section").each(function (i) {
+			$(".content-scroll-wrapper .product-section-id").each(function (i) {
 				if (
 					$(this).position().top -
 					$(".product-detail-nav").outerHeight() -
@@ -797,24 +783,46 @@ function stickyProductDetail() {
 			});
 		})
 		.scroll();
-
 	$(".sticky-navigation a").on("click", function (event) {
-		// Make sure this.hash has a value before overriding default behavior
 		if (this.hash !== "") {
-			// Prevent default anchor click behavior
 			let offset =
 				$("header").outerHeight() + $(".product-detail-nav").outerHeight();
-			// Store hash
 			var hash = this.hash;
-
-			// Using jQuery's animate() method to add smooth page scroll
-			// The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
 			$("html, body").animate({
 					scrollTop: $(hash).offset().top - offset,
 				},
 				800,
 				function () {
-					// Add hash (#) to URL when done scrolling (default click behavior)
+					window.location.hash = hash;
+				}
+			);
+		} // End if
+	});
+	$(".sticky-solution-nav a").on("click", function (event) {
+		if (this.hash !== "") {
+			let offset =
+				$("header").outerHeight() + $(".sticky-solution-nav").outerHeight();
+			var hash = this.hash;
+			$("html, body").animate({
+					scrollTop: $(hash).offset().top - offset,
+				},
+				800,
+				function () {
+					window.location.hash = hash;
+				}
+			);
+		} // End if
+	});
+	$(".product-detail-nav a.btn-primary").on("click", function (event) {
+		if (this.hash !== "") {
+			let offset =
+				$("header").outerHeight() + $(".product-detail-nav").outerHeight();
+			var hash = this.hash;
+			$("html, body").animate({
+					scrollTop: $(hash).offset().top - offset,
+				},
+				800,
+				function () {
 					window.location.hash = hash;
 				}
 			);

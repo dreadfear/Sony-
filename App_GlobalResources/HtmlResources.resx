@@ -331,4 +331,10 @@
 		<data name="VMText" xml:space="preserve">
 		<value>View more</value>
 	</data>
+		<data name="DealerText" xml:space="preserve">
+		<value>Where to buy</value>
+	</data>
+		<data name="CusText" xml:space="preserve">
+		<value>Contact us</value>
+	</data>
 </root>

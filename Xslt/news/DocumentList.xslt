@@ -33,6 +33,7 @@
 			<td>
 				<p>
 					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</p>
 				<p>
 					<xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of>
@@ -40,6 +41,9 @@
 			</td>
 			<td class="text-center">
 				<!-- <xsl:value-of disable-output-escaping="yes" select="SubTitle"></xsl:value-of> -->
+				<xsl:if test="FileUrl != ''">
+					<xsl:value-of disable-output-escaping="yes" select="FileSize"></xsl:value-of>
+				</xsl:if>
 			</td>
 			<td class="text-center">
 				<xsl:value-of disable-output-escaping="yes" select="CreatedDate"></xsl:value-of>
@@ -57,10 +61,14 @@
 					</a>
 				</xsl:if>
 				<xsl:if test="FileUrl = ''">
-					<a href="#">
-						<xsl:attribute name="href">
-							<xsl:value-of select="BriefContent"></xsl:value-of>
-						</xsl:attribute>
+					<a>
+						<xsl:if test="BriefContent!=''">
+
+							<xsl:attribute name="href">
+								<xsl:value-of select="BriefContent"></xsl:value-of>
+							</xsl:attribute>
+						</xsl:if>
+
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>

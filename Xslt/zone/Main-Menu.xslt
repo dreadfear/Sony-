@@ -28,7 +28,7 @@
 							</xsl:attribute>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 						</a>
-						<em class="lnr lnr-chevron-down"></em>
+						<em class="lnr lnr-chevron-right"></em>
 					</div>
 					<div class="mega-menu">
 						<div class="back-previous"><em class="lnr lnr-chevron-left"></em></div>
@@ -132,7 +132,7 @@
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 					</span>
 				</a>
-				<em class="lnr lnr-chevron-down"></em>
+				<em class="lnr lnr-chevron-right"></em>
 			</div>
 			<xsl:if test="count(Zone) > 0">
 				<ul class="mega-nav-second-level">

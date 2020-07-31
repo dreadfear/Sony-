@@ -33,7 +33,7 @@ export const tw_TaskSass = () => {
 					browsers: ["last 4 version", "IE 9"],
 					cascade: false
 				}),
-				// cssnano(),
+				cssnano(),
 				cssSort({
 					order: "concentric-css"
 				})

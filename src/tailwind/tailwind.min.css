@@ -321,9 +321,9 @@ hr {
       .btn.btn-primary span::first-letter {
         text-transform: uppercase; }
     .btn.btn-primary:hover {
-      @apply bg-white {} }
+      @apply bg-primary-1 {} }
       .btn.btn-primary:hover span, .btn.btn-primary:hover em {
-        @apply text-black {} }
+        @apply text-white {} }
       .btn.btn-primary:hover em {
         transform: translateX(3px); }
   .btn.btn-close-all, .btn.btn-open-all {

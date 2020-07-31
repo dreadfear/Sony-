@@ -327,5 +327,10 @@
 		<value>Tải về file PDF ></value>
 	</data>
 
-
+		<data name="DealerText" xml:space="preserve">
+		<value>Liên hệ</value>
+	</data>
+		<data name="CusText" xml:space="preserve">
+		<value>Tìm đại lý</value>
+	</data>
 </root>

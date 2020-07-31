@@ -9,7 +9,7 @@
 	<xsl:template match="Zone">
 		<xsl:if test="position()=2">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-2 section-text-white insight-section text-white">
+				<section class="insight-display-2 section-text-white insight-section text-white" id='section-id-1'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -33,7 +33,7 @@
 
 		<xsl:if test="position()=3">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-3 insight-section">
+				<section class="insight-display-3 insight-section" id='section-id-2'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -50,7 +50,7 @@
 		</xsl:if>
 		<xsl:if test="position()=4">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-4 insight-section">
+				<section class="insight-display-4 insight-section" id='section-id-3'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -72,7 +72,7 @@
 		</xsl:if>
 		<xsl:if test="position()=5">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-6 insight-section">
+				<section class="insight-display-6 insight-section" id='section-id-4'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -94,7 +94,7 @@
 		</xsl:if>
 		<xsl:if test="position()=6">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-7 insight-section">
+				<section class="insight-display-7 insight-section" id='section-id-5'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
@@ -108,7 +108,7 @@
 		</xsl:if>
 		<xsl:if test="position()=7">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-8 insight-section text-white">
+				<section class="insight-display-8 insight-section text-white" id='section-id-6'>
 					<div class="container">
 						<div class="row">
 							<xsl:apply-templates select="News" mode='News-6'></xsl:apply-templates>
@@ -119,7 +119,7 @@
 		</xsl:if>
 		<xsl:if test="position()=8">
 			<xsl:if test="Url !='#'">
-				<section class="insight-display-9 insight-section">
+				<section class="insight-display-9 insight-section" id='section-id-7'>
 					<div class="container">
 						<div class="head-title text-center">
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>

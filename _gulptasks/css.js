@@ -27,7 +27,7 @@ export const sassTask = () => {
 					browsers: ["last 4 version", "IE 9"],
 					cascade: false
 				}),
-				// cssnano(),
+				cssnano(),
 				cssSort({
 					order: "concentric-css"
 				})

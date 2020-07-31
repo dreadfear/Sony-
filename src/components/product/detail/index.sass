@@ -1,6 +1,8 @@
 .product-detail
 	.button-wrapper
 		.btn
+			min-width: 160px
+			
 			&:not(:last-child)
 				@apply mr-2
 			@media screen and ( max-width:767px)
@@ -8,7 +10,7 @@
 	.row-padding
 		@apply py-12
 		@screen lg
-			@apply pt-20 pb-32
+			@apply pt-20 pb-28
 		h1
 			@apply text-32 text-grey-2 uppercase font-bold mb-3
 		.caption
@@ -42,45 +44,27 @@
 				width: 100%
 				height: 100%
 				object-fit: contain
-// .product-sticky-scroll
-// 	@apply block bg-primary-1 fixed w-full
-// 	top: 0
-// 	z-index: 999
-// 	transform: translateY(-100%)
-// 	&.active
-// 		@apply fixed top-0 left-0 w-full
-// 		z-index: 999
-// 		transform: translateY(0)
-// 	.product-header
-// 		@apply flex justify-between items-start pt-12 pb-2
-// 		transform: translate-y-100
-// 		.title
-// 			h2
-// 				@apply text-white text-24 uppercase
-// 	.button-wrapper
-// 		.btn-primary
-// 			&:not(:last-child)
-// 				@apply mr-2
-// 			&:first-child
-// 				border: 1px solid #ffffff
-// 				span
-// 					@apply text-white
-		
 .product-detail-image
 	@apply  bg-azure-4 pt-12 pb-16 
 	@screen lg
-		@apply pt-20 pb-24
+		@apply pt-20 pb-30
 	.swiper-product-detail
 		position: relative
 		.nav-arrow-prev,.nav-arrow-next
 			padding: 5px 15px
 			transition: .3s all ease-in-out
-			&:hover
-				background: rgba(#333333 ,.8 )
+			@media screen and ( min-width: 1024px )
+				&:hover
+					background: rgba(#333333 ,.8 )
+					span
+						@apply text-white
 			span
+				@apply transition
 				height: 25px
+				color: #959ea7
+				width: 24px
 		.nav-arrow-prev
-			left: -50px
+			left: -70px
 			@media screen and ( min-width:1200px) and ( max-width:1250px)
 				left: -35px
 			@media screen and ( max-width:1050px)
@@ -88,7 +72,7 @@
 			@media screen and ( max-width:  1024px)
 				left: 0
 		.nav-arrow-next
-			right: -50px
+			right: -70px
 			@media screen and ( min-width:1200px) and ( max-width:1250px)
 				right: -35px
 			@media screen and ( max-width:1050px)
@@ -96,7 +80,9 @@
 			@media screen and ( max-width:  1024px)
 				right: 0
 		.wrapper
-			@apply p-8 bg-white
+			@apply p-12 bg-white
+			@screen lg
+				@apply p-28
 			a
 				display: block
 				height: 0
@@ -112,12 +98,12 @@
 					object-fit: contain
 	.swiper-pagination
 		@apply left-50 translate-x-50
-		bottom: -30px
+		bottom: -40px
 		display: block !important
 .product-detail-summary
-	@apply  bg-white py-12
+	@apply  bg-white pt-12 pb-6
 	@screen lg
-		@apply pt-16 pb-16
+		@apply pt-16 pb-12
 	.caption-text
 		
 		.title,strong
@@ -150,7 +136,7 @@
 		vertical-align: top
 		width: 100%
 		.title
-			@apply text-16 text-grey-2 font-bold text-left inline-block mb-4
+			@apply text-14 text-grey-2 font-bold text-left inline-block mb-3
 		.caption
 			@apply text-14 text-grey-2 text-left leading-relaxed
 			*
@@ -193,9 +179,14 @@
 		@media screen and ( min-width: 1024.1px )
 			@apply mt-20
 	.toggle-item
+		&.active
+			.title
+				span
+					@apply text-dove
 		.title
 			@apply py-2
 			min-height: 55px
+			
 		article
 			@apply py-0
 			p
@@ -382,7 +373,7 @@
 					
 	@apply bg-primary-1
 	*
-		@apply text-white font-bold text-14
+		@apply text-white font-bold text-16
 	@media screen and ( max-width: 767px )
 		white-space: nowrap
 		ul
@@ -396,6 +387,8 @@
 				@apply inline-block pr-10
 			&.active
 				a
+					transition: .3s all  ease-in-out
+					color: #31b6ee
 					&::before
 						opacity: 1
 			a

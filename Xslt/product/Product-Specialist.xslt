@@ -97,7 +97,7 @@
 			<div class="col w-full sm:w-1/2 md:w-4/12">
 				<div class="col-match-height">
 					<div class="figure-product">
-						<div class="figure-image">
+						<div class="figure-image opacity">
 							<a>
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>
@@ -159,7 +159,7 @@
 			<div class="col w-full sm:w-1/2 md:w-4/12">
 				<div class="col-match-height">
 					<div class="figure-product">
-						<div class="figure-image">
+						<div class="figure-image opacity">
 							<a>
 								<xsl:attribute name="href">
 									<xsl:value-of select="Url"></xsl:value-of>

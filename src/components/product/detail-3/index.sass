@@ -1,5 +1,19 @@
+.section-detail-2
+	.head-title
+		@apply font-light mb-0 text-grey-2
+	.caption
+		padding: 0 8.33%
+		@apply text-center text-14 leading-relaxed text-grey-2 font-light
+		@media screen and ( max-width: 1024px)
+			padding: 0
+			
+		*
+			@apply text-center text-14 leading-relaxed text-grey-2 font-light
 .product-detail-projector
 	.top-image
+		img
+			@apply block mx-auto
+			
 		@apply py-8
 		@screen lg
 			@apply pt-20
@@ -22,3 +36,59 @@
 		@apply pb-16
 		@screen lg
 			@apply pb-24
+.product-detail-section-image
+	.container
+		@apply py-12
+		@screen md
+			@apply py-16
+		@screen lg
+			@apply py-20
+	.image-wrapper
+		img
+			@media screen and ( max-width:1024px)
+				min-height: 60vh
+				width: 100%
+				height: 100%
+				object-fit: cover
+			
+.product-detail-installation
+	.container
+		@media screen and ( max-width:1024px)
+			@apply pb-12
+	.image-wrapper
+		img
+			min-height: auto
+	.caption
+		@apply pb-6
+		@screen lg
+			@apply pb-12
+.product-detail-innovative
+	@apply bg-azure-4 pt-16 pb-8
+	@screen lg
+		@apply pt-20 pb-14
+	.head-title
+		@apply mb-4
+	.row
+		.col
+			margin-bottom: 30px
+.figure-innovative
+	.figure-image
+			height: 160px
+			width: auto
+			img
+				width: 100%
+				height: 100%
+				object-fit: contain
+			@media screen and ( max-width:1024px)
+				height: 120px
+				
+	.figcaption
+		@apply text-center
+		h2
+			@apply text-26 text-grey-2 font-light mt-4 mb-2 leading-tight
+			@screen lg
+				@apply text-28
+		.note-text
+			@apply font-light mt-4
+			*
+				@apply font-light 

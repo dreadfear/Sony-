@@ -13,6 +13,9 @@ header
 		height: 60px
 	> .container
 		@apply flex justify-between items-center h-full 
+		@media screen and ( max-width: 1024px)
+			@apply relative
+			
 	.header-wrapper-right
 		@apply flex items-center justify-end h-full
 	.header-wrapper-left
@@ -91,6 +94,10 @@ header
 		.btn-primary
 			@apply mt-2
 			height: 50px
+		.btn-view-more
+			margin-bottom: 15px !important
+			span
+				@apply text-16
 .mobile-wrapper
 	@apply fixed top-0 bottom-0 m-0   opacity-0 overflow-y-auto  pointer-events-none
 	height: 100vh

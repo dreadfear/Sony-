@@ -87,7 +87,9 @@
 	@screen lg
 		@apply py-28
 	.zone-description 
-		@apply mb-8
+		@apply mb-8 text-14
+		*
+			@apply text-14
 		@screen lg
 			@apply mb-16
 .solution-detail-4
@@ -99,7 +101,9 @@
 	.head-title
 		@apply text-left
 	.zone-description
-		@apply text-left p-0
+		@apply text-left p-0 text-14
+		*
+			text-14
 	@media screen and ( max-width:1024px)
 		.head-title,.zone-description
 			@apply text-center
@@ -148,7 +152,7 @@
 	.head-title
 		@apply text-left
 	.zone-description
-		@apply text-left p-0
+		@apply text-left p-0 text-14
 	@media screen and ( max-width:1024px)
 		.head-title,.zone-description
 			@apply text-center
@@ -172,9 +176,9 @@
 						@apply text-20
 						
 			.caption
-				@apply text-14  mt-4 text-center text-grey-2 font-normal text-white
+				@apply text-14  mt-4 text-center text-grey-2 font-normal 
 				*
-					@apply text-14 text-center text-grey-2 font-normal text-white
+					@apply text-14 text-center text-grey-2 font-normal 
 			.btn-view-more
 				@media screen and ( max-width:1024px)
 					@apply mt-8 justify-center
@@ -274,6 +278,10 @@
 		ul
 			li
 				+left-dot
+				&:before
+					font-size: 6px
+					margin-bottom: .5rem
+					margin-top: 0
 				@apply mb-1
 		@media screen and ( max-width: 767px )
 			@apply text-center
@@ -306,13 +314,13 @@
 	.head-title
 		@apply text-white
 	.zone-description
-		@apply text-white
+		@apply text-white text-center text-14
 		*
-			@apply text-white mb-3
+			@apply text-white mb-3 text-14
 			@screen lg
 				@apply mb-8
 		p 
-			@apply leading-relaxed mb-3
+			@apply leading-relaxed mb-3 text-14
 			@screen lg
 				@apply mb-8
 		@media screen and ( max-width:767px)
@@ -329,6 +337,10 @@
 	@apply pt-16 pb-4
 	.figure-image
 		+img-ratio(110/100,contain)
+	.container
+		@media screen and ( min-width: 1280px)
+			max-width: 790px !important
+			
 
 .solution-detail-13
 	@apply pb-20
@@ -373,4 +385,16 @@
 				@screen lg
 					@apply text-28
 		
-.swiper-client-federations
+.swiper-client-federations,.swiper-client-brands,.swiper-client-media
+	.wrapper
+		a
+			@apply flex items-center justify-center
+			img
+				max-width: 100%
+				height: auto
+				max-height: 200px
+			@media screen and ( max-width: 1024px)
+				img
+					max-height: 150px
+
+			

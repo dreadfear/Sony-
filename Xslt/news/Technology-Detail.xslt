@@ -37,7 +37,17 @@
 				<section class="section-card-product three-item-section technology-detail-3 section-caption"
 					id='section-id-3'>
 					<div class="container">
-						<xsl:apply-templates select="News" mode='News-3'></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode='News-3-Title'></xsl:apply-templates>
+
+						<div class="product-section-include">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<xsl:apply-templates select="News" mode='News-3-Item'></xsl:apply-templates>
+
+								</div>
+							</div>
+						</div>
+
 					</div>
 				</section>
 			</xsl:if>
@@ -105,7 +115,19 @@
 			<xsl:if test="Url !='#'">
 				<section class="section-card-product three-item-section technology-detail-three" id='section-id-11'>
 					<div class="container">
-						<xsl:apply-templates select="News" mode='News-11'></xsl:apply-templates>
+
+						<div class="row">
+
+							<xsl:apply-templates select="News" mode='News-11-Title'></xsl:apply-templates>
+						</div>
+						<div class="product-section-include">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<xsl:apply-templates select="News" mode='News-11-Item'></xsl:apply-templates>
+
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</xsl:if>
@@ -114,7 +136,15 @@
 			<xsl:if test="Url !='#'">
 				<section class="section-card-product four-item-section technology-detail-four" id='section-id-12'>
 					<div class="container">
-						<xsl:apply-templates select="News" mode='News-12'></xsl:apply-templates>
+						<xsl:apply-templates select="News" mode='News-12-Title'></xsl:apply-templates>
+						<div class="product-section-include">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+
+								<xsl:apply-templates select="News" mode='News-12-Item'></xsl:apply-templates>
+								</div>
+							</div>
+						</div>
 					</div>
 				</section>
 			</xsl:if>
@@ -233,22 +263,59 @@
 			</div>
 		</div>
 	</xsl:template>
-	<xsl:template match="News" mode='News-3'>
-		<div class="head-title">
-			<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-		</div>
-		<div class="zone-description">
-			<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-		</div>
-		<div class="product-section-include">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
-
+	<xsl:template match="News" mode='News-3-Title'>
+		<xsl:if test="position()=1">
+			<div class="head-title">
+				<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+				<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+			</div>
+			<div class="zone-description">
+				<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+			</div>
+		</xsl:if>
+	</xsl:template>
+	<xsl:template match="News" mode='News-3-Item'>
+		<xsl:if test="position() !=1">
+			<div class="swiper-slide">
+				<div class="figure-product-seciton">
+					<div class="figure-image">
+						<a>
+							<xsl:attribute name="href">
+								<xsl:value-of select="SubTitle"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<img class="lazyload">
+							<xsl:attribute name="data-src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</a>
+					</div>
+					<div class="figcaption">
+						<h3>
+							<a>
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+							</a>
+						</h3>
+						<div class="caption">
+							<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+						</div>
+					</div>
 				</div>
 			</div>
-		</div>
+		</xsl:if>
 	</xsl:template>
 	<xsl:template match="News" mode='News-4'>
 		<div class="col w-full sm:w-1/2 lg:w-4/12">
@@ -417,15 +484,16 @@
 			<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 		</div>
 	</xsl:template>
-	<xsl:template match="News" mode='News-11'>
-		<div class="row">
+	<xsl:template match="News" mode='News-11-Title'>
+		<xsl:if test="position()=1">
+
 			<div class="col w-full lg:w-1/2">
 				<div class="head-title">
 					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 				</div>
 				<div class="zone-description">
-					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
+					<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
 				</div>
 				<xsl:if test="SubTitle !=''">
 
@@ -458,74 +526,203 @@
 
 				</div>
 			</div>
-		</div>
-		<div class="product-section-include">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
-					<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+		</xsl:if>
 
+	</xsl:template>
+	<xsl:template match='News' mode="News-11-Item">
+		<xsl:if test="position()!=1">
+
+			<div class="swiper-slide">
+				<div class="figure-product-seciton">
+					<div class="figure-image">
+
+						<a>
+							<xsl:if test="SubTitle !=''">
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+							</xsl:if>
+							<xsl:attribute name="title">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							<img class="lazyload">
+							<xsl:attribute name="data-src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							</img>
+						</a>
+					</div>
+					<div class="figcaption">
+						<h3>
+							<a>
+								<xsl:if test="SubTitle !=''">
+
+
+									<xsl:attribute name="href">
+										<xsl:value-of select="SubTitle"></xsl:value-of>
+									</xsl:attribute>
+								</xsl:if>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+							</a>
+
+						</h3>
+						<div class="caption">
+							<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+						</div>
+					</div>
+					<xsl:if test="SubTitle !=''">
+						<div class="button-wrapper-center"><a class="btn btn-view-more">
+
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<span>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+									</xsl:value-of>
+								</span>
+							</a>
+						</div>
+					</xsl:if>
 				</div>
 			</div>
-		</div>
+		</xsl:if>
+
 	</xsl:template>
-	<xsl:template match="News" mode='News-12'>
-		<div class="row">
-			<div class="col w-full lg:w-1/2">
-				<div class="figure-media video">
-					<div class="figure-image">
-						<div class="wrapper">
-							<xsl:if test="FileUrl != ''">
-								<div class="play">
-									<div class="play__icon"></div>
-									<video playsinline="" loop="">
-										<source type="video/mp4">
-										<xsl:attribute name="src">
-											<xsl:value-of select="FileUrl" disable-output-escaping="yes"></xsl:value-of>
-										</xsl:attribute>
-										</source>
-									</video>
-								</div>
-							</xsl:if>
+	<xsl:template match="News" mode='News-12-Title'>
+		<xsl:if test="position()=1">
+
+			<div class="row">
+				<div class="col w-full lg:w-1/2">
+					<div class="figure-media video">
+						<div class="figure-image">
+							<div class="wrapper">
+								<xsl:if test="FileUrl != ''">
+									<div class="play">
+										<div class="play__icon"></div>
+										<video playsinline="" loop="">
+											<source type="video/mp4">
+											<xsl:attribute name="src">
+												<xsl:value-of select="FileUrl" disable-output-escaping="yes">
+												</xsl:value-of>
+											</xsl:attribute>
+											</source>
+										</video>
+									</div>
+								</xsl:if>
+							</div>
 						</div>
 					</div>
 				</div>
+				<div class="col w-full lg:w-1/2">
+					<div class="head-title -mt-2">
+						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+						<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+					</div>
+					<div class="zone-description">
+						<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+					</div>
+					<xsl:if test="SubTitle !=''">
+						<div class="button-wrapper-left">
+							<a class="btn btn-view-more">
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+
+								<span>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+									</xsl:value-of>
+								</span>
+							</a>
+
+						</div>
+					</xsl:if>
+				</div>
 			</div>
-			<div class="col w-full lg:w-1/2">
-				<div class="head-title -mt-2">
-					<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-					<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
-				</div>
-				<div class="zone-description">
-					<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-				</div>
-				<xsl:if test="SubTitle !=''">
-					<div class="button-wrapper-left">
-						<a class="btn btn-view-more">
-							<xsl:attribute name="href">
-								<xsl:value-of select="SubTitle"></xsl:value-of>
-							</xsl:attribute>
+		</xsl:if>
+
+	</xsl:template>
+	<xsl:template match="News" mode='News-12-Item'>
+		<xsl:if test="position()!=1">
+
+			<div class="swiper-slide">
+				<div class="figure-product-seciton">
+					<div class="figure-image">
+						<a>
+							<xsl:if test="SubTitle!=''">
+
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+							</xsl:if>
+
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
 
-							<span>
-								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
-								</xsl:value-of>
-							</span>
+							<img class="lazyload">
+							<xsl:attribute name="data-src">
+								<xsl:value-of select="ImageUrl"></xsl:value-of>
+							</xsl:attribute>
+							<xsl:attribute name="alt">
+								<xsl:value-of select="Title"></xsl:value-of>
+							</xsl:attribute>
+							</img>
 						</a>
 
 					</div>
-				</xsl:if>
-			</div>
-		</div>
-		<div class="product-section-include">
-			<div class="swiper-container">
-				<div class="swiper-wrapper">
+					<div class="figcaption">
+						<h3>
+							<a>
+								<xsl:if test="SubTitle !=''">
+									<xsl:attribute name="href">
+										<xsl:value-of select="SubTitle"></xsl:value-of>
+									</xsl:attribute>
+								</xsl:if>
 
-					<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+							</a>
+						</h3>
+						<div class="caption">
+							<xsl:value-of disable-output-escaping="yes" select="FullContent"></xsl:value-of>
+						</div>
+					</div>
+					<xsl:if test="SubTitle !=''">
+						<div class="button-wrapper-center"><a class="btn btn-view-more">
+
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<span>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+									</xsl:value-of>
+								</span>
+							</a>
+						</div>
+					</xsl:if>
 				</div>
 			</div>
-		</div>
+		</xsl:if>
+
 	</xsl:template>
 	<xsl:template match="News" mode='News-13'>
 		<div class="qoutes-text">
