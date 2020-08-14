@@ -18,6 +18,7 @@
 	"css": [
 		"src/_plugins/font.css",
 		"bower_components/swiper/dist/css/swiper.css",
-		"bower_components/fancybox/dist/jquery.fancybox.min.css"
+		"bower_components/fancybox/dist/jquery.fancybox.min.css",
+		"src/_plugins/sitemap.css"
 	]
 }

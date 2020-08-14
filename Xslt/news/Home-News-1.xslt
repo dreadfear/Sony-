@@ -46,10 +46,18 @@
 
 					</div>
 					<div class="figcaption">
-						<h3><a href="#">PXW-FX9 Đạt chuẩn "cận máy quay điện ảnh"</a></h3>
+						<h3><a>
+								<xsl:attribute name="href">
+									<xsl:value-of select="Url"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+								<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
+							</a></h3>
 						<div class="caption">
-							<p>Ttrong nhựng năm trở lại đây máy quay kỹ thuật số với cảm biến lớn phát
-								triển nhanh chóng </p>
+							<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 						</div>
 					</div>
 				</div>

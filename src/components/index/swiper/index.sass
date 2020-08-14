@@ -12,12 +12,13 @@
 	
 				
 	.swiper-slide
+		@apply h-auto
 		&:nth-child(1)
 			.figcaption
 				background: #ffffff
 		&:nth-child(2)
 			.figcaption
-				background-color: rgba(245, 245, 245,.3)
+				background-color: rgba(245, 245, 245,.8)
 		&:nth-child(3)
 			.figcaption
 				background: #2c3e50
@@ -30,6 +31,8 @@
 		&:nth-child(5)
 			.figcaption
 				background: #ffffff
+	.wrapper
+		@apply h-full
 	.container
 		@apply relative
 	.swiper-container
@@ -59,7 +62,9 @@
 		em
 .figure-lastest-news
 	border: 1px solid #ffffff
+	@apply h-full flex flex-col
 	.figure-image
+		flex: 1 0 auto
 		a
 			display: block
 			height: 0
@@ -76,11 +81,20 @@
 	.figcaption
 		padding: 20px
 		transition: .3s all ease-in-out
+		@apply h-full flex flex-col justify-between
 		h3
 			a
-				@apply text-20 font-normal text-left mb-2 inline-block
+				@apply text-20 font-normal text-left mb-2 inline-block leading-tight
+				display: -webkit-box
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
 		.caption
-			@apply text-12 text-white font-light
+			@apply text-12 text-grey font-light
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
 	@media screen and ( min-width: 1024px )
 		&:hover
 			.figcaption

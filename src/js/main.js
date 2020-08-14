@@ -5,24 +5,28 @@ $(document).ready(function () {
 		$(".navbar-primary-menu").fadeIn(function () {
 			$(".navbar-primary-menu").css({
 				display: "flex",
+				opacity: "1"
 			});
 		});
 	}
 	//Library init
+
 	setBackground();
 	mobileMenu();
 	swiperInit();
 	tabActive();
 	productTab();
-	// mappingSearch();
 	mappingMenu();
 	toggleSearch();
 	toggleFooter();
+
+	// mappingSearch();
 	togglePlugin();
 	stickyProductDetail();
 	triggerCompare();
 	toggleMobileNav();
 	productToggleAll();
+	searchEnter();
 	$('[data-fancybox="modal"]').fancybox({
 		modal: true,
 		smallBtn: true,
@@ -30,10 +34,14 @@ $(document).ready(function () {
 	});
 	//Declare function Javascript
 });
-window.onscroll = function () {
-	// scrollHeader();
-	// fixAboutNav();
-};
+
+
+function searchEnter() {
+	$(".searchresults .searchcontrols input[type='text']").keyup(function (n) {
+		if (n.which == 13)
+			$(".searchresults .searchcontrols input[type='submit']").trigger('click');
+	});
+}
 
 function toggleMobileNav() {
 	let trigger = $('.nav-primary .mega-title em')
@@ -57,6 +65,14 @@ function swiperInit() {
 		// Optional parameters
 		slidesPerView: 1,
 		speed: 1205,
+		autoplay: {
+			delay: 3000,
+		},
+	});
+	var topBanner = new Swiper(".top-banner .swiper-container", {
+		// Optional parameters
+		speed: 1205,
+		slidesPerView: 1,
 		autoplay: {
 			delay: 3000,
 		},
@@ -301,56 +317,49 @@ function swiperInit() {
 		},
 	});
 
-	var homeNewsLastest = new Swiper(".lastest-news-swiper .swiper-container", {
-		// Optional parameters
-		speed: 1205,
-		autoplay: {
-			delay: 3000,
-		},
-		centeredSlides: true,
-		breakpointsInverse: true,
-		breakpoints: {
-			320: {
-				slidesPerView: 1,
-				spaceBetween: 10,
+	if ($(".lastest-news-swiper").length) {
+		var homeNewsLastest = new Swiper(" .lastest-news-swiper .swiper-container", {
+			// Optional parameters
+			speed: 1205,
+			autoplay: {
+				delay: 3000,
 			},
-			450: {
-				slidesPerView: 2,
-				spaceBetween: 10,
+			centeredSlides: true,
+			breakpointsInverse: true,
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 10,
+				},
+				450: {
+					slidesPerView: 2,
+					spaceBetween: 10,
+				},
+				768: {
+					slidesPerView: 3,
+					spaceBetween: 10,
+				},
+				1280: {
+					slidesPerView: 3.1,
+					spaceBetween: 10,
+				},
 			},
-			768: {
-				slidesPerView: 3,
-				spaceBetween: 10,
+
+			pagination: {
+				el: ".lastest-news-swiper .swiper-pagination",
+				type: "bullets",
 			},
-			1280: {
-				slidesPerView: 3.1,
-				spaceBetween: 10,
+			navigation: {
+				nextEl: ".lastest-news-swiper .lastest-news-next",
+				prevEl: ".lastest-news-swiper .lastest-news-prev",
 			},
-		},
-		on: {
-			init: function () {
-			}
-		},
-		pagination: {
-			el: ".lastest-news-swiper .swiper-pagination",
-			type: "bullets",
-		},
-		navigation: {
-			nextEl: ".lastest-news-swiper .lastest-news-next",
-			prevEl: ".lastest-news-swiper .lastest-news-prev",
-		},
-	});
-				homeNewsLastest.slideTo(1)
+		});
+		try {
+			homeNewsLastest.slideTo(1)
+		} catch (error) {}
+	}
 
 
-	var topBanner = new Swiper(".top-banner .swiper-container", {
-		// Optional parameters
-		speed: 1205,
-		slidesPerView: 1,
-		autoplay: {
-			delay: 3000,
-		},
-	});
 
 	var homeNews = new Swiper(".three-item-section .swiper-container", {
 		// Optional parameters
@@ -375,15 +384,8 @@ function swiperInit() {
 			1280: {
 				slidesPerView: 3,
 			},
-		},
-		pagination: {
-			el: ".lastest-news-swiper .swiper-pagination",
-			type: "bullets",
-		},
-		navigation: {
-			nextEl: ".lastest-news-swiper .nav-arrow-next",
-			prevEl: ".lastest-news-swiper .nav-arrow-prev",
-		},
+		}
+
 	});
 
 	$(".swiper-insight-video .swiper-container").each(function (index, element) {
@@ -420,16 +422,12 @@ function swiperInit() {
 				type: "bullets",
 			},
 
-			// your settings ...
 		});
 	});
 
 	$(".four-item-section .swiper-container").each(function (index, element) {
 		var $this = $(this);
 		$this.addClass("instance-" + index);
-		// $this.parents('.tab-item').find(".nav-arrow-prev").addClass("btn-prev-" + index);
-		// $this.parents('.tab-item').find(".nav-arrow-next").addClass("btn-next-" + index);
-
 		var swiper = new Swiper(".instance-" + index, {
 			speed: 750,
 
@@ -451,12 +449,6 @@ function swiperInit() {
 					slidesPerView: 4,
 				},
 			},
-			// navigation: {
-			// 	nextEl: ".btn-next-" + index,
-			// 	prevEl: ".btn-prev-" + index
-			// }
-
-			// your settings ...
 		});
 	});
 
@@ -765,9 +757,6 @@ function stickyProductDetail() {
 	$(window)
 		.scroll(function () {
 			var scrollDistance = $(window).scrollTop();
-
-
-
 			// Assign active class to nav links while scolling
 			$(".content-scroll-wrapper .product-section-id").each(function (i) {
 				if (
