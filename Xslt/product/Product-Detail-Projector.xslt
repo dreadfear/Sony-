@@ -325,6 +325,9 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
+						<xsl:attribute name="aria-hidden">
+							<xsl:text disable-output-escaping="yes">true</xsl:text>
+						</xsl:attribute>
 						<img class='lazyload'>
 						<xsl:attribute name="data-src">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
@@ -337,15 +340,21 @@
 
 				</div>
 				<div class="figcaption">
-					<h2><a>
+					<div class='title'><a>
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
+							<xsl:attribute name="tabindex">
+								<xsl:text disable-output-escaping="yes">-1</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="aria-hidden">
+								<xsl:text disable-output-escaping="yes">true</xsl:text>
+							</xsl:attribute>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
-						</a></h2>
+						</a></div>
 					<div class="caption">
 						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 					</div>
@@ -383,6 +392,12 @@
 						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
+						</xsl:attribute>
+						<xsl:attribute name="tabindex">
+							<xsl:text disable-output-escaping="yes">-1</xsl:text>
+						</xsl:attribute>
+						<xsl:attribute name="aria-hidden">
+							<xsl:text disable-output-escaping="yes">true</xsl:text>
 						</xsl:attribute>
 						<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 					</a>
@@ -459,12 +474,14 @@
 
 			<div class="swiper-slide">
 				<div class="wrapper"><a>
-						<xsl:attribute name="href">
-							<xsl:value-of select="Url"></xsl:value-of>
-						</xsl:attribute>
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
+
+						<xsl:attribute name="aria-hidden">
+							<xsl:text disable-output-escaping="yes">true</xsl:text>
+						</xsl:attribute>
+
 
 
 						<img class='lazyload'>

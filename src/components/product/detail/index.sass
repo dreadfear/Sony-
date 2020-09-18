@@ -80,22 +80,12 @@
 			@media screen and ( max-width:  1024px)
 				right: 0
 		.wrapper
-			@apply p-12 bg-white
+			@apply p-10 bg-white
 			@screen lg
-				@apply p-28
+				@apply px-16 
 			a
-				display: block
-				height: 0
-				overflow: hidden
-				padding-top: 620 / 1100 * 100%
-				position: relative
-				img
-					position: absolute
-					top: 0
-					left: 0
-					width: 100%
-					height: 100%
-					object-fit: contain
+				+img-ratio(620/1100,contain)
+			
 	.swiper-pagination
 		@apply left-50 translate-x-50
 		bottom: -40px
@@ -105,9 +95,16 @@
 	@screen lg
 		@apply pt-16 pb-12
 	.caption-text
+		ul
+			list-style-type: disc
+			@apply pl-8
+			li
+				@apply mb-0
 		
 		.title,strong
 			@apply text-16 text-grey-2 text-left mb-2 font-bold inline-block mb-4
+		strong
+			margin-bottom: 0 !important
 		@apply text-14 text-grey-2 text-left leading-relaxed mb-4
 		*
 			@apply text-14 text-grey-2 text-left leading-relaxed mb-4
@@ -153,6 +150,9 @@
 			@apply  mb-8 absolute
 			right: 15px
 			top: 0
+	article
+		*
+			@apply leading-relaxed
 	table
 		@apply w-full
 		tbody
@@ -162,6 +162,11 @@
 				td
 					min-height: 50px
 					padding: 15px 0
+					*
+						@apply leading-relaxed
+					ul
+						list-style-type: disc
+						padding: 0 0 0 20px
 					&:first-child
 						width: 100%
 						@apply text-14 font-bold text-grey-2 inline-block
@@ -203,6 +208,10 @@
 			width: 100%
 			height: 100%
 			object-fit: scale-down
+			@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none)
+				width: auto
+				@apply block mx-auto
+
 	
 	.figure-document
 		@apply mb-10
@@ -276,8 +285,18 @@
 		.figcaption
 			.title
 				@apply text-14 font-bold text-primary-1 uppercase mt-4 inline-block
+				display: -webkit-box
+				-webkit-line-clamp: 2
+				-webkit-box-orient: vertical
+				overflow: hidden
+				height: 2rem
 			.caption
 				@apply text-12 text-grey-2 font-light text-left mt-3
+				display: -webkit-box
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
+				height: 3.375rem
 				*
 					@apply text-12 text-grey-2 font-light text-left
 .product-detail-news
@@ -298,14 +317,26 @@
 			@apply mt-4
 			@screen lg
 				@apply mt-6
-			h2
+			.title
 				a
 					@apply text-16 text-grey-2 text-left font-bold leading-normal
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					height: 4.5rem
 			.caption
 				@apply mt-4 text-12 font-light
+				display: -webkit-box
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
+				height: 3.375rem
+				*
+					@apply  text-12 font-light
+
 				
 .product-detail-nav
-
 	&.scroll-to-fixed-fixed
 		@apply pt-6
 		.row
@@ -336,6 +367,12 @@
 					@apply mb-4
 				@media screen and ( max-width:1024px)
 					@apply mb-2
+	.btn-primary
+		height: 40px
+		span
+			@apply text-14
+			line-height: 1
+			
 	.button-wrapper
 		@media screen and ( min-width:767.9px) and ( max-width:1024px)
 			@apply flex flex-row items-center justify-end 

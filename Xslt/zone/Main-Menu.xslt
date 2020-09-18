@@ -136,7 +136,10 @@
 			</div>
 			<xsl:if test="count(Zone) > 0">
 				<ul class="mega-nav-second-level">
-					<div class="back-previous"><em class="lnr lnr-chevron-left"></em></div>
+					<li>
+						<div class="back-previous"><em class="lnr lnr-chevron-left"></em></div>
+					</li>
+
 					<xsl:apply-templates select="Zone" mode='Sub'></xsl:apply-templates>
 				</ul>
 			</xsl:if>

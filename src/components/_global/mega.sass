@@ -25,6 +25,8 @@
 			
 .mega-menu
 	z-index: 200
+	transition: .3s opacity ease-in-out
+	@apply transition
 	@media screen and ( max-width:767.9px)
 		@apply fixed right-0 h-full bg-primary-1
 		transform: translateX(100%)
@@ -37,6 +39,8 @@
 		height: calc(100vh - 100px)
 		padding: 30px
 		@apply opacity-0 pointer-events-none  z-0 transition overflow-y-auto w-full top-100 left-0 absolute bg-primary-1
+		&.open-mega
+			@apply opacity-100 pointer-events-auto z-50 
 	&.open-first
 		transform: translateX(0) 
 		@apply  z-50
@@ -129,10 +133,10 @@
 				@media screen and ( min-width: 767.9px )
 					border-bottom: 2px solid $azure-2
 		&.has-mega
-			@media screen and ( min-width:767.9px)
-				&:hover
-					.mega-menu
-						@apply opacity-100 pointer-events-auto z-50
+			// @media screen and ( min-width:767.9px)
+			// 	&:hover
+			// 		.mega-menu
+			// 			@apply opacity-100 pointer-events-auto 
 	@media screen and ( max-width: 767.9px)
 		padding: 35px 15px
 		max-width: 100%

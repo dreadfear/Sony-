@@ -45,24 +45,33 @@
 				<div class="figcaption">
 					<h2>
 						<a>
+
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
+							<xsl:attribute name="tabindex">
+								<xsl:text disable-output-escaping="yes">-1</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="aria-hidden">
+								<xsl:text disable-output-escaping="yes">true</xsl:text>
+							</xsl:attribute>
 							<xsl:value-of select="Title"></xsl:value-of>
 						</a>
 					</h2>
-					<p>
+					<div class="caption">
 						<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-					</p>
+					</div>
 					<div class="button-wrapper">
 						<a class="btn btn-view-more" href="#">
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
-							<span><xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText"></xsl:value-of></span>
+							<span>
+								<xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText"></xsl:value-of>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -100,6 +109,12 @@
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
+							<xsl:attribute name="tabindex">
+								<xsl:text disable-output-escaping="yes">-1</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="aria-hidden">
+								<xsl:text disable-output-escaping="yes">true</xsl:text>
+							</xsl:attribute>
 							<xsl:value-of select="Title"></xsl:value-of>
 						</a>
 					</h2>
@@ -108,7 +123,9 @@
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
 							</xsl:attribute>
-							<span><xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText"></xsl:value-of></span>
+							<span>
+								<xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText"></xsl:value-of>
+							</span>
 						</a>
 					</div>
 				</div>
@@ -148,18 +165,27 @@
 									<xsl:attribute name="title">
 										<xsl:value-of select="Title"></xsl:value-of>
 									</xsl:attribute>
+									<xsl:attribute name="tabindex">
+										<xsl:text disable-output-escaping="yes">-1</xsl:text>
+									</xsl:attribute>
+									<xsl:attribute name="aria-hidden">
+										<xsl:text disable-output-escaping="yes">true</xsl:text>
+									</xsl:attribute>
 									<xsl:value-of select="Title"></xsl:value-of>
 								</a>
 							</h2>
-							<p>
+							<div class="caption">
 								<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
-							</p>
+							</div>
 							<div class="button-wrapper">
 								<a class="btn btn-view-more" href="#">
 									<xsl:attribute name="href">
 										<xsl:value-of select="Url"></xsl:value-of>
 									</xsl:attribute>
-									<span><xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText"></xsl:value-of></span>
+									<span>
+										<xsl:value-of disable-output-escaping="yes" select="/NewsList/VMAText">
+										</xsl:value-of>
+									</span>
 								</a>
 							</div>
 						</div>

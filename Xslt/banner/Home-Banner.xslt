@@ -18,7 +18,7 @@
 		<div class="swiper-slide">
 			<div class="wrapper">
 				<div class="banner-image">
-					<a>
+					<a class="lazyload">
 						<xsl:if test="Url !=''">
 							<xsl:attribute name="href">
 								<xsl:value-of select="Url"></xsl:value-of>
@@ -27,14 +27,10 @@
 						<xsl:attribute name="title">
 							<xsl:value-of select="Title"></xsl:value-of>
 						</xsl:attribute>
-						<img class='lazyload'>
-						<xsl:attribute name="data-src">
+						<xsl:attribute name="data-bg">
 							<xsl:value-of select="ImageUrl"></xsl:value-of>
 						</xsl:attribute>
-						<xsl:attribute name="alt">
-							<xsl:value-of select="Title"></xsl:value-of>
-						</xsl:attribute>
-						</img>
+					
 					</a>
 				</div>
 				<xsl:if test="Title !=''">

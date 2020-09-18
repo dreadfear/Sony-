@@ -54,6 +54,7 @@
 				</div>
 			</div>
 		</section>
+		<xsl:apply-templates select="/NewsDetail/NewsRelated"></xsl:apply-templates>
 	</xsl:template>
 
 </xsl:stylesheet>

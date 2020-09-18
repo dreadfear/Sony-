@@ -56,6 +56,12 @@
 							<xsl:attribute name="title">
 								<xsl:value-of select="Title"></xsl:value-of>
 							</xsl:attribute>
+							<xsl:attribute name="tabindex">
+								<xsl:text disable-output-escaping="yes">-1</xsl:text>
+							</xsl:attribute>
+							<xsl:attribute name="aria-hidden">
+								<xsl:text disable-output-escaping="yes">true</xsl:text>
+							</xsl:attribute>
 							<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 							<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 						</a>

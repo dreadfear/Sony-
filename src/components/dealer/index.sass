@@ -2,6 +2,9 @@
 	@apply py-12
 	@screen xl
 		@apply py-18
+	.hidden-label
+		@apply h-0 opacity-0 pointer-events-none w-0 absolute
+		font-size: 0
 	.btn-searchmap
 	.filter-map
 		padding: 15px 30px
@@ -44,6 +47,14 @@
 		margin: 20px 0px 20px 10px
 		padding: 16px
 		flex: 1
+		.icon
+			background: url('../img/map-marker.png')
+			background-repeat: no-repeat
+			background-size: contain
+			background-position: center
+			width: 16px
+			height: 14px
+			@apply mt-1
 	#list,.list
 		margin-bottom: 0
 		list-style: none

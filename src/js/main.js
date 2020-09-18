@@ -1,4 +1,28 @@
 $(document).ready(function () {
+	const ie = window.navigator.userAgent
+	if (/MSIE \d|Trident.*rv:/.test(ie)) {
+		$('img').each(function () {
+			let fit = $(this).css('font-family')
+			if (fit === 'object-fit') {
+				let src;
+				if ($(this).attr('data-src') !== undefined) {
+					src = $(this).attr('data-src')
+				} else {
+					src = $(this).attr('src')
+				}
+				$(this).parent().css({
+					'background-image': "url('" + src + "')",
+					'background-size': 'cover',
+					'background-position': 'center center',
+					'background-repeat': 'no-repeat'
+
+				})
+				$(this).hide();
+			}
+		})
+
+	}
+
 	//Declare normal variable javascript
 	//Hide element when smaller than 1025
 	if ($(window).width() < 767.9) {
@@ -10,6 +34,20 @@ $(document).ready(function () {
 		});
 	}
 	//Library init
+	if ($(window).width() > 767.9) {
+		var timer;
+		$("body").on("mouseenter", ".has-mega", function () {
+			let self = this;
+			timer = setTimeout(function () {
+				$(self).find('.mega-menu').addClass("open-mega")
+			}, 500);
+		}).on("mouseleave", ".has-mega", function () {
+			clearTimeout(timer);
+			$('.mega-menu').removeClass("open-mega")
+
+		});
+	}
+
 
 	setBackground();
 	mobileMenu();
@@ -19,14 +57,14 @@ $(document).ready(function () {
 	mappingMenu();
 	toggleSearch();
 	toggleFooter();
-
+	triggerCompare();
 	// mappingSearch();
 	togglePlugin();
 	stickyProductDetail();
-	triggerCompare();
 	toggleMobileNav();
 	productToggleAll();
 	searchEnter();
+
 	$('[data-fancybox="modal"]').fancybox({
 		modal: true,
 		smallBtn: true,
@@ -34,6 +72,7 @@ $(document).ready(function () {
 	});
 	//Declare function Javascript
 });
+
 
 
 function searchEnter() {
@@ -47,6 +86,7 @@ function toggleMobileNav() {
 	let trigger = $('.nav-primary .mega-title em')
 	let firstLevel = $('.first-level-title em')
 	let back = $('.back-previous')
+	let back2 = $('.mega-nav-second-level .back-previous')
 	trigger.click(function () {
 		$(this).parent().next().toggleClass('open-first')
 
@@ -55,7 +95,10 @@ function toggleMobileNav() {
 		$(this).parent().next().toggleClass('open-second')
 	})
 	back.click(function () {
-		$(this).parent().removeClass(['open-first', 'open-second'])
+		$(this).parent().removeClass('open-first')
+	})
+	back2.click(function () {
+		$(this).parent().parent().removeClass('open-second')
 	})
 
 }
@@ -734,10 +777,9 @@ function toggleFooter() {
 }
 
 function triggerCompare() {
-	let remove = $(".btn-remove-compare");
-	remove.on("click", function () {
-		$(".select-product-compare").removeClass("open-compare");
-	});
+	$('body').on('click', '.btn-remove-compare', function () {
+		$(".select-product-compare-2").removeClass("open-compare");
+	})
 }
 
 function stickyProductDetail() {
@@ -782,7 +824,7 @@ function stickyProductDetail() {
 				},
 				800,
 				function () {
-					window.location.hash = hash;
+					// window.location.hash = hash;
 				}
 			);
 		} // End if
@@ -797,7 +839,7 @@ function stickyProductDetail() {
 				},
 				800,
 				function () {
-					window.location.hash = hash;
+					// window.location.hash = hash;
 				}
 			);
 		} // End if
@@ -812,7 +854,7 @@ function stickyProductDetail() {
 				},
 				800,
 				function () {
-					window.location.hash = hash;
+					// window.location.hash = hash;
 				}
 			);
 		} // End if

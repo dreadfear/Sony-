@@ -381,9 +381,15 @@
 	.figcaption
 		h3
 			a
-				@apply text-20
+				@apply text-20 block mb-3
 				@screen lg
 					@apply text-28
+		.caption
+			display: -webkit-box
+			-webkit-line-clamp: 3
+			-webkit-box-orient: vertical
+			overflow: hidden
+			height: 3.9375rem
 		
 .swiper-client-federations,.swiper-client-brands,.swiper-client-media
 	.wrapper

@@ -15,10 +15,10 @@
 			<table>
 				<thead>
 					<tr>
-						<th></th>
+						<td></td>
 						<th class="text-center">Kích thước file</th>
 						<th class="text-center">Ngày cập nhật</th>
-						<th></th>
+						<td></td>
 					</tr>
 				</thead>
 				<tbody>

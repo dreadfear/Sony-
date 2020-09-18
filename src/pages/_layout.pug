@@ -13,14 +13,20 @@ html(lang="en")
 		link(rel="stylesheet", href="./css/main.min.css")
 		link(href='https://fonts.googleapis.com/css?family=Inter:200,300,400,500,600,700|KoHo:400,700&display=swap&subset=vietnamese', rel='stylesheet')
 		title #{title}
+
 	body(class=bodyClass)
 		#wrapper
+			a.skip-main(href='#ctl00_divCenter') Skip to main content
 			.mobile-wrapper 
 			block header
 				include ../components/_global/header.pug
-			main
-				block main
+			#ctl00_divCenter(tabindex="-1")
+				main
+					block main
 			block footer
 				include ../components/_global/footer.pug
+
+
 		script(src="./js/core.min.js")
 		script(src="./js/main.min.js")
+		script(type='text/javascript')

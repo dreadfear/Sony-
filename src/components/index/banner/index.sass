@@ -1,14 +1,14 @@
 .primary-banner
 	.wrapper
-		a
-			width: auto
-			img
+		.banner-image
+			a
+				@apply block w-auto w-full h-full
 				min-height: calc( 100vh - 60px )
-				width: 100%
-				height: 100%
 				object-fit: cover
-			@media screen and ( min-width: 1024.1px )
-				img
+				background-position: center center
+				background-repeat: no-repeat
+				background-size: cover
+				@media screen and ( min-width: 1024.1px )
 					min-height: calc( 100vh - 100px )
 	.container
 		@apply absolute left-50 translate-x-50
@@ -33,9 +33,9 @@
 			h2
 				@apply text-white text-42 leading-normal mb-4
 				@media screen and ( max-width: 1440px)
-					@apply text-36  leading-relaxed
+					@apply text-36 
 				@media screen and ( max-width: 1024px)
-					@apply text-32 
+					@apply text-32 leading-tight
 			.caption
 				@apply mb-6 text-20 text-left text-white
 				p

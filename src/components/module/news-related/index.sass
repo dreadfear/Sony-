@@ -19,8 +19,21 @@
 		@apply mb-3
 		@media screen and ( max-width: 1024px)
 			@apply mb-2
-			
-			
+	.figure-news-related
+		.figcaption
+			h3
+				a
+					display: -webkit-box
+					-webkit-line-clamp: 3
+					-webkit-box-orient: vertical
+					overflow: hidden
+					height: 4.5rem
+			.caption
+				display: -webkit-box
+				-webkit-line-clamp: 3
+				-webkit-box-orient: vertical
+				overflow: hidden
+				height: 3.5625rem
 .figure-news-related
 	.figure-image
 		a
@@ -28,7 +41,7 @@
 	.figcaption
 		h3
 			a
-				@apply text-16 text-primary-1 font-bold my-4 inline-block
+				@apply text-16 text-primary-1 font-bold my-4 inline-block leading-normal
 				@screen lg
 					@apply mt-5 mb-3
 		.caption

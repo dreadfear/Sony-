@@ -50,45 +50,46 @@
 
 		<!-- <xsl:if test="count(/ProductList/Compared) > 0"> -->
 		<div id="product-compare">
-		<section class="select-product-compare-2" >
-			<div class="container">
-				<h2 class="head-title">
-					<xsl:value-of disable-output-escaping="yes" select="/ProductList/PCText"></xsl:value-of>
-				</h2>
-				<div class="btn-remove-compare"><em class="lnr lnr-cross"></em></div>
-				<div class="row">
-					<xsl:apply-templates select="/ProductList/Compared"></xsl:apply-templates>
+			<section class="select-product-compare-2">
+				<div class="container">
+					<h2 class="head-title">
+						<xsl:value-of disable-output-escaping="yes" select="/ProductList/PCText"></xsl:value-of>
+					</h2>
+					<div class="btn-remove-compare"><em class="lnr lnr-cross"></em></div>
+					<div class="row">
+						<xsl:apply-templates select="/ProductList/Compared"></xsl:apply-templates>
 
-					<xsl:variable name="CompareNum">
-						<xsl:value-of select="count(/ProductList/Compared)"></xsl:value-of>
-					</xsl:variable>
+						<xsl:variable name="CompareNum">
+							<xsl:value-of select="count(/ProductList/Compared)"></xsl:value-of>
+						</xsl:variable>
 
-					<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
-					<!-- <div class="col-match-height"> -->
-					<!-- <div class="figure-product"> -->
-					<!-- <div class="figure-image"><a href="#"><img src="./img/product/3.png" alt="" /></a></div> -->
-					<!-- <div class="figcaption"> -->
-					<!-- <div class="title"> -->
-					<!-- <h2><a href="#">máy quay chuyên dụngg</a></h2> -->
-					<!-- </div> -->
-					<!-- </div> -->
-					<!-- </div> -->
-					<!-- </div> -->
-					<!-- </div> -->
+						<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
+						<!-- <div class="col-match-height"> -->
+						<!-- <div class="figure-product"> -->
+						<!-- <div class="figure-image"><a href="#"><img src="./img/product/3.png" alt="" /></a></div> -->
+						<!-- <div class="figcaption"> -->
+						<!-- <div class="title"> -->
+						<!-- <h2><a href="#">máy quay chuyên dụngg</a></h2> -->
+						<!-- </div> -->
+						<!-- </div> -->
+						<!-- </div> -->
+						<!-- </div> -->
+						<!-- </div> -->
 
-					<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
-					<!-- <div class="col-match-height"> -->
-					<!-- <div class="figure-add-more"><em class="lnr lnr-cross"></em></div> -->
-					<!-- </div> -->
-					<!-- </div> -->
+						<!-- <div class="col w-full sm:w-1/2 lg:w-4/12"> -->
+						<!-- <div class="col-match-height"> -->
+						<!-- <div class="figure-add-more"><em class="lnr lnr-cross"></em></div> -->
+						<!-- </div> -->
+						<!-- </div> -->
+					</div>
+					<div class="button-wrapper-center"><a class="btn btn-primary yellow"
+							href="/Product/Compare.aspx"><span>
+								<xsl:value-of disable-output-escaping="yes" select="/ProductList/CompareText">
+								</xsl:value-of>
+							</span></a>
+					</div>
 				</div>
-				<div class="button-wrapper-center"><a class="btn btn-primary yellow" href="/Product/Compare.aspx"><span>
-							<xsl:value-of disable-output-escaping="yes" select="/ProductList/CompareText">
-							</xsl:value-of>
-						</span></a>
-				</div>
-			</div>
-		</section>
+			</section>
 		</div>
 		<!-- </xsl:if> -->
 	</xsl:template>
@@ -125,7 +126,12 @@
 										<xsl:attribute name="title">
 											<xsl:value-of select="Title"></xsl:value-of>
 										</xsl:attribute>
-
+										<xsl:attribute name="tabindex">
+											<xsl:text disable-output-escaping="yes">-1</xsl:text>
+										</xsl:attribute>
+										<xsl:attribute name="aria-hidden">
+											<xsl:text disable-output-escaping="yes">true</xsl:text>
+										</xsl:attribute>
 										<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
 										<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 

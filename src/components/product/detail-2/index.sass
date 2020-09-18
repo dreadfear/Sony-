@@ -11,7 +11,9 @@
 			*
 				@apply text-14 text-grey-2 text-center  font-light
 .detail-section
-	@apply py-16
+	@apply pt-16 pb-8
+	@screen md
+		@apply py-16
 	@screen lg
 		@apply py-20
 	.head-title
@@ -24,10 +26,9 @@
 		@apply my-2
 		li
 			+left-dot
-
-			@apply text-14 text-grey-2  font-light mb-2 ml-3
+			@apply text-14 text-grey-2  font-light mb-2 ml-3 leading-relaxed
 			*
-				@apply text-14 text-grey-2  font-light mb-2
+				@apply text-14 text-grey-2  font-light mb-2 leading-relaxed 
 			&:before
 				font-size: 6px
 				color: #333333
@@ -213,9 +214,13 @@
 			*
 				@apply text-center
 .product-detail-features-9
-
+	
 	.row
 		&:nth-child(even)
 			@apply flex-row-reverse
 		+ .row
 			@apply pt-16
+	.image-wrapper
+		@media screen and ( max-width: 1024px)
+			@apply pb-8
+			

@@ -17,8 +17,7 @@
 						<div class="figure-image">
 							<div class="wrapper">
 								<div class="play">
-									<div class="play__icon"></div>
-									<video playsinline="" loop="">
+									<video playsinline="" autoplay="" muted="muted" loop="" controls="">
 										<source type="video/mp4">
 										<xsl:attribute name="src">
 											<xsl:value-of select="/NewsDetail/FileUrl" disable-output-escaping="yes">

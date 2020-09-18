@@ -11,6 +11,7 @@
 		"src/_plugins/mapping-listener.js",
 		"src/_plugins/mapping.js",
 		"src/_plugins/data-bg.js",
+		"src/_plugins/lazy-bg.js",
 		"src/_plugins/lazyload.js",
 		"src/_plugins/scrolltofix.js",
 		"bower_components/swiper/dist/js/swiper.js"
