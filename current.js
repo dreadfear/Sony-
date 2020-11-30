@@ -1,4 +1,4 @@
-﻿// Google Map API Standard Code
+// Google Map API Standard Code
 var map;
 var geocoder;
 

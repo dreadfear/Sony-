@@ -1,9 +1,8 @@
 //Button variable
 .btn
-	@apply text-16 font-normal text-center cursor-pointer
-	transition: .3s all ease-in-out
+	@apply text-16 font-normal text-center  transition 
 	&.btn-primary
-		@apply  inline-flex text-center cursor-pointer items-center justify-center px-4 mx-2
+		@apply  inline-flex text-center items-center justify-center px-4 mx-2 cursor-pointer
 		border: 1px solid $grey-2
 		height: 50px
 		min-width: 140px
@@ -21,7 +20,7 @@
 			em
 				transform: translateX(3px)
 	&.btn-close-all,&.btn-open-all
-		@apply px-5 bg-azure-4 flex items-center justify-center 
+		@apply px-5 bg-azure-4 flex items-center justify-center  cursor-pointer
 		height: 45px
 		span
 			@apply text-16 text-grey-2 inline-block mr-6
@@ -48,7 +47,7 @@
 			span
 				@apply text-grey-2
 	&.btn-compare
-		@apply flex  cursor-pointer bg-azure-1 items-center justify-center
+		@apply flex   bg-azure-1 items-center justify-center cursor-pointer
 		border-radius: 15px
 		min-width: 140px
 		height: 30px
@@ -61,7 +60,7 @@
 			@apply text-14 text-grey-2 font-semibold
 	
 	&.btn-view-more
-		@apply  flex text-center cursor-pointer   mt-4
+		@apply  flex text-center    mt-4 cursor-pointer
 		background: none !important
 		span
 			@apply text-blue inline-block font-normal transition  text-14 font-normal 
@@ -89,7 +88,7 @@
 		z-index: 9
 		width: 40px
 		height: 40px
-		@apply flex items-center justify-center absolute top-0 right-0 pointer-events-auto
+		@apply flex items-center justify-center absolute top-0 right-0 pointer-events-auto cursor-pointer
 		&:focus
 			outline: none
 		span

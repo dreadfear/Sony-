@@ -964,6 +964,7 @@
 	<xsl:template match="News" mode='News-19'>
 		<h2 class="title">
 			<xsl:value-of disable-output-escaping="yes" select="Title"></xsl:value-of>
+			<xsl:value-of select="EditLink" disable-output-escaping="yes"></xsl:value-of>
 		</h2>
 		<xsl:if test="SubTitle !=''">
 			<div class="button-wrapper-center"><a class="btn btn-primary yellow">

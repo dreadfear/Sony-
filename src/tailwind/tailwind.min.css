@@ -308,9 +308,9 @@ hr {
   display: none; }
 
 .btn {
-  @apply text-16 font-normal text-center cursor-pointer {}  transition: .3s all ease-in-out; }
+  @apply text-16 font-normal text-center  transition {} }
   .btn.btn-primary {
-    @apply inline-flex text-center cursor-pointer items-center justify-center px-4 mx-2 {}    border: 1px solid #4a4a4a;
+    @apply inline-flex text-center items-center justify-center px-4 mx-2 cursor-pointer {}    border: 1px solid #4a4a4a;
     height: 50px;
     min-width: 140px; }
     @media screen and (max-width: 1024.1px) {
@@ -327,7 +327,7 @@ hr {
       .btn.btn-primary:hover em {
         transform: translateX(3px); }
   .btn.btn-close-all, .btn.btn-open-all {
-    @apply px-5 bg-azure-4 flex items-center justify-center {}    height: 45px; }
+    @apply px-5 bg-azure-4 flex items-center justify-center  cursor-pointer {}    height: 45px; }
     .btn.btn-close-all span, .btn.btn-open-all span {
       @apply text-16 text-grey-2 inline-block mr-6 {} }
     .btn.btn-close-all em, .btn.btn-open-all em {
@@ -349,7 +349,7 @@ hr {
       .btn.white:hover span {
         @apply text-grey-2 {} }
   .btn.btn-compare {
-    @apply flex  cursor-pointer bg-azure-1 items-center justify-center {}    border-radius: 15px;
+    @apply flex   bg-azure-1 items-center justify-center cursor-pointer {}    border-radius: 15px;
     min-width: 140px;
     height: 30px; }
     .btn.btn-compare:hover {
@@ -360,7 +360,7 @@ hr {
     .btn.btn-compare span {
       @apply text-14 text-grey-2 font-semibold {} }
   .btn.btn-view-more {
-    @apply flex text-center cursor-pointer   mt-4 {}    background: none !important; }
+    @apply flex text-center    mt-4 cursor-pointer {}    background: none !important; }
     .btn.btn-view-more span {
       @apply text-blue inline-block font-normal transition  text-14 font-normal {} }
       .btn.btn-view-more span::first-letter {
@@ -384,7 +384,7 @@ hr {
     z-index: 9;
     width: 40px;
     height: 40px;
-    @apply flex items-center justify-center absolute top-0 right-0 pointer-events-auto {} }
+    @apply flex items-center justify-center absolute top-0 right-0 pointer-events-auto cursor-pointer {} }
     .btn.btn-modal-close:focus {
       outline: none; }
     .btn.btn-modal-close span {

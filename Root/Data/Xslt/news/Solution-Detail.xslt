@@ -273,7 +273,9 @@
 		<div class="button-wrapper-center">
 			<a class="btn btn-primary yellow">
 
-				<xsl:value-of select="BriefContent"></xsl:value-of>
+				<xsl:attribute name="href">
+					<xsl:value-of select="SubTitle"></xsl:value-of>
+				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
 				</xsl:attribute>
@@ -305,18 +307,22 @@
 						<div class="caption">
 							<xsl:value-of disable-output-escaping="yes" select="BriefContent"></xsl:value-of>
 						</div>
-						<a class="btn btn-view-more">
-							<xsl:attribute name="href">
-								<xsl:value-of select="BriefContent"></xsl:value-of>
-							</xsl:attribute>
-							<xsl:attribute name="title">
-								<xsl:value-of select="Title"></xsl:value-of>
-							</xsl:attribute>
-							<span>
-								<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
-								</xsl:value-of>
-							</span>
-						</a>
+						<xsl:if test="SubTitle !=''">
+
+							<a class="btn btn-view-more">
+								<xsl:attribute name="href">
+									<xsl:value-of select="SubTitle"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="title">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								<span>
+									<xsl:value-of disable-output-escaping="yes" select="/ZoneList/FindMoreText">
+									</xsl:value-of>
+								</span>
+							</a>
+						</xsl:if>
+
 					</div>
 					<div class="col w-full md:w-1/2">
 						<div class="image-wrapper opacity">
@@ -331,15 +337,14 @@
 								<xsl:attribute name="aria-hidden">
 									<xsl:text disable-output-escaping="yes">true</xsl:text>
 								</xsl:attribute>
-								<xsl:attribute name="href">
-									<img class='lazyload'>
-									<xsl:attribute name="data-src">
-										<xsl:value-of select="ImageUrl"></xsl:value-of>
-									</xsl:attribute>
-									<xsl:attribute name="alt">
-										<xsl:value-of select="Title"></xsl:value-of>
-									</xsl:attribute>
-									</img>
+								<img class='lazyload'>
+								<xsl:attribute name="data-src">
+									<xsl:value-of select="ImageUrl"></xsl:value-of>
+								</xsl:attribute>
+								<xsl:attribute name="alt">
+									<xsl:value-of select="Title"></xsl:value-of>
+								</xsl:attribute>
+								</img>
 							</a>
 						</div>
 					</div>

@@ -337,7 +337,7 @@
 		<div class="button-wrapper-center">
 			<a class="btn btn-primary yellow">
 				<xsl:attribute name="href">
-					<xsl:value-of select="Url"></xsl:value-of>
+					<xsl:value-of select="SubTitle"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>
@@ -665,7 +665,7 @@
 		<div class="button-wrapper-center">
 			<a class="btn btn-primary yellow">
 				<xsl:attribute name="href">
-					<xsl:value-of select="BriefContent"></xsl:value-of>
+					<xsl:value-of select="SubTitle"></xsl:value-of>
 				</xsl:attribute>
 				<xsl:attribute name="title">
 					<xsl:value-of select="Title"></xsl:value-of>

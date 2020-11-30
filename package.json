@@ -42,6 +42,6 @@
         "gulp-uglify": "3.0.2",
         "merge-stream": "^2.0.0",
         "postcss-import": "^12.0.1",
-        "tailwindcss": "^1.2.0"
+        "tailwindcss": "^1.8.10"
     }
 }

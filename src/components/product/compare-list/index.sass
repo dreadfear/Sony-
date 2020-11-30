@@ -7,7 +7,7 @@
 	@apply bg-azure-4 overflow-auto fixed bottom-0 w-full h-auto  transition z-50
 	transform: translateY(100%)
 	&.open-compare
-		@apply transform-none py-6 
+		@apply translate-0 py-6 
 		@media screen and ( max-width:1440.1px)
 			@apply py-4
 			
@@ -18,21 +18,22 @@
 	.figure-product
 		@apply bg-white
 		.figure-image
-			@apply bg-white px-4
+			@apply bg-white 
 			a
-				@apply static pt-0 h-auto
-				img
-					@apply static
-			@media screen and ( min-width:1024.1px)
+				height: 120px
 				@apply my-4
-			@media screen and ( min-width:1440.1px)
+				+img-ratio(70/140,contain)
+				@media screen and ( max-width: 1024px)
+					height: 60px
+				@media screen and ( max-width: 576px)
+					height: 50px
+					
+			@media screen and ( min-width:1280.1px)
 				@apply my-6 mx-2
-				a
-					+img-ratio(70/140,contain)
 			@media screen and ( max-width:576px)
 				@apply m-0 p-0
 				a
-					height: 80px
+					height: 50px
 					width: auto
 					@apply px-2
 					img
